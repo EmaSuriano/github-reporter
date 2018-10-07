@@ -25,7 +25,7 @@ export const GET_REPOSITORIES_INFORMATION = gql`
             stargazers {
               totalCount
             }
-            branch1: ref(qualifiedName: "master") {
+            masterBranch: ref(qualifiedName: "master") {
               target {
                 ... on Commit {
                   history(first: 0, author: { id: $id }) {

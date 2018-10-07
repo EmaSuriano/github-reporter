@@ -1,38 +1,25 @@
 import React from "react";
 import { compose, concat, isEmpty, pathOr, prop, reduce } from "ramda";
 import { Query } from "react-apollo";
-import { Doughnut } from "react-chartjs-2";
-
 import { GET_REPOSITORIES_INFORMATION } from "./query";
 import {
   getEdges,
   getEndCursor,
-  getLabels,
-  getDataSet,
   getInfo,
   getPageInfo,
   getStatistics,
   hasNextPage,
   updateRepositoryData
 } from "../../utils";
-
-const options = {
-  maintainAspectRatio: false
-};
-
-const configuration = {
-  height: 250,
-  width: 450,
-  options
-};
+import Statistics from "../Statistics/Statistics";
 
 const generateDataForTable = (data, currentProp) => {
-  const info = getInfo(prop("languages", data), currentProp);
+  const { labels, values } = getInfo(prop("languages", data), currentProp);
   return {
-    labels: getLabels(info),
+    labels,
     datasets: [
       {
-        data: getDataSet(info),
+        data: values,
         backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
         hoverBackgroundColor: ["#FFAAAA", "#36A2EB", "#FFCE56"]
       }
@@ -41,12 +28,12 @@ const generateDataForTable = (data, currentProp) => {
 };
 
 const generateDataForRepositoriesTable = (data, currentProp) => {
-  const info = getInfo(prop("repositories", data), currentProp);
+  const { labels, values } = getInfo(prop("repositories", data), currentProp);
   return {
-    labels: getLabels(info),
+    labels,
     datasets: [
       {
-        data: getDataSet(info),
+        data: values,
         backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
         hoverBackgroundColor: ["#FFAAAA", "#36A2EB", "#FFCE56"]
       }
@@ -81,6 +68,8 @@ const RepositoryInfo = ({ id, login }) => (
             pageInfo
           );
 
+          console.log("HERE", fetchMoreResult);
+
           return isEmpty(newEdges) ? previousResult : updatedData;
         }
       });
@@ -98,49 +87,17 @@ const RepositoryInfo = ({ id, login }) => (
         pathOr([], ["user", "repositories", "edges"], data)
       );
 
-      console.log("HERE", dataSet);
-
       return (
         <section>
-          <div>
-            <h1>Repos Per Language</h1>
-            <Doughnut
-              data={generateDataForTable(dataSet, "repositories")}
-              {...configuration}
-            />
-          </div>
-
-          <div>
-            <h1>Stars Per Language</h1>
-            <Doughnut
-              data={generateDataForTable(dataSet, "stars")}
-              {...configuration}
-            />
-          </div>
-
-          <div>
-            <h1>Commits Per Language</h1>
-            <Doughnut
-              data={generateDataForTable(dataSet, "commits")}
-              {...configuration}
-            />
-          </div>
-
-          <div>
-            <h1>Commits Per Repo (Top 10)</h1>
-            <Doughnut
-              data={generateDataForRepositoriesTable(dataSet, "commits")}
-              {...configuration}
-            />
-          </div>
-
-          <div>
-            <h1>Stars Per Repo (Top 10)</h1>
-            <Doughnut
-              data={generateDataForRepositoriesTable(dataSet, "stars")}
-              {...configuration}
-            />
-          </div>
+          <Statistics data={generateDataForTable(dataSet, "repositories")} />
+          <Statistics data={generateDataForTable(dataSet, "stars")} />
+          <Statistics data={generateDataForTable(dataSet, "commits")} />
+          <Statistics
+            data={generateDataForRepositoriesTable(dataSet, "commits")}
+          />
+          <Statistics
+            data={generateDataForRepositoriesTable(dataSet, "stars")}
+          />
         </section>
       );
     }}

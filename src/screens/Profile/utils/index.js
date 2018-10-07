@@ -78,8 +78,6 @@ const getCommits = pathOr(0, [
   "totalCount"
 ]);
 
-// I need to order the objet to get the top 10 repos by stars and commits.
-
 const removeLowerThan = (statistics, param, x) => key => {
   const currentParam = path([key, param], statistics);
   return not(isNil(currentParam)) || gt(currentParam, x);
@@ -93,12 +91,14 @@ const transformStatistics = statistics => (accumulator, key) => ({
   [key]: { ...statistics[key] }
 });
 
-const getLabels = keys;
-
-const getDataSet = values;
+const generateDataSet = data => ({
+  labels: keys(data),
+  values: values(data)
+});
 
 const getInfo = (data, param) =>
   compose(
+    generateDataSet,
     map(prop(param)),
     reduce(transformStatistics(data), {}),
     take(10),
@@ -115,8 +115,6 @@ const hasForked = path(["node", "isFork"]);
 
 const hasNextPage = propOr(false, "hasNextPage");
 
-const removeData = data => not(isNil(data)) || gt(data, 0);
-
 const updateRepositoryData = (repositoryInfo, edges, pageInfo) =>
   compose(
     assocPath(["user", "repositories", "edges"], edges),
@@ -124,11 +122,9 @@ const updateRepositoryData = (repositoryInfo, edges, pageInfo) =>
   )(repositoryInfo);
 
 export {
-  getDataSet,
   getEdges,
   getEndCursor,
   getInfo,
-  getLabels,
   getPageInfo,
   getStatistics,
   hasNextPage,

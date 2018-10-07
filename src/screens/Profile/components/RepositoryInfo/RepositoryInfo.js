@@ -1,6 +1,8 @@
 import React from "react";
+import { string } from "prop-types";
 import { compose, concat, isEmpty, pathOr, prop, reduce } from "ramda";
 import { Query } from "react-apollo";
+
 import { GET_REPOSITORIES_INFORMATION } from "./query";
 import {
   getEdges,
@@ -103,5 +105,15 @@ const RepositoryInfo = ({ id, login }) => (
     }}
   </Query>
 );
+
+RepositoryInfo.defaultProps = {
+  id: "",
+  login: ""
+};
+
+RepositoryInfo.propTypes = {
+  id: string,
+  login: string
+};
 
 export default RepositoryInfo;

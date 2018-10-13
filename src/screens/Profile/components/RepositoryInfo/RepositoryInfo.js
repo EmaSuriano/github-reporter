@@ -14,6 +14,7 @@ import {
   updateRepositoryData
 } from "../../utils";
 import Statistics from "../Statistics/Statistics";
+import { DEFAULT_COLORS } from "../../constants";
 
 const generateDataForTable = (data, currentProp) => {
   const { labels, values } = getInfo(prop("languages", data), currentProp);
@@ -22,8 +23,7 @@ const generateDataForTable = (data, currentProp) => {
     datasets: [
       {
         data: values,
-        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-        hoverBackgroundColor: ["#FFAAAA", "#36A2EB", "#FFCE56"]
+        backgroundColor: DEFAULT_COLORS
       }
     ]
   };
@@ -36,8 +36,7 @@ const generateDataForRepositoriesTable = (data, currentProp) => {
     datasets: [
       {
         data: values,
-        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-        hoverBackgroundColor: ["#FFAAAA", "#36A2EB", "#FFCE56"]
+        backgroundColor: DEFAULT_COLORS
       }
     ]
   };
@@ -91,15 +90,29 @@ const RepositoryInfo = ({ id, login }) => (
 
       return (
         <section>
-          <Statistics data={generateDataForTable(dataSet, "repositories")} />
-          <Statistics data={generateDataForTable(dataSet, "stars")} />
-          <Statistics data={generateDataForTable(dataSet, "commits")} />
-          <Statistics
-            data={generateDataForRepositoriesTable(dataSet, "commits")}
-          />
-          <Statistics
-            data={generateDataForRepositoriesTable(dataSet, "stars")}
-          />
+          <div className="statistics--panel">
+            <div className="first">
+              <Statistics
+                data={generateDataForTable(dataSet, "repositories")}
+              />
+            </div>
+            <div className="second">
+              <Statistics data={generateDataForTable(dataSet, "stars")} />
+            </div>
+            <div className="third">
+              <Statistics data={generateDataForTable(dataSet, "commits")} />
+            </div>
+            <div className="four">
+              <Statistics
+                data={generateDataForRepositoriesTable(dataSet, "commits")}
+              />
+            </div>
+            <div className="five">
+              <Statistics
+                data={generateDataForRepositoriesTable(dataSet, "commits")}
+              />
+            </div>
+          </div>
         </section>
       );
     }}

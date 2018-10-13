@@ -5,7 +5,7 @@ import { Doughnut } from "react-chartjs-2";
 import { CHART_CONFIGURATION } from "../../constants";
 
 const Statistics = ({ data, title }) => (
-  <div>
+  <div className="profile--box">
     <h1>{title}</h1>
     <Doughnut data={data} {...CHART_CONFIGURATION} />
   </div>

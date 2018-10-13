@@ -6,6 +6,7 @@ import { Query } from "react-apollo";
 import RepositoryInfo from "./components/RepositoryInfo";
 
 import { PROFILE_INFO } from "./query";
+import "./styles.css";
 
 const NAME = "wesbos";
 
@@ -16,8 +17,14 @@ const Profile = () => (
       if (error) return "Error";
 
       const { id, login } = propOr({}, "user")(data);
-      console.log("Fetch User Data", data);
-      return <RepositoryInfo id={id} login={login} />;
+      return (
+        <section className="profile--container">
+          <section className="profile--sidebar" />
+          <section className="profile--info">
+            <RepositoryInfo id={id} login={login} />
+          </section>
+        </section>
+      );
     }}
   </Query>
 );

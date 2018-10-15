@@ -16,11 +16,14 @@ const Profile = () => (
       if (loading) return "Loading...";
       if (error) return "Error";
 
-      const { id, login } = propOr({}, "user")(data);
+      const { avatarUrl, id, login } = propOr({}, "user")(data);
+      console.log("HERE", data);
       return (
         <section className="profile--container">
-          <section className="profile--sidebar" />
-          <section className="profile--info">
+          <section className="profile--sidebar">
+            <img src={avatarUrl} alt="Avatar" className="profile--avatar" />
+          </section>
+          <section className="profile--content">
             <RepositoryInfo id={id} login={login} />
           </section>
         </section>

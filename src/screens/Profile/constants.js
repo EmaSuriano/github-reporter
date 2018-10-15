@@ -4,10 +4,11 @@ const DEFAULT_OPTIONS = {
   legend: {
     position: "left",
     labels: {
+      usePointStyle: true,
       fontColor: "white",
-      fontSize: 14,
-      padding: 10,
-      boxWidth: 14
+      fontSize: 12,
+      padding: 15,
+      boxWidth: 12
     }
   },
   tooltips: {
@@ -29,9 +30,15 @@ export const DEFAULT_COLORS = [
   "#DC2127"
 ];
 
-export const CHART_CONFIGURATION = {
-  height: 250,
+export const CHART_SM_CONFIGURATION = {
+  height: 300,
   width: 400,
+  options: DEFAULT_OPTIONS
+};
+
+export const CHART_LG_CONFIGURATION = {
+  height: 400,
+  width: 600,
   options: DEFAULT_OPTIONS
 };
 

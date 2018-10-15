@@ -2,12 +2,10 @@ import React from "react";
 import { arrayOf, number, shape, string } from "prop-types";
 import { Doughnut } from "react-chartjs-2";
 
-import { CHART_CONFIGURATION } from "../../constants";
-
-const Statistics = ({ data, title }) => (
+const Statistics = ({ data, configuration, title }) => (
   <div className="profile--box">
     <h1>{title}</h1>
-    <Doughnut data={data} {...CHART_CONFIGURATION} />
+    <Doughnut data={data} {...configuration} />
   </div>
 );
 

@@ -15,6 +15,10 @@ import {
 } from "../../utils";
 import Statistics from "../Statistics/Statistics";
 import { DEFAULT_COLORS } from "../../constants";
+import {
+  CHART_SM_CONFIGURATION,
+  CHART_LG_CONFIGURATION
+} from "../../constants";
 
 const generateDataForTable = (data, currentProp) => {
   const { labels, values } = getInfo(prop("languages", data), currentProp);
@@ -23,7 +27,8 @@ const generateDataForTable = (data, currentProp) => {
     datasets: [
       {
         data: values,
-        backgroundColor: DEFAULT_COLORS
+        backgroundColor: DEFAULT_COLORS,
+        pointStyle: "circle"
       }
     ]
   };
@@ -89,29 +94,45 @@ const RepositoryInfo = ({ id, login }) => (
       );
 
       return (
-        <section>
-          <div className="statistics--panel">
-            <div className="first">
-              <Statistics
-                data={generateDataForTable(dataSet, "repositories")}
-              />
+        <section className="statistics--content">
+          <div className="statistics--extras">
+            <div className="graphic-info statistics--box">1</div>
+            <div className="statistics-followers statistics--box">
+              <h1>Followers</h1>
+              <span>11132</span>
             </div>
-            <div className="second">
-              <Statistics data={generateDataForTable(dataSet, "stars")} />
+            <div className="statistics-repositories statistics--box">
+              <h1>Followers</h1>
+              <span>11132</span>
             </div>
-            <div className="third">
-              <Statistics data={generateDataForTable(dataSet, "commits")} />
+            <div className="statistics-starred statistics--box">
+              <h1>Followers</h1>
+              <span>11132</span>
             </div>
-            <div className="four">
-              <Statistics
-                data={generateDataForRepositoriesTable(dataSet, "commits")}
-              />
-            </div>
-            <div className="five">
-              <Statistics
-                data={generateDataForRepositoriesTable(dataSet, "commits")}
-              />
-            </div>
+          </div>
+          <div className="statistics--by-language">
+            <Statistics
+              data={generateDataForTable(dataSet, "repositories")}
+              configuration={CHART_SM_CONFIGURATION}
+            />
+            <Statistics
+              data={generateDataForTable(dataSet, "stars")}
+              configuration={CHART_SM_CONFIGURATION}
+            />
+            <Statistics
+              data={generateDataForTable(dataSet, "commits")}
+              configuration={CHART_SM_CONFIGURATION}
+            />
+          </div>
+          <div className="statistics--by-repository">
+            <Statistics
+              data={generateDataForRepositoriesTable(dataSet, "commits")}
+              configuration={CHART_LG_CONFIGURATION}
+            />
+            <Statistics
+              data={generateDataForRepositoriesTable(dataSet, "commits")}
+              configuration={CHART_LG_CONFIGURATION}
+            />
           </div>
         </section>
       );

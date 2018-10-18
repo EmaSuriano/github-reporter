@@ -19,7 +19,7 @@ import {
   take,
   values
 } from "ramda";
-import { MIN_LANGUAGES } from "../constants";
+import { DEFAULT_COLORS, MIN_LANGUAGES } from "../constants";
 
 const getEdges = path(["user", "repositories", "edges"]);
 
@@ -96,6 +96,19 @@ const generateDataSet = data => ({
   values: values(data)
 });
 
+const createData = (data, from, currentProp) => {
+  const { labels, values } = getInfo(prop(from, data), currentProp);
+  return {
+    labels,
+    datasets: [
+      {
+        data: values,
+        backgroundColor: DEFAULT_COLORS
+      }
+    ]
+  };
+};
+
 const getInfo = (data, param) =>
   compose(
     generateDataSet,
@@ -122,9 +135,9 @@ const updateRepositoryData = (repositoryInfo, edges, pageInfo) =>
   )(repositoryInfo);
 
 export {
+  createData,
   getEdges,
   getEndCursor,
-  getInfo,
   getPageInfo,
   getStatistics,
   hasNextPage,

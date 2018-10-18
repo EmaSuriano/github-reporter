@@ -2,8 +2,11 @@ import React from "react";
 import { number, shape, string } from "prop-types";
 import { propOr } from "ramda";
 import { Query } from "react-apollo";
+import { PulseLoader } from "react-spinners";
 
+import Header from "./components/Header";
 import RepositoryInfo from "./components/RepositoryInfo";
+import Sidebar from "./components/Sidebar";
 
 import { PROFILE_INFO } from "./query";
 import "./styles.css";
@@ -13,17 +16,27 @@ const NAME = "wesbos";
 const Profile = () => (
   <Query query={PROFILE_INFO} variables={{ name: NAME }}>
     {({ data, error, loading }) => {
-      if (loading) return "Loading...";
+      if (loading)
+        return (
+          <PulseLoader
+            className="spinner"
+            loading={true}
+            color="#90C3FF"
+            sizeUnit="rem"
+            size={5}
+            margin="1rem"
+          />
+        );
+
       if (error) return "Error";
 
       const { avatarUrl, id, login } = propOr({}, "user")(data);
-      console.log("HERE", data);
+
       return (
-        <section className="profile--container">
-          <section className="profile--sidebar">
-            <img src={avatarUrl} alt="Avatar" className="profile--avatar" />
-          </section>
+        <section className="container">
+          <Header />
           <section className="profile--content">
+            <Sidebar avatar={avatarUrl} />
             <RepositoryInfo id={id} login={login} />
           </section>
         </section>

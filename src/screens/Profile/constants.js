@@ -5,7 +5,6 @@ const DEFAULT_OPTIONS = {
     position: "left",
     labels: {
       usePointStyle: true,
-      fontColor: "white",
       fontSize: 12,
       padding: 15,
       boxWidth: 12

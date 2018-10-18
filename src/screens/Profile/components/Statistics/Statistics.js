@@ -3,7 +3,7 @@ import { arrayOf, number, shape, string } from "prop-types";
 import { Doughnut } from "react-chartjs-2";
 
 const Statistics = ({ data, configuration, title }) => (
-  <div className="profile--box">
+  <div className="statistic--box">
     <h1>{title}</h1>
     <Doughnut data={data} {...configuration} />
   </div>

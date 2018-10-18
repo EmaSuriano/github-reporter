@@ -7,7 +7,7 @@ import Profile from "./screens/Profile";
 import client from "./config/apolloConfig";
 import registerServiceWorker from "./registerServiceWorker";
 
-import "./index.css";
+import "./screens/Profile/styles.css";
 
 ReactDOM.render(
   <ApolloProvider client={client}>

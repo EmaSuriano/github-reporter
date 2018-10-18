@@ -55,7 +55,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
   grid-gap: 1rem;
-  grid-template-areas: "by-language" "by-repository" "by-something";
+  grid-template-areas: "by-activity" "by-language" "by-repository";
   margin: 2rem 0;
   padding: 0 1rem 0 0;
   align-items: flex-start;
@@ -181,6 +181,32 @@ input::placeholder {
   grid-gap: 1rem;
 }
 
+.statistics-by-activity {
+  grid-area: by-activity;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+  grid-template-areas: "activity-chart repositories" "activity-chart starred" "activity-chart extra";
+  justify-items: center;
+}
+
+.activity--chart {
+  grid-area: activity-chart;
+}
+
+.activity--repositories {
+  grid-area: repositories;
+}
+
+.activity--starred {
+  grid-area: starred;
+}
+
+.activity--extra {
+  grid-area: extra;
+}
+
 .spinner {
   display: flex;
   justify-content: center;
@@ -213,4 +239,22 @@ input::placeholder {
 
 .follow-text {
   grid-area: follow-text;
+}
+
+.activity--box {
+  min-width: 10rem;
+  min-height: 5rem;
+  border-radius: 1rem;
+}
+
+.activity--box__blue {
+  background: #4f93fb;
+  background: -moz-linear-gradient(left, #4f93fb 0%, #54abfe 53%, #57c1fc 100%);
+  background: -webkit-linear-gradient(
+    left,
+    #4f93fb 0%,
+    #54abfe 53%,
+    #57c1fc 100%
+  );
+  background: linear-gradient(to right, #4f93fb 0%, #54abfe 53%, #57c1fc 100%);
 }

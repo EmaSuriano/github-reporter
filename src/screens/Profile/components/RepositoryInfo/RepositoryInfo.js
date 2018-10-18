@@ -77,6 +77,15 @@ const RepositoryInfo = ({ id, login }) => (
 
       return (
         <section className="content--container">
+          <section className="statistics-by-activity">
+            <div class="activity--chart">Chart</div>
+            <div class="activity--repositories activity--box activity--box__blue">
+              Repositories
+            </div>
+            <div class="activity--starred">Starred</div>
+            <div class="activity--extra">Extra</div>
+          </section>
+
           <section className="statistics-by-language">
             <Statistics
               data={createData(dataSet, "languages", "repositories")}

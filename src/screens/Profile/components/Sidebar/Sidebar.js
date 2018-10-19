@@ -1,10 +1,10 @@
 import React from "react";
-import { string } from "prop-types";
+import { number, string } from "prop-types";
 import { FaUserCheck, FaUserPlus } from "react-icons/fa";
 
 import Follow from "../Follow";
 
-const Sidebar = ({ avatar }) => (
+const Sidebar = ({ avatar, bio, followers, following }) => (
   <section className="content--sidebar">
     <div className="sidebar--header">
       <div className="sidebar--avatar">
@@ -12,19 +12,19 @@ const Sidebar = ({ avatar }) => (
       </div>
       <div className="sidebar--info">
         <h1 className="sidebar--info__title">Welcome Wesbos</h1>
-        <span className="sidebar--info__location">Super Admin</span>
+        <span className="sidebar--info__bio">{bio}</span>
       </div>
       <div className="sidebar--following">
         <Follow
           icon={<FaUserCheck size="2rem" />}
           title="Followers"
-          quantity={213213}
+          quantity={followers}
         />
 
         <Follow
           icon={<FaUserPlus size="2rem" />}
           title="Following"
-          quantity={342234}
+          quantity={following}
         />
       </div>
     </div>
@@ -32,7 +32,10 @@ const Sidebar = ({ avatar }) => (
 );
 
 Sidebar.propTypes = {
-  avatar: string.isRequired
+  avatar: string.isRequired,
+  bio: string.isRequired,
+  followers: number.isRequired,
+  following: number.isRequired
 };
 
 export default Sidebar;

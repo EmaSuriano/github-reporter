@@ -3,6 +3,7 @@ import { string } from "prop-types";
 import { compose, pathOr, reduce } from "ramda";
 import { Query } from "react-apollo";
 import { PulseLoader } from "react-spinners";
+import { GoRepo, GoStar } from "react-icons/go";
 
 import {
   CHART_SM_CONFIGURATION,
@@ -78,12 +79,20 @@ const RepositoryInfo = ({ id, login }) => (
       return (
         <section className="content--container">
           <section className="statistics-by-activity">
-            <div class="activity--chart">Chart</div>
-            <div class="activity--repositories activity--box activity--box__blue">
-              Repositories
+            <div className="activity--chart">Chart</div>
+            <div className="activity--stats activity--repositories activity--box activity--box__blue">
+              <GoRepo className="stats--icon" size="4rem" />
+              <h3 className="stats--number">80</h3>
+              <span className="stats--title">Repositories</span>
             </div>
-            <div class="activity--starred">Starred</div>
-            <div class="activity--extra">Extra</div>
+            <div className="activity--stats activity--starred activity--box activity--box__pink">
+              <GoStar className="stats--icon" size="4rem" />
+              <h3 className="stats--number">80</h3>
+              <span className="stats--title">Starred</span>
+            </div>
+            <div className="activity--stats activity--extra activity--box activity--box__orange">
+              Extra
+            </div>
           </section>
 
           <section className="statistics-by-language">

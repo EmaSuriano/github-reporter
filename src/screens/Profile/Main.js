@@ -9,6 +9,9 @@ import RepositoryInfo from "./components/RepositoryInfo";
 import Sidebar from "./components/Sidebar";
 
 import { PROFILE_INFO } from "./query";
+
+import { getFollowers, getFollowing } from "./utils";
+
 import "./styles.css";
 
 const NAME = "wesbos";
@@ -30,13 +33,23 @@ const Profile = () => (
 
       if (error) return "Error";
 
-      const { avatarUrl, id, login } = propOr({}, "user")(data);
+      const { avatarUrl, bio, id, login, followers, following } = propOr(
+        {},
+        "user"
+      )(data);
+
+      console.log("HERE", data);
 
       return (
         <section className="container">
           <Header />
           <section className="profile--content">
-            <Sidebar avatar={avatarUrl} />
+            <Sidebar
+              avatar={avatarUrl}
+              bio={bio}
+              followers={getFollowers(followers)}
+              following={getFollowing(following)}
+            />
             <RepositoryInfo id={id} login={login} />
           </section>
         </section>

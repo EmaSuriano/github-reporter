@@ -242,19 +242,31 @@ input::placeholder {
 }
 
 .activity--box {
-  min-width: 10rem;
-  min-height: 5rem;
-  border-radius: 1rem;
+  min-width: 20rem;
+  min-height: 8rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #eee9e9;
 }
 
-.activity--box__blue {
-  background: #4f93fb;
-  background: -moz-linear-gradient(left, #4f93fb 0%, #54abfe 53%, #57c1fc 100%);
-  background: -webkit-linear-gradient(
-    left,
-    #4f93fb 0%,
-    #54abfe 53%,
-    #57c1fc 100%
-  );
-  background: linear-gradient(to right, #4f93fb 0%, #54abfe 53%, #57c1fc 100%);
+.activity--stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "stats-icon stats-number" "stats-icon stats-title";
+  justify-items: center;
+  align-items: center;
+}
+
+.stats--icon {
+  grid-area: stats-icon;
+}
+
+.stats--number {
+  grid-area: stats-number;
+}
+
+.stats--title {
+  grid-area: stats-title;
+  font-size: 1.5rem;
 }

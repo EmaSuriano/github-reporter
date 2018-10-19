@@ -4,6 +4,7 @@ export const PROFILE_INFO = gql`
   query($name: String!) {
     user(login: $name) {
       avatarUrl
+      bio
       company
       createdAt
       email
@@ -12,6 +13,9 @@ export const PROFILE_INFO = gql`
       login
       name
       followers {
+        totalCount
+      }
+      following {
         totalCount
       }
       repositories(first: 0, affiliations: [OWNER]) {

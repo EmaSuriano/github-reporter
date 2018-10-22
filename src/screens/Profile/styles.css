@@ -27,8 +27,11 @@ body {
 
 .profile--content {
   display: grid;
-  grid-template-columns: 30rem 1fr;
-  grid-template-areas: "sidebar content";
+  grid-template-columns: 25rem 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1rem;
+  grid-template-areas: "sidebar activity" "sidebar activity";
+  padding: 1rem;
   background-color: #fafafa;
   border-radius: 0.5rem;
   -webkit-box-shadow: inset 0px 5px 25px 5px rgba(240, 240, 240, 0.75);
@@ -44,20 +47,17 @@ body {
   align-items: center;
   background-color: #ffffff;
   border: 1px solid #eee9e9;
-  margin: 2rem;
   padding: 1rem;
 }
 
 .content--container {
-  grid-area: content;
+  grid-area: activity;
   display: grid;
   height: 100%;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
   grid-gap: 1rem;
   grid-template-areas: "by-activity" "by-language" "by-repository";
-  margin: 2rem 0;
-  padding: 0 1rem 0 0;
   align-items: flex-start;
 }
 
@@ -158,6 +158,14 @@ input::placeholder {
   padding: 1.5rem 0;
 }
 
+.sidebar--info__title {
+  margin: 0.5rem 0;
+}
+
+.sidebar--info__bio {
+  font-size: 1rem;
+}
+
 .statistic--box {
   background-color: #ffffff;
   border: 1px solid #eee9e9;
@@ -184,7 +192,7 @@ input::placeholder {
 .statistics-by-activity {
   grid-area: by-activity;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 1rem;
   grid-template-areas: "activity-chart repositories" "activity-chart starred" "activity-chart extra";
@@ -224,8 +232,8 @@ input::placeholder {
   display: grid;
   height: 100%;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "follow-icon follow-number" "follow-icon follow-text";
+  grid-template-rows: 1fr;
+  grid-template-areas: "follow-icon follow-stat";
   align-items: center;
 }
 
@@ -233,12 +241,19 @@ input::placeholder {
   grid-area: follow-icon;
 }
 
-.follow-number {
-  grid-area: follow-number;
+.follow-stat {
+  grid-area: follow-stat;
 }
 
-.follow-text {
-  grid-area: follow-text;
+.follow-stat--number {
+  margin: 0.5rem 0;
+  font-size: 1.8rem;
+}
+
+.follow-stat--text {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
 .activity--box {
@@ -268,5 +283,7 @@ input::placeholder {
 
 .stats--title {
   grid-area: stats-title;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }

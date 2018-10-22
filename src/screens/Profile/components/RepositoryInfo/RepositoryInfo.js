@@ -1,9 +1,9 @@
 import React from "react";
-import { string } from "prop-types";
+import { number, string } from "prop-types";
 import { compose, pathOr, reduce } from "ramda";
 import { Query } from "react-apollo";
 import { PulseLoader } from "react-spinners";
-import { GoRepo, GoStar } from "react-icons/go";
+import { GoPin, GoRepo, GoStar } from "react-icons/go";
 
 import {
   CHART_SM_CONFIGURATION,
@@ -21,9 +21,16 @@ import {
   hasNextPage
 } from "../../utils";
 
+import ActivityBox from "../ActivityBox";
 import Statistics from "../Statistics";
 
-const RepositoryInfo = ({ id, login }) => (
+const RepositoryInfo = ({
+  id,
+  login,
+  pinnedRepositories,
+  repositories,
+  starredRepositories
+}) => (
   <Query query={GET_REPOSITORIES_INFORMATION} variables={{ name: login, id }}>
     {({ data, error, fetchMore, loading }) => {
       if (loading)
@@ -80,19 +87,21 @@ const RepositoryInfo = ({ id, login }) => (
         <section className="content--container">
           <section className="statistics-by-activity">
             <div className="activity--chart">Chart</div>
-            <div className="activity--stats activity--repositories activity--box activity--box__blue">
-              <GoRepo className="stats--icon" size="4rem" />
-              <h3 className="stats--number">80</h3>
-              <span className="stats--title">Repositories</span>
-            </div>
-            <div className="activity--stats activity--starred activity--box activity--box__pink">
-              <GoStar className="stats--icon" size="4rem" />
-              <h3 className="stats--number">80</h3>
-              <span className="stats--title">Starred</span>
-            </div>
-            <div className="activity--stats activity--extra activity--box activity--box__orange">
-              Extra
-            </div>
+            <ActivityBox
+              icon={<GoRepo className="stats--icon" size="4rem" />}
+              stat={repositories}
+              title="Repositories"
+            />
+            <ActivityBox
+              icon={<GoStar className="stats--icon" size="4rem" />}
+              stat={starredRepositories}
+              title="Starred"
+            />
+            <ActivityBox
+              icon={<GoPin className="stats--icon" size="4rem" />}
+              stat={pinnedRepositories}
+              title="Pinned"
+            />
           </section>
 
           <section className="statistics-by-language">
@@ -133,7 +142,10 @@ RepositoryInfo.defaultProps = {
 
 RepositoryInfo.propTypes = {
   id: string,
-  login: string
+  login: string,
+  pinnedRepositories: number,
+  repositories: number,
+  starredRepositories: number
 };
 
 export default RepositoryInfo;

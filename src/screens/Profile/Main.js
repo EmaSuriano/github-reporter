@@ -10,7 +10,7 @@ import Sidebar from "./components/Sidebar";
 
 import { PROFILE_INFO } from "./query";
 
-import { getFollowers, getFollowing } from "./utils";
+import { getTotalCount } from "./utils";
 
 import "./styles.css";
 
@@ -33,10 +33,18 @@ const Profile = () => (
 
       if (error) return "Error";
 
-      const { avatarUrl, bio, id, login, followers, following } = propOr(
-        {},
-        "user"
-      )(data);
+      const {
+        avatarUrl,
+        bio,
+        followers,
+        following,
+        id,
+        login,
+        name,
+        pinnedRepositories,
+        repositories,
+        starredRepositories
+      } = propOr({}, "user")(data);
 
       console.log("HERE", data);
 
@@ -47,10 +55,17 @@ const Profile = () => (
             <Sidebar
               avatar={avatarUrl}
               bio={bio}
-              followers={getFollowers(followers)}
-              following={getFollowing(following)}
+              followers={getTotalCount(followers)}
+              following={getTotalCount(following)}
+              name={name}
             />
-            <RepositoryInfo id={id} login={login} />
+            <RepositoryInfo
+              id={id}
+              login={login}
+              repositories={getTotalCount(repositories)}
+              starredRepositories={getTotalCount(starredRepositories)}
+              pinnedRepositories={getTotalCount(pinnedRepositories)}
+            />
           </section>
         </section>
       );
@@ -60,6 +75,7 @@ const Profile = () => (
 
 Profile.propTypes = {
   avatarUrl: string,
+  bio: string,
   company: string,
   createdAt: string,
   email: string,
@@ -67,6 +83,9 @@ Profile.propTypes = {
   login: string,
   name: string,
   followers: shape({
+    totalCount: number
+  }),
+  pinnedRepositories: shape({
     totalCount: number
   }),
   repositories: shape({

@@ -4,8 +4,10 @@ import { element, number, string } from "prop-types";
 const Follow = ({ icon, title, quantity }) => (
   <div className="follow-box">
     <span className="follow-icon">{icon}</span>
-    <h3 className="follow-number">{quantity}</h3>
-    <span className="follow-text">{title}</span>
+    <div className="follow-stat">
+      <h3 className="follow-stat--number">{quantity}</h3>
+      <span className="follow-stat--text">{title}</span>
+    </div>
   </div>
 );
 

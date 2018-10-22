@@ -4,14 +4,14 @@ import { FaUserCheck, FaUserPlus } from "react-icons/fa";
 
 import Follow from "../Follow";
 
-const Sidebar = ({ avatar, bio, followers, following }) => (
+const Sidebar = ({ avatar, bio, followers, following, name }) => (
   <section className="content--sidebar">
     <div className="sidebar--header">
       <div className="sidebar--avatar">
         <img alt="Avatar" src={avatar} />
       </div>
       <div className="sidebar--info">
-        <h1 className="sidebar--info__title">Welcome Wesbos</h1>
+        <h1 className="sidebar--info__title">{name}</h1>
         <span className="sidebar--info__bio">{bio}</span>
       </div>
       <div className="sidebar--following">
@@ -34,6 +34,7 @@ const Sidebar = ({ avatar, bio, followers, following }) => (
 Sidebar.propTypes = {
   avatar: string.isRequired,
   bio: string.isRequired,
+  name: string.isRequired,
   followers: number.isRequired,
   following: number.isRequired
 };

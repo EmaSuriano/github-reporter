@@ -36,10 +36,6 @@ const getLanguage = pathOr("Unknown", ["node", "primaryLanguage", "name"]);
 
 const getRepository = path(["node", "name"]);
 
-const getFollowers = propOr(0, "totalCount");
-
-const getFollowing = propOr(0, "totalCount");
-
 const getStatistics = (accumulator, edge) => {
   const language = getLanguage(edge);
   const repository = getRepository(edge);
@@ -138,14 +134,15 @@ const updateRepositoryData = (repositoryInfo, edges, pageInfo) =>
     assocPath(["user", "repositories", "pageInfo"], pageInfo)
   )(repositoryInfo);
 
+const getTotalCount = propOr(0, "totalCount");
+
 export {
   createData,
   getEdges,
   getEndCursor,
-  getFollowers,
-  getFollowing,
   getPageInfo,
   getStatistics,
+  getTotalCount,
   hasNextPage,
   updateRepositoryData
 };

@@ -61,6 +61,15 @@ body {
   align-items: flex-start;
 }
 
+.input-search {
+  display: grid;
+  grid-template-columns: 1fr 5rem;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+  grid-template-areas: "searchbar-input searchbar-icon";
+  align-items: center;
+}
+
 input[type="text"] {
   font-family: "Niramit", sans-serif;
   background-color: #f6f6f6;

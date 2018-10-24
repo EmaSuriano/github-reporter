@@ -4,6 +4,8 @@ import { FaUserCheck, FaUserPlus } from "react-icons/fa";
 
 import Follow from "../Follow";
 
+const renderIcon = ({ Icon }) => <Icon size="2rem" />;
+
 const Sidebar = ({ avatar, bio, followers, following, name }) => (
   <section className="content--sidebar">
     <div className="sidebar--header">
@@ -16,13 +18,13 @@ const Sidebar = ({ avatar, bio, followers, following, name }) => (
       </div>
       <div className="sidebar--following">
         <Follow
-          icon={<FaUserCheck size="2rem" />}
+          icon={renderIcon({ Icon: FaUserCheck })}
           title="Followers"
           quantity={followers}
         />
 
         <Follow
-          icon={<FaUserPlus size="2rem" />}
+          icon={renderIcon({ Icon: FaUserPlus })}
           title="Following"
           quantity={following}
         />

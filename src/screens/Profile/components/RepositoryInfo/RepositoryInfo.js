@@ -24,6 +24,8 @@ import {
 import ActivityBox from "../ActivityBox";
 import Statistics from "../Statistics";
 
+const renderIcon = ({ Icon, ...props }) => <Icon size="4rem" {...props} />;
+
 const RepositoryInfo = ({
   id,
   login,
@@ -88,17 +90,17 @@ const RepositoryInfo = ({
           <section className="statistics-by-activity">
             <div className="activity--chart">Chart</div>
             <ActivityBox
-              icon={<GoRepo className="stats--icon" size="4rem" />}
+              icon={renderIcon({ Icon: GoRepo, className: "stats--icon" })}
               stat={repositories}
               title="Repositories"
             />
             <ActivityBox
-              icon={<GoStar className="stats--icon" size="4rem" />}
+              icon={renderIcon({ Icon: GoStar, className: "stats--icon" })}
               stat={starredRepositories}
               title="Starred"
             />
             <ActivityBox
-              icon={<GoPin className="stats--icon" size="4rem" />}
+              icon={renderIcon({ Icon: GoPin, className: "stats--icon" })}
               stat={pinnedRepositories}
               title="Pinned"
             />

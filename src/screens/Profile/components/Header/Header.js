@@ -16,7 +16,7 @@ export default class Header extends Component {
   render() {
     return (
       <section className="profile--header">
-        <h1 className="header--title">Reporter</h1>
+        <h1 className="header--title">Github Reporter</h1>
         <div className="input-search">
           <input
             type="text"

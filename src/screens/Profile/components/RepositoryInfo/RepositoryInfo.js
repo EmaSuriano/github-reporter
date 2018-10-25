@@ -22,6 +22,7 @@ import {
 } from "../../utils";
 
 import ActivityBox from "../ActivityBox";
+import ErrorReport from "shared/components/ErrorReport";
 import Statistics from "../Statistics";
 
 const renderIcon = ({ Icon, ...props }) => <Icon size="4rem" {...props} />;
@@ -47,7 +48,7 @@ const RepositoryInfo = ({
           />
         );
 
-      if (error) return "Error";
+      if (error) return <ErrorReport />;
 
       fetchMore({
         query: GET_REPOSITORIES_INFORMATION,

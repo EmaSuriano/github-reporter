@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Report Component when contains a defined property should render accordingly to the snapshot 1`] = `
+<div
+  className="error-box"
+>
+  Some Description
+</div>
+`;
+
+exports[`Error Report Component when have a default property should render accordingly to the snapshot 1`] = `
+<div
+  className="error-box"
+>
+  No results found
+</div>
+`;

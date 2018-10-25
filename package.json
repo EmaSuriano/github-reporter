@@ -10,6 +10,7 @@
     "apollo-link-context": "^1.0.9",
     "apollo-link-http": "^1.5.5",
     "chart.js": "^2.7.2",
+    "enzyme-adapter-react-16": "^1.6.0",
     "graphql": "^14.0.2",
     "prop-types": "^15.6.2",
     "ramda": "^0.25.0",
@@ -19,7 +20,8 @@
     "react-dom": "^16.5.2",
     "react-icons": "^3.2.1",
     "react-scripts": "1.1.5",
-    "react-spinners": "^0.4.7"
+    "react-spinners": "^0.4.7",
+    "react-test-renderer": "^16.6.0"
   },
   "husky": {
     "hooks": {
@@ -30,13 +32,33 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test:coverage": "npm run test -- --coverage",
     "eject": "react-scripts eject"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/index.js",
+      "src/**/*.{js,jsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 94,
+        "lines": 96,
+        "statements": 96
+      }
+    },
+    "coverageReporters": [
+      "lcov"
+    ]
+  },
   "devDependencies": {
+    "enzyme": "^3.7.0",
     "eslint": "^5.6.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "^2.6.2",
     "husky": "^1.0.0-rc.15",
+    "jest-enzyme": "^7.0.0",
     "prettier": "^1.14.3",
     "pretty-quick": "^1.7.0"
   }

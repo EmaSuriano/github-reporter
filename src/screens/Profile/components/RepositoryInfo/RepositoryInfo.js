@@ -124,7 +124,7 @@ const RepositoryInfo = ({
 
           <section className="statistics-by-repository">
             <Statistics
-              data={createData(dataSet, "repositories", "commits")}
+              data={createData(dataSet, "repositories", "stars")}
               configuration={CHART_LG_CONFIGURATION}
             />
             <Statistics

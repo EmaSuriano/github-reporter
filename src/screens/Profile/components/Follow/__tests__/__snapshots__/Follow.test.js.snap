@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Follow Component render should be match with html structure of the snapshot 1`] = `
+<div
+  className="follow-box"
+>
+  <span
+    className="follow-icon"
+  >
+    <span>
+      Icon
+    </span>
+  </span>
+  <div
+    className="follow-stat"
+  >
+    <h3
+      className="follow-stat--number"
+    >
+      10
+    </h3>
+    <span
+      className="follow-stat--text"
+    >
+      Title
+    </span>
+  </div>
+</div>
+`;

@@ -19,8 +19,7 @@ Statistics.propTypes = {
     datasets: arrayOf(
       shape({
         backgroundColor: arrayOf(string),
-        data: arrayOf(number),
-        hoverBackgroundColor: arrayOf(string)
+        data: arrayOf(number)
       })
     )
   })

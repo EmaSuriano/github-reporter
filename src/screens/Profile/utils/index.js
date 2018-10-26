@@ -109,9 +109,12 @@ const createData = (data, from, currentProp) => {
   };
 };
 
+const removeEmpties = data => filter(value => value !== 0, data);
+
 const getInfo = (data, param) =>
   compose(
     generateDataSet,
+    removeEmpties,
     map(prop(param)),
     reduce(transformStatistics(data), {}),
     take(10),

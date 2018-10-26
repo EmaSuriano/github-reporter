@@ -10,9 +10,9 @@ const ActivityBox = ({ icon, stat, title }) => (
 );
 
 ActivityBox.propTypes = {
-  icon: element,
-  stat: number,
-  title: string
+  icon: element.isRequired,
+  stat: number.isRequired,
+  title: string.isRequired
 };
 
 export default ActivityBox;

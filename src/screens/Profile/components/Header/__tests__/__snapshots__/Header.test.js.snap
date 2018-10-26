@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component render should match with html structure of the snapshot 1`] = `
+<section
+  className="profile--header"
+>
+  <h1
+    className="header--title"
+  >
+    Github Reporter
+  </h1>
+  <div
+    className="input-search"
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Who are you looking for ?"
+      type="text"
+      value=""
+    />
+    <span
+      className="input-search--button"
+      onClick={[Function]}
+    >
+      <FaSearch
+        size="2rem"
+      />
+    </span>
+  </div>
+</section>
+`;

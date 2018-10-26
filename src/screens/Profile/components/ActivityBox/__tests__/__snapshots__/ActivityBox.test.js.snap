@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Activity Box Component render should be match with html structure of the snapshot 1`] = `
+<div
+  className="activity--stats activity--box"
+>
+  <span>
+    Icon
+  </span>
+  <h1
+    className="stats--number"
+  >
+    5
+  </h1>
+  <span
+    className="stats--title"
+  >
+    Title
+  </span>
+</div>
+`;

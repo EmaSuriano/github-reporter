@@ -1,0 +1,9 @@
+{
+  "labels": ["JavaScript", "PHP", "HTML"],
+  "datasets": [
+    {
+      "backgroundColor": ["#DS25F1", "#21FAAC"],
+      "data": [100, 32, 46]
+    }
+  ]
+}

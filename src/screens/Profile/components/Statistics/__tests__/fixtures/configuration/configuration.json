@@ -1,0 +1,18 @@
+{
+  "height": 300,
+  "width": 400,
+  "options": {
+    "maintainAspectRatio": false,
+    "responsive": false,
+    "legend": {
+      "position": "left",
+      "labels": {
+        "usePointStyle": true,
+        "fontSize": 12,
+        "padding": 15,
+        "boxWidth": 12
+      }
+    },
+    "tooltips": { "enabled": true }
+  }
+}

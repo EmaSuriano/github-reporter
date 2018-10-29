@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Statistics Component render should match with the html structure of snapshot 1`] = `
+<div
+  className="statistic--box"
+>
+  <Doughnut
+    data={
+      Object {
+        "datasets": Array [
+          Object {
+            "backgroundColor": Array [
+              "#DS25F1",
+              "#21FAAC",
+            ],
+            "data": Array [
+              100,
+              32,
+              46,
+            ],
+          },
+        ],
+        "labels": Array [
+          "JavaScript",
+          "PHP",
+          "HTML",
+        ],
+      }
+    }
+    height={300}
+    options={
+      Object {
+        "legend": Object {
+          "labels": Object {
+            "boxWidth": 12,
+            "fontSize": 12,
+            "padding": 15,
+            "usePointStyle": true,
+          },
+          "position": "left",
+        },
+        "maintainAspectRatio": false,
+        "responsive": false,
+        "tooltips": Object {
+          "enabled": true,
+        },
+      }
+    }
+    width={400}
+  />
+</div>
+`;

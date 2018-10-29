@@ -1,11 +1,17 @@
 import React from "react";
 import { arrayOf, number, shape, string } from "prop-types";
+import { isEmpty } from "ramda";
 import { Doughnut } from "react-chartjs-2";
+
+import NoDataFound from "../NoDataFound";
 
 const Statistics = ({ data, configuration, title }) => (
   <div className="statistic--box">
-    <h1>{title}</h1>
-    <Doughnut data={data} {...configuration} />
+    {isEmpty(data.labels) ? (
+      <NoDataFound />
+    ) : (
+      <Doughnut data={data} {...configuration} />
+    )}
   </div>
 );
 

@@ -42,3 +42,5 @@ export const CHART_LG_CONFIGURATION = {
 };
 
 export const MIN_LANGUAGES = 1;
+
+export const NO_RESULTS_FOUND = "No Results Found";

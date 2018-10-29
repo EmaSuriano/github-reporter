@@ -313,3 +313,14 @@ input:focus {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
+
+.not-results {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(20deg);
+  font-size: 3rem;
+  color: #a52424;
+  text-transform: uppercase;
+}

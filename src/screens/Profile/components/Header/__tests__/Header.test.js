@@ -21,7 +21,7 @@ describe("Header Component", () => {
       expect(wrapper).toMatchSnapshot());
   });
 
-  describe("methods", () => {
+  describe("inner methods", () => {
     const mockedEvent = { target: { value: "wesbos" } };
 
     describe("handleInput", () => {

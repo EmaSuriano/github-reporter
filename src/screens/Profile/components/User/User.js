@@ -42,8 +42,6 @@ const User = ({ profile }) => (
         starredRepositories
       } = propOr({}, "user")(data);
 
-      console.log("HERE", data);
-
       return (
         <section className="profile--content">
           <Sidebar

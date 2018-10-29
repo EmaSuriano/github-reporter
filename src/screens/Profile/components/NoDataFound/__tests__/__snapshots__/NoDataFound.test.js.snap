@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoDataFound Component render should match with the html structure of the snapshot 1`] = `
+<div
+  className="not-results"
+>
+  No Results Found
+</div>
+`;

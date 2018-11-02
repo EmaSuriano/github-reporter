@@ -1,0 +1,698 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User Component render without errors when has more than one page should render full page 1`] = `
+<section
+  className="profile--content"
+>
+  <Sidebar
+    avatar="https://avatars0.githubusercontent.com/u/3399429?v=4"
+    bio="Hi 👋 Normally I build stuff with JavaScript 💻 Sometimes I give talks 💬 Once a month I write an article ✍"
+    followers={13}
+    following={11}
+    name="Emanuel Suriano"
+  >
+    <section
+      className="content--sidebar"
+    >
+      <div
+        className="sidebar--header"
+      >
+        <div
+          className="sidebar--avatar"
+        >
+          <img
+            alt="Avatar"
+            src="https://avatars0.githubusercontent.com/u/3399429?v=4"
+          />
+        </div>
+        <div
+          className="sidebar--info"
+        >
+          <h1
+            className="sidebar--info__title"
+          >
+            Emanuel Suriano
+          </h1>
+          <span
+            className="sidebar--info__bio"
+          >
+            Hi 👋 Normally I build stuff with JavaScript 💻 Sometimes I give talks 💬 Once a month I write an article ✍
+          </span>
+        </div>
+        <div
+          className="sidebar--following"
+        >
+          <Follow
+            icon={
+              <FaUserCheck
+                size="2rem"
+              />
+            }
+            quantity={13}
+            title="Followers"
+          >
+            <div
+              className="follow-box"
+            >
+              <span
+                className="follow-icon"
+              >
+                <FaUserCheck
+                  size="2rem"
+                >
+                  <IconBase
+                    attr={
+                      Object {
+                        "viewBox": "0 0 640 512",
+                      }
+                    }
+                    size="2rem"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="2rem"
+                      size="2rem"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 640 512"
+                      width="2rem"
+                    >
+                      <path
+                        d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4zm323-128.4l-27.8-28.1c-4.6-4.7-12.1-4.7-16.8-.1l-104.8 104-45.5-45.8c-4.6-4.7-12.1-4.7-16.8-.1l-28.1 27.9c-4.7 4.6-4.7 12.1-.1 16.8l81.7 82.3c4.6 4.7 12.1 4.7 16.8.1l141.3-140.2c4.6-4.7 4.7-12.2.1-16.8z"
+                        key="0"
+                      />
+                    </svg>
+                  </IconBase>
+                </FaUserCheck>
+              </span>
+              <div
+                className="follow-stat"
+              >
+                <h3
+                  className="follow-stat--number"
+                >
+                  13
+                </h3>
+                <span
+                  className="follow-stat--text"
+                >
+                  Followers
+                </span>
+              </div>
+            </div>
+          </Follow>
+          <Follow
+            icon={
+              <FaUserPlus
+                size="2rem"
+              />
+            }
+            quantity={11}
+            title="Following"
+          >
+            <div
+              className="follow-box"
+            >
+              <span
+                className="follow-icon"
+              >
+                <FaUserPlus
+                  size="2rem"
+                >
+                  <IconBase
+                    attr={
+                      Object {
+                        "viewBox": "0 0 640 512",
+                      }
+                    }
+                    size="2rem"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="2rem"
+                      size="2rem"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 640 512"
+                      width="2rem"
+                    >
+                      <path
+                        d="M624 208h-64v-64c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v64h-64c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h64v64c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-64h64c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm-400 48c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+                        key="0"
+                      />
+                    </svg>
+                  </IconBase>
+                </FaUserPlus>
+              </span>
+              <div
+                className="follow-stat"
+              >
+                <h3
+                  className="follow-stat--number"
+                >
+                  11
+                </h3>
+                <span
+                  className="follow-stat--text"
+                >
+                  Following
+                </span>
+              </div>
+            </div>
+          </Follow>
+        </div>
+      </div>
+    </section>
+  </Sidebar>
+  <RepositoryInfo
+    id="MDQ6VXNlcjMzOTk0Mjk="
+    login="EmaSuriano"
+    pinnedRepositories={4}
+    repositories={71}
+    starredRepositories={69}
+  >
+    <Query
+      query={
+        Object {
+          "definitions": Array [
+            Object {
+              "directives": Array [],
+              "kind": "OperationDefinition",
+              "name": undefined,
+              "operation": "query",
+              "selectionSet": Object {
+                "kind": "SelectionSet",
+                "selections": Array [
+                  Object {
+                    "alias": undefined,
+                    "arguments": Array [
+                      Object {
+                        "kind": "Argument",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "login",
+                        },
+                        "value": Object {
+                          "kind": "Variable",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "name",
+                          },
+                        },
+                      },
+                    ],
+                    "directives": Array [],
+                    "kind": "Field",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "user",
+                    },
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "id",
+                          },
+                          "selectionSet": undefined,
+                        },
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [
+                            Object {
+                              "kind": "Argument",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "orderBy",
+                              },
+                              "value": Object {
+                                "fields": Array [
+                                  Object {
+                                    "kind": "ObjectField",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "direction",
+                                    },
+                                    "value": Object {
+                                      "kind": "EnumValue",
+                                      "value": "DESC",
+                                    },
+                                  },
+                                  Object {
+                                    "kind": "ObjectField",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "field",
+                                    },
+                                    "value": Object {
+                                      "kind": "EnumValue",
+                                      "value": "STARGAZERS",
+                                    },
+                                  },
+                                ],
+                                "kind": "ObjectValue",
+                              },
+                            },
+                            Object {
+                              "kind": "Argument",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "affiliations",
+                              },
+                              "value": Object {
+                                "kind": "ListValue",
+                                "values": Array [
+                                  Object {
+                                    "kind": "EnumValue",
+                                    "value": "OWNER",
+                                  },
+                                ],
+                              },
+                            },
+                            Object {
+                              "kind": "Argument",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "first",
+                              },
+                              "value": Object {
+                                "kind": "IntValue",
+                                "value": "100",
+                              },
+                            },
+                            Object {
+                              "kind": "Argument",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "after",
+                              },
+                              "value": Object {
+                                "kind": "Variable",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "cursor",
+                                },
+                              },
+                            },
+                          ],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "repositories",
+                          },
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "pageInfo",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "hasNextPage",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "endCursor",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                  ],
+                                },
+                              },
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "edges",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "node",
+                                      },
+                                      "selectionSet": Object {
+                                        "kind": "SelectionSet",
+                                        "selections": Array [
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "name",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "isFork",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "primaryLanguage",
+                                            },
+                                            "selectionSet": Object {
+                                              "kind": "SelectionSet",
+                                              "selections": Array [
+                                                Object {
+                                                  "alias": undefined,
+                                                  "arguments": Array [],
+                                                  "directives": Array [],
+                                                  "kind": "Field",
+                                                  "name": Object {
+                                                    "kind": "Name",
+                                                    "value": "name",
+                                                  },
+                                                  "selectionSet": undefined,
+                                                },
+                                                Object {
+                                                  "alias": undefined,
+                                                  "arguments": Array [],
+                                                  "directives": Array [],
+                                                  "kind": "Field",
+                                                  "name": Object {
+                                                    "kind": "Name",
+                                                    "value": "color",
+                                                  },
+                                                  "selectionSet": undefined,
+                                                },
+                                              ],
+                                            },
+                                          },
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "stargazers",
+                                            },
+                                            "selectionSet": Object {
+                                              "kind": "SelectionSet",
+                                              "selections": Array [
+                                                Object {
+                                                  "alias": undefined,
+                                                  "arguments": Array [],
+                                                  "directives": Array [],
+                                                  "kind": "Field",
+                                                  "name": Object {
+                                                    "kind": "Name",
+                                                    "value": "totalCount",
+                                                  },
+                                                  "selectionSet": undefined,
+                                                },
+                                              ],
+                                            },
+                                          },
+                                          Object {
+                                            "alias": Object {
+                                              "kind": "Name",
+                                              "value": "masterBranch",
+                                            },
+                                            "arguments": Array [
+                                              Object {
+                                                "kind": "Argument",
+                                                "name": Object {
+                                                  "kind": "Name",
+                                                  "value": "qualifiedName",
+                                                },
+                                                "value": Object {
+                                                  "block": false,
+                                                  "kind": "StringValue",
+                                                  "value": "master",
+                                                },
+                                              },
+                                            ],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "ref",
+                                            },
+                                            "selectionSet": Object {
+                                              "kind": "SelectionSet",
+                                              "selections": Array [
+                                                Object {
+                                                  "alias": undefined,
+                                                  "arguments": Array [],
+                                                  "directives": Array [],
+                                                  "kind": "Field",
+                                                  "name": Object {
+                                                    "kind": "Name",
+                                                    "value": "target",
+                                                  },
+                                                  "selectionSet": Object {
+                                                    "kind": "SelectionSet",
+                                                    "selections": Array [
+                                                      Object {
+                                                        "directives": Array [],
+                                                        "kind": "InlineFragment",
+                                                        "selectionSet": Object {
+                                                          "kind": "SelectionSet",
+                                                          "selections": Array [
+                                                            Object {
+                                                              "alias": undefined,
+                                                              "arguments": Array [
+                                                                Object {
+                                                                  "kind": "Argument",
+                                                                  "name": Object {
+                                                                    "kind": "Name",
+                                                                    "value": "first",
+                                                                  },
+                                                                  "value": Object {
+                                                                    "kind": "IntValue",
+                                                                    "value": "0",
+                                                                  },
+                                                                },
+                                                                Object {
+                                                                  "kind": "Argument",
+                                                                  "name": Object {
+                                                                    "kind": "Name",
+                                                                    "value": "author",
+                                                                  },
+                                                                  "value": Object {
+                                                                    "fields": Array [
+                                                                      Object {
+                                                                        "kind": "ObjectField",
+                                                                        "name": Object {
+                                                                          "kind": "Name",
+                                                                          "value": "id",
+                                                                        },
+                                                                        "value": Object {
+                                                                          "kind": "Variable",
+                                                                          "name": Object {
+                                                                            "kind": "Name",
+                                                                            "value": "id",
+                                                                          },
+                                                                        },
+                                                                      },
+                                                                    ],
+                                                                    "kind": "ObjectValue",
+                                                                  },
+                                                                },
+                                                              ],
+                                                              "directives": Array [],
+                                                              "kind": "Field",
+                                                              "name": Object {
+                                                                "kind": "Name",
+                                                                "value": "history",
+                                                              },
+                                                              "selectionSet": Object {
+                                                                "kind": "SelectionSet",
+                                                                "selections": Array [
+                                                                  Object {
+                                                                    "alias": undefined,
+                                                                    "arguments": Array [],
+                                                                    "directives": Array [],
+                                                                    "kind": "Field",
+                                                                    "name": Object {
+                                                                      "kind": "Name",
+                                                                      "value": "totalCount",
+                                                                    },
+                                                                    "selectionSet": undefined,
+                                                                  },
+                                                                ],
+                                                              },
+                                                            },
+                                                          ],
+                                                        },
+                                                        "typeCondition": Object {
+                                                          "kind": "NamedType",
+                                                          "name": Object {
+                                                            "kind": "Name",
+                                                            "value": "Commit",
+                                                          },
+                                                        },
+                                                      },
+                                                    ],
+                                                  },
+                                                },
+                                              ],
+                                            },
+                                          },
+                                        ],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+              "variableDefinitions": Array [
+                Object {
+                  "defaultValue": undefined,
+                  "kind": "VariableDefinition",
+                  "type": Object {
+                    "kind": "NonNullType",
+                    "type": Object {
+                      "kind": "NamedType",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "String",
+                      },
+                    },
+                  },
+                  "variable": Object {
+                    "kind": "Variable",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "name",
+                    },
+                  },
+                },
+                Object {
+                  "defaultValue": undefined,
+                  "kind": "VariableDefinition",
+                  "type": Object {
+                    "kind": "NonNullType",
+                    "type": Object {
+                      "kind": "NamedType",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "ID",
+                      },
+                    },
+                  },
+                  "variable": Object {
+                    "kind": "Variable",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "id",
+                    },
+                  },
+                },
+                Object {
+                  "defaultValue": undefined,
+                  "kind": "VariableDefinition",
+                  "type": Object {
+                    "kind": "NamedType",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "String",
+                    },
+                  },
+                  "variable": Object {
+                    "kind": "Variable",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "cursor",
+                    },
+                  },
+                },
+              ],
+            },
+          ],
+          "kind": "Document",
+          "loc": Object {
+            "end": 843,
+            "start": 0,
+          },
+        }
+      }
+      variables={
+        Object {
+          "id": "MDQ6VXNlcjMzOTk0Mjk=",
+          "name": "EmaSuriano",
+        }
+      }
+    >
+      <ErrorReport
+        description="No results found"
+      >
+        <div
+          className="error-box"
+        >
+          No results found
+        </div>
+      </ErrorReport>
+    </Query>
+  </RepositoryInfo>
+</section>
+`;

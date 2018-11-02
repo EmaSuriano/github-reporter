@@ -13,7 +13,7 @@ const propsWithLabels = {
 };
 
 const propsWithoutLabels = {
-  data: [],
+  data: {},
   title: "Title"
 };
 

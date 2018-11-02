@@ -36,9 +36,9 @@ const Sidebar = ({ avatar, bio, followers, following, name }) => (
 Sidebar.propTypes = {
   avatar: string.isRequired,
   bio: string.isRequired,
-  name: string.isRequired,
   followers: number.isRequired,
-  following: number.isRequired
+  following: number.isRequired,
+  name: string.isRequired
 };
 
 export default Sidebar;

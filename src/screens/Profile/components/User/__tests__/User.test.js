@@ -1,19 +1,27 @@
 import React from "react";
 import { mount } from "enzyme";
 import { MockedProvider } from "react-apollo/test-utils";
+import User from "../User";
+import { PROFILE_INFO } from "../query";
 import wait from "waait";
-
-import RepositoryInfo from "../RepositoryInfo";
-import { GET_REPOSITORIES_INFORMATION } from "../query";
-
 import queryMock from "./fixtures/query-mock";
 
-const variables = { name: "wesbos", id: "MDQ6VXNlcjMzOTk0Mjk=" };
+const variables = { name: "emasuriano" };
+
+const queryErrorMock = [
+  {
+    request: {
+      query: PROFILE_INFO,
+      variables
+    },
+    error: new Error("Query Error")
+  }
+];
 
 const queryMockWithData = [
   {
     request: {
-      query: GET_REPOSITORIES_INFORMATION,
+      query: PROFILE_INFO,
       variables
     },
     result: {
@@ -22,15 +30,7 @@ const queryMockWithData = [
   }
 ];
 
-const queryErrorMock = {
-  request: {
-    query: GET_REPOSITORIES_INFORMATION,
-    variables
-  },
-  error: new Error("Query Error")
-};
-
-describe("Repository Info Component", () => {
+describe("User Component", () => {
   describe("render", () => {
     let wrapper;
 
@@ -40,7 +40,7 @@ describe("Repository Info Component", () => {
       beforeAll(() => {
         wrapper = mount(
           <MockedProvider mocks={[]} addTypename={false}>
-            <RepositoryInfo />
+            <User profile="emasuriano" />
           </MockedProvider>
         );
 
@@ -75,8 +75,8 @@ describe("Repository Info Component", () => {
 
       beforeAll(async () => {
         wrapper = mount(
-          <MockedProvider mocks={[queryErrorMock]} addTypename={false}>
-            <RepositoryInfo login="wesbos" id="124345343" />
+          <MockedProvider mocks={queryErrorMock} addTypename={false}>
+            <User profile="emasuriano" />
           </MockedProvider>
         );
 
@@ -93,24 +93,25 @@ describe("Repository Info Component", () => {
         expect(error.prop("description")).toBe("No results found"));
     });
 
-    describe.only("without errors", () => {
+    describe("without errors", () => {
       describe("when has just one page", () => {});
 
       describe("when has more than one page", () => {
+        let main;
+
         beforeAll(async () => {
           wrapper = mount(
             <MockedProvider mocks={queryMockWithData}>
-              <RepositoryInfo login="wesbos" id="MDQ6VXNlcjMzOTk0Mjk=" />
+              <User profile="emasuriano" />
             </MockedProvider>
           );
 
           await wait();
           wrapper.update();
+          main = wrapper.find("section.profile--content");
         });
 
-        it("should", () => {
-          expect(true).toBe(true);
-        });
+        it("should render full page", () => expect(main).toMatchSnapshot());
       });
     });
   });

@@ -1,0 +1,25 @@
+{
+  "user": {
+    "avatarUrl": "https://avatars0.githubusercontent.com/u/3399429?v=4",
+    "bio": "Hi 👋 Normally I build stuff with JavaScript 💻 Sometimes I give talks 💬 Once a month I write an article ✍",
+    "company": "@goeuro ",
+    "createdAt": "2013-01-27T20:05:30Z",
+    "email": "emanuel.suriano@gmail.com",
+    "id": "MDQ6VXNlcjMzOTk0Mjk=",
+    "location": "Berlin, Germany",
+    "login": "EmaSuriano",
+    "name": "Emanuel Suriano",
+    "followers": { "totalCount": 13, "__typename": "FollowerConnection" },
+    "following": { "totalCount": 11, "__typename": "FollowingConnection" },
+    "pinnedRepositories": {
+      "totalCount": 4,
+      "__typename": "RepositoryConnection"
+    },
+    "repositories": { "totalCount": 71, "__typename": "RepositoryConnection" },
+    "starredRepositories": {
+      "totalCount": 69,
+      "__typename": "StarredRepositoryConnection"
+    },
+    "__typename": "User"
+  }
+}

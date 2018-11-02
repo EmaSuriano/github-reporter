@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Statistics Component render should match with the html structure of snapshot 1`] = `
+exports[`Statistics Component render when have labels should match with the html structure of snapshot 1`] = `
 <div
   className="statistic--box"
 >
@@ -47,6 +47,16 @@ exports[`Statistics Component render should match with the html structure of sna
       }
     }
     width={400}
+  />
+</div>
+`;
+
+exports[`Statistics Component render when labels are empty should match with the html structure of snapshot 1`] = `
+<div
+  className="statistic--box"
+>
+  <Doughnut
+    data={Object {}}
   />
 </div>
 `;

@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar render should match with html structure of the snapshot 1`] = `
+<section
+  className="content--sidebar"
+>
+  <div
+    className="sidebar--header"
+  >
+    <div
+      className="sidebar--avatar"
+    >
+      <img
+        alt="Avatar"
+        src="Avatar"
+      />
+    </div>
+    <div
+      className="sidebar--info"
+    >
+      <h1
+        className="sidebar--info__title"
+      >
+        Kyle Simpson
+      </h1>
+      <span
+        className="sidebar--info__bio"
+      >
+        Biography
+      </span>
+    </div>
+    <div
+      className="sidebar--following"
+    >
+      <Follow
+        icon={
+          <FaUserCheck
+            size="2rem"
+          />
+        }
+        quantity={40}
+        title="Followers"
+      />
+      <Follow
+        icon={
+          <FaUserPlus
+            size="2rem"
+          />
+        }
+        quantity={22}
+        title="Following"
+      />
+    </div>
+  </div>
+</section>
+`;

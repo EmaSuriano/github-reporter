@@ -92,26 +92,5 @@ describe("Repository Info Component", () => {
       it("should has a default description for error", () =>
         expect(error.prop("description")).toBe("No results found"));
     });
-
-    describe.only("without errors", () => {
-      describe("when has just one page", () => {});
-
-      describe("when has more than one page", () => {
-        beforeAll(async () => {
-          wrapper = mount(
-            <MockedProvider mocks={queryMockWithData}>
-              <RepositoryInfo login="wesbos" id="MDQ6VXNlcjMzOTk0Mjk=" />
-            </MockedProvider>
-          );
-
-          await wait();
-          wrapper.update();
-        });
-
-        it("should", () => {
-          expect(true).toBe(true);
-        });
-      });
-    });
   });
 });

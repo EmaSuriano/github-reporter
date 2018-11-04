@@ -36,11 +36,11 @@ describe("Main Profile Screen Component", () => {
       let user;
 
       beforeAll(() => {
-        wrapper.setState({ user: "kentcdodds" });
+        wrapper.instance().searchProfile("kentcdodds");
         user = wrapper.state("user");
       });
 
-      it("should set state when call to searchProfile", () =>
+      it("should modify the state when call to searchProfile", () =>
         expect(user).toBe("kentcdodds"));
     });
   });

@@ -78,6 +78,21 @@ describe("Helper Functions", () => {
   describe("transformStatistics", () => {
     let result;
 
+    describe("when statistics are not passed", () => {
+      const accumulator = { PHP: { commits: 100, repositories: 40 } };
+      const key = "CSS";
+
+      beforeEach(() => {
+        result = transformStatistics()(accumulator, key);
+      });
+
+      it("should return accumulator with CSS as key and an empty object inside", () =>
+        expect(result).toEqual({
+          CSS: {},
+          PHP: { commits: 100, repositories: 40 }
+        }));
+    });
+
     describe("when the key exists within statistics", () => {
       const statistics = { CSS: { commits: 10, repositories: 5 } };
       const accumulator = { JavaScript: { commits: 100, repositories: 40 } };

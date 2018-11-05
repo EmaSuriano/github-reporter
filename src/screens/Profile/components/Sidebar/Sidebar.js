@@ -1,12 +1,24 @@
 import React from "react";
 import { number, string } from "prop-types";
 import { FaUserCheck, FaUserPlus } from "react-icons/fa";
+import { GoClock, GoCode, GoMail } from "react-icons/go";
+import moment from "moment";
 
-import Follow from "../Follow";
+import Follow from "./components/Follow";
+import StatsBox from "./components/StatsBox";
 
-const renderIcon = ({ Icon }) => <Icon size="2rem" />;
+const renderIcon = ({ Icon, ...props }) => <Icon size="2rem" {...props} />;
 
-const Sidebar = ({ avatar, bio, followers, following, name }) => (
+const Sidebar = ({
+  avatar,
+  bio,
+  company,
+  createdAt,
+  email,
+  followers,
+  following,
+  name
+}) => (
   <section className="content--sidebar">
     <div className="sidebar--header">
       <div className="sidebar--avatar">
@@ -29,13 +41,30 @@ const Sidebar = ({ avatar, bio, followers, following, name }) => (
           quantity={following}
         />
       </div>
+      <div className="algo">
+        <StatsBox
+          icon={renderIcon({ Icon: GoClock, size: "3rem" })}
+          title={`Joined Github ${moment(createdAt).fromNow()}`}
+        />
+        <StatsBox
+          icon={renderIcon({ Icon: GoMail, size: "3rem" })}
+          title={email}
+        />
+        <StatsBox
+          icon={renderIcon({ Icon: GoCode, size: "3rem" })}
+          title={company}
+        />
+      </div>
     </div>
   </section>
 );
 
 Sidebar.propTypes = {
   avatar: string.isRequired,
-  bio: string.isRequired,
+  bio: string,
+  company: string,
+  createdAt: string,
+  email: string,
   followers: number.isRequired,
   following: number.isRequired,
   name: string.isRequired

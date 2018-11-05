@@ -199,6 +199,13 @@ input:focus {
   border-radius: 0.5rem;
 }
 
+.statistic--box-title {
+  text-align: center;
+  padding: 0 0 1.5rem 0;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
 .statistics-by-language {
   grid-area: by-language;
   display: grid;
@@ -319,8 +326,21 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: rotate(20deg);
-  font-size: 3rem;
+  font-size: 2rem;
   color: #a52424;
   text-transform: uppercase;
+}
+
+.sidebar--extra-info {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "icon info";
+  justify-items: center;
+  align-items: center;
+}
+
+.extra-info-title {
+  margin: 1rem 0;
 }

@@ -7,6 +7,7 @@ import NoDataFound from "../NoDataFound";
 
 const Statistics = ({ data, configuration, title }) => (
   <div className="statistic--box">
+    <h1 className="statistic--box-title">{title}</h1>
     {isEmpty(data.labels) ? (
       <NoDataFound />
     ) : (

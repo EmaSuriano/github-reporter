@@ -21,9 +21,9 @@ import {
   hasNextPage
 } from "../../utils";
 
-import ActivityBox from "../ActivityBox";
+import ActivityBox from "./components/ActivityBox";
 import ErrorReport from "shared/components/ErrorReport";
-import Statistics from "../Statistics";
+import Statistics from "./components/Statistics";
 
 const renderIcon = ({ Icon, ...props }) => <Icon size="4rem" {...props} />;
 
@@ -109,14 +109,17 @@ const RepositoryInfo = ({
 
           <section className="statistics-by-language">
             <Statistics
+              title="Repositories per Language"
               data={createData(dataSet, "languages", "repositories")}
               configuration={CHART_SM_CONFIGURATION}
             />
             <Statistics
+              title="Stars per Language"
               data={createData(dataSet, "languages", "stars")}
               configuration={CHART_SM_CONFIGURATION}
             />
             <Statistics
+              title="Commits per Language"
               data={createData(dataSet, "languages", "commits")}
               configuration={CHART_SM_CONFIGURATION}
             />
@@ -124,10 +127,12 @@ const RepositoryInfo = ({
 
           <section className="statistics-by-repository">
             <Statistics
+              title="Commits per Repo Top 10"
               data={createData(dataSet, "repositories", "stars")}
               configuration={CHART_LG_CONFIGURATION}
             />
             <Statistics
+              title="Stars per Repo Top 10"
               data={createData(dataSet, "repositories", "commits")}
               configuration={CHART_LG_CONFIGURATION}
             />

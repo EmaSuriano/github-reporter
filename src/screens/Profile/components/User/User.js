@@ -32,6 +32,9 @@ const User = ({ profile }) => (
       const {
         avatarUrl,
         bio,
+        company,
+        createdAt,
+        email,
         followers,
         following,
         id,
@@ -47,6 +50,9 @@ const User = ({ profile }) => (
           <Sidebar
             avatar={avatarUrl}
             bio={bio}
+            company={company}
+            createdAt={createdAt}
+            email={email}
             followers={getTotalCount(followers)}
             following={getTotalCount(following)}
             name={name}

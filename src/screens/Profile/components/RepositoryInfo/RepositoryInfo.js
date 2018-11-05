@@ -88,8 +88,39 @@ const RepositoryInfo = ({
 
       return (
         <section className="content--container">
+          <div>
+            <section className="statistics-by-language">
+              <Statistics
+                title="Repositories per Language"
+                data={createData(dataSet, "languages", "repositories")}
+                configuration={CHART_SM_CONFIGURATION}
+              />
+              <Statistics
+                title="Stars per Language"
+                data={createData(dataSet, "languages", "stars")}
+                configuration={CHART_SM_CONFIGURATION}
+              />
+              <Statistics
+                title="Commits per Language"
+                data={createData(dataSet, "languages", "commits")}
+                configuration={CHART_SM_CONFIGURATION}
+              />
+            </section>
+
+            <section className="statistics-by-repository">
+              <Statistics
+                title="Commits per Repo Top 10"
+                data={createData(dataSet, "repositories", "stars")}
+                configuration={CHART_LG_CONFIGURATION}
+              />
+              <Statistics
+                title="Stars per Repo Top 10"
+                data={createData(dataSet, "repositories", "commits")}
+                configuration={CHART_LG_CONFIGURATION}
+              />
+            </section>
+          </div>
           <section className="statistics-by-activity">
-            <div className="activity--chart">Chart</div>
             <ActivityBox
               icon={renderIcon({ Icon: GoRepo, className: "stats--icon" })}
               stat={repositories}
@@ -104,37 +135,6 @@ const RepositoryInfo = ({
               icon={renderIcon({ Icon: GoPin, className: "stats--icon" })}
               stat={pinnedRepositories}
               title="Pinned"
-            />
-          </section>
-
-          <section className="statistics-by-language">
-            <Statistics
-              title="Repositories per Language"
-              data={createData(dataSet, "languages", "repositories")}
-              configuration={CHART_SM_CONFIGURATION}
-            />
-            <Statistics
-              title="Stars per Language"
-              data={createData(dataSet, "languages", "stars")}
-              configuration={CHART_SM_CONFIGURATION}
-            />
-            <Statistics
-              title="Commits per Language"
-              data={createData(dataSet, "languages", "commits")}
-              configuration={CHART_SM_CONFIGURATION}
-            />
-          </section>
-
-          <section className="statistics-by-repository">
-            <Statistics
-              title="Commits per Repo Top 10"
-              data={createData(dataSet, "repositories", "stars")}
-              configuration={CHART_LG_CONFIGURATION}
-            />
-            <Statistics
-              title="Stars per Repo Top 10"
-              data={createData(dataSet, "repositories", "commits")}
-              configuration={CHART_LG_CONFIGURATION}
             />
           </section>
         </section>

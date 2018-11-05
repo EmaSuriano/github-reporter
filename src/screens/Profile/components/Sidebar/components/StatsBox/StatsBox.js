@@ -14,7 +14,7 @@ StatsBox.defaultProps = {
 
 StatsBox.propTypes = {
   icon: element.isRequired,
-  title: string.isRequired
+  title: string
 };
 
 export default StatsBox;

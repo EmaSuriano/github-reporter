@@ -1,0 +1,17 @@
+{
+  "node": {
+    "name": "anchor-css-transition",
+    "isFork": true,
+    "primaryLanguage": "CSS",
+    "stargazers": { "totalCount": 0, "__typename": "StargazerConnection" },
+    "masterBranch": {
+      "target": {
+        "history": { "totalCount": 1, "__typename": "CommitHistoryConnection" },
+        "__typename": "Commit"
+      },
+      "__typename": "Ref"
+    },
+    "__typename": "Repository"
+  },
+  "__typename": "RepositoryEdge"
+}

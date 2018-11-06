@@ -1,4 +1,5 @@
 [![Travis badge](https://travis-ci.com/Damimd10/github-reporter.svg)](https://travis-ci.com/Damimd10/github-reporter)
+[![Coverage Status](https://coveralls.io/repos/github/Damimd10/github-reporter/badge.svg?branch=master)](https://coveralls.io/github/Damimd10/github-reporter?branch=master)
 [![eslint](https://img.shields.io/badge/eslint-enabled-green.svg)](https://eslint.org/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 

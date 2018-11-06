@@ -30,7 +30,7 @@
     }
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env NODE_PATH=./src react-scripts start",
     "build": "react-scripts build",
     "test": "cross-env CI=true NODE_PATH=./src react-scripts test --env=jsdom --colors",
     "test:coverage": "npm run test -- --coverage",

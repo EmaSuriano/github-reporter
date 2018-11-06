@@ -5,6 +5,10 @@ cache:
   directories:
     - node_modules
 
+branches:
+  only:
+    - master
+
 notifications:
   email: false
 
@@ -14,9 +18,5 @@ node_js:
 before_install:
   - npm install coveralls
 
-after_success:
-  - npm run test:coverage
-
-branches:
-  only:
-    - master
+script:
+  - npm run coveralls

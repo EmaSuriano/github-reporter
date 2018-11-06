@@ -20,3 +20,6 @@ before_install:
 
 script:
   - npm run coveralls
+
+after_success:
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js

@@ -14,11 +14,7 @@ node_js:
 before_install:
   - npm install coveralls
 
-after_script:
-  - npm run test:coverage
-
-after_success:
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+after_success: coveralls
 
 branches:
   only:

@@ -6,18 +6,19 @@ import wait from "waait";
 import RepositoryInfo from "../RepositoryInfo";
 import { GET_REPOSITORIES_INFORMATION } from "../query";
 
-import queryMock from "./fixtures/query-mock";
+import mockedQueryResponse from "./fixtures/query-mock";
+import mockedQueryResponseWithNextPage from "./fixtures/query-mock-with-next-page";
 
 const variables = { name: "wesbos", id: "MDQ6VXNlcjMzOTk0Mjk=" };
 
-const queryMockWithData = [
+const querySuccess = [
   {
     request: {
       query: GET_REPOSITORIES_INFORMATION,
       variables
     },
     result: {
-      data: queryMock
+      data: mockedQueryResponse
     }
   }
 ];
@@ -30,6 +31,18 @@ const queryErrorMock = {
   error: new Error("Query Error")
 };
 
+const queryFirstPage = [
+  {
+    request: {
+      query: GET_REPOSITORIES_INFORMATION,
+      variables: { ...variables, endCursor: "Y3Vyc29yOnYyOpIAzgIGNAs=" }
+    },
+    result: {
+      data: mockedQueryResponseWithNextPage
+    }
+  }
+];
+
 describe("Repository Info Component", () => {
   describe("render", () => {
     let wrapper;
@@ -39,7 +52,7 @@ describe("Repository Info Component", () => {
 
       beforeAll(() => {
         wrapper = mount(
-          <MockedProvider mocks={[]} addTypename={false}>
+          <MockedProvider mocks={[]}>
             <RepositoryInfo />
           </MockedProvider>
         );
@@ -91,6 +104,48 @@ describe("Repository Info Component", () => {
 
       it("should has a default description for error", () =>
         expect(error.prop("description")).toBe("No results found"));
+    });
+
+    describe("when it has successfull response", () => {
+      describe("and has one page", () => {
+        let main;
+
+        beforeAll(async () => {
+          wrapper = mount(
+            <MockedProvider mocks={querySuccess}>
+              <RepositoryInfo login="wesbos" id="MDQ6VXNlcjMzOTk0Mjk=" />
+            </MockedProvider>
+          );
+
+          await wait();
+          wrapper.update();
+
+          main = wrapper.find(".content--container");
+        });
+
+        it("should render repository info", () =>
+          expect(main).toMatchSnapshot());
+      });
+
+      describe("and has more than one page", () => {
+        let main;
+
+        beforeAll(async () => {
+          wrapper = mount(
+            <MockedProvider mocks={[...queryFirstPage, ...querySuccess]}>
+              <RepositoryInfo login="wesbos" id="MDQ6VXNlcjMzOTk0Mjk=" />
+            </MockedProvider>
+          );
+
+          await wait();
+          wrapper.update();
+
+          main = wrapper.find(".content--container");
+        });
+
+        it("should render repository info", () =>
+          expect(main).toMatchSnapshot());
+      });
     });
   });
 });

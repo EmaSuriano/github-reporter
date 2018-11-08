@@ -1,0 +1,2511 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Repository Info Component render when it has successfull response and has more than one page should render repository info 1`] = `
+<section
+  className="content--container"
+>
+  <div>
+    <section
+      className="statistics-by-language"
+    >
+      <Statistics
+        configuration={
+          Object {
+            "height": 300,
+            "options": Object {
+              "legend": Object {
+                "labels": Object {
+                  "boxWidth": 12,
+                  "fontSize": 12,
+                  "padding": 15,
+                  "usePointStyle": true,
+                },
+                "position": "left",
+              },
+              "maintainAspectRatio": false,
+              "responsive": false,
+              "tooltips": Object {
+                "enabled": true,
+              },
+            },
+            "width": 400,
+          }
+        }
+        data={
+          Object {
+            "datasets": Array [
+              Object {
+                "backgroundColor": Array [
+                  "#A4BDFC",
+                  "#7AE7BF",
+                  "#DBADFF",
+                  "#FF887C",
+                  "#FBD75B",
+                  "#FFB878",
+                  "#46D6DB",
+                  "#E1E1E1",
+                  "#5484ED",
+                  "#51B749",
+                  "#DC2127",
+                ],
+                "data": Array [
+                  38,
+                  6,
+                  3,
+                  3,
+                  2,
+                  2,
+                  1,
+                ],
+              },
+            ],
+            "labels": Array [
+              "JavaScript",
+              "HTML",
+              "Unknown",
+              "Java",
+              "CSS",
+              "C#",
+              "C",
+            ],
+          }
+        }
+        title="Repositories per Language"
+      >
+        <div
+          className="statistic--box"
+        >
+          <h1
+            className="statistic--box-title"
+          >
+            Repositories per Language
+          </h1>
+          <Doughnut
+            data={
+              Object {
+                "datasets": Array [
+                  Object {
+                    "backgroundColor": Array [
+                      "#A4BDFC",
+                      "#7AE7BF",
+                      "#DBADFF",
+                      "#FF887C",
+                      "#FBD75B",
+                      "#FFB878",
+                      "#46D6DB",
+                      "#E1E1E1",
+                      "#5484ED",
+                      "#51B749",
+                      "#DC2127",
+                    ],
+                    "data": Array [
+                      38,
+                      6,
+                      3,
+                      3,
+                      2,
+                      2,
+                      1,
+                    ],
+                  },
+                ],
+                "labels": Array [
+                  "JavaScript",
+                  "HTML",
+                  "Unknown",
+                  "Java",
+                  "CSS",
+                  "C#",
+                  "C",
+                ],
+              }
+            }
+            height={300}
+            options={
+              Object {
+                "legend": Object {
+                  "labels": Object {
+                    "boxWidth": 12,
+                    "fontSize": 12,
+                    "padding": 15,
+                    "usePointStyle": true,
+                  },
+                  "position": "left",
+                },
+                "maintainAspectRatio": false,
+                "responsive": false,
+                "tooltips": Object {
+                  "enabled": true,
+                },
+              }
+            }
+            width={400}
+          >
+            <ChartComponent
+              data={
+                Object {
+                  "datasets": Array [
+                    Object {
+                      "backgroundColor": Array [
+                        "#A4BDFC",
+                        "#7AE7BF",
+                        "#DBADFF",
+                        "#FF887C",
+                        "#FBD75B",
+                        "#FFB878",
+                        "#46D6DB",
+                        "#E1E1E1",
+                        "#5484ED",
+                        "#51B749",
+                        "#DC2127",
+                      ],
+                      "data": Array [
+                        38,
+                        6,
+                        3,
+                        3,
+                        2,
+                        2,
+                        1,
+                      ],
+                    },
+                  ],
+                  "labels": Array [
+                    "JavaScript",
+                    "HTML",
+                    "Unknown",
+                    "Java",
+                    "CSS",
+                    "C#",
+                    "C",
+                  ],
+                }
+              }
+              datasetKeyProvider={[Function]}
+              height={300}
+              legend={
+                Object {
+                  "display": true,
+                  "position": "bottom",
+                }
+              }
+              options={
+                Object {
+                  "legend": Object {
+                    "labels": Object {
+                      "boxWidth": 12,
+                      "fontSize": 12,
+                      "padding": 15,
+                      "usePointStyle": true,
+                    },
+                    "position": "left",
+                  },
+                  "maintainAspectRatio": false,
+                  "responsive": false,
+                  "tooltips": Object {
+                    "enabled": true,
+                  },
+                }
+              }
+              redraw={false}
+              type="doughnut"
+              width={400}
+            >
+              <canvas
+                height={300}
+                onClick={[Function]}
+                width={400}
+              />
+            </ChartComponent>
+          </Doughnut>
+        </div>
+      </Statistics>
+      <Statistics
+        configuration={
+          Object {
+            "height": 300,
+            "options": Object {
+              "legend": Object {
+                "labels": Object {
+                  "boxWidth": 12,
+                  "fontSize": 12,
+                  "padding": 15,
+                  "usePointStyle": true,
+                },
+                "position": "left",
+              },
+              "maintainAspectRatio": false,
+              "responsive": false,
+              "tooltips": Object {
+                "enabled": true,
+              },
+            },
+            "width": 400,
+          }
+        }
+        data={
+          Object {
+            "datasets": Array [
+              Object {
+                "backgroundColor": Array [
+                  "#A4BDFC",
+                  "#7AE7BF",
+                  "#DBADFF",
+                  "#FF887C",
+                  "#FBD75B",
+                  "#FFB878",
+                  "#46D6DB",
+                  "#E1E1E1",
+                  "#5484ED",
+                  "#51B749",
+                  "#DC2127",
+                ],
+                "data": Array [
+                  46,
+                  1,
+                ],
+              },
+            ],
+            "labels": Array [
+              "JavaScript",
+              "C",
+            ],
+          }
+        }
+        title="Stars per Language"
+      >
+        <div
+          className="statistic--box"
+        >
+          <h1
+            className="statistic--box-title"
+          >
+            Stars per Language
+          </h1>
+          <Doughnut
+            data={
+              Object {
+                "datasets": Array [
+                  Object {
+                    "backgroundColor": Array [
+                      "#A4BDFC",
+                      "#7AE7BF",
+                      "#DBADFF",
+                      "#FF887C",
+                      "#FBD75B",
+                      "#FFB878",
+                      "#46D6DB",
+                      "#E1E1E1",
+                      "#5484ED",
+                      "#51B749",
+                      "#DC2127",
+                    ],
+                    "data": Array [
+                      46,
+                      1,
+                    ],
+                  },
+                ],
+                "labels": Array [
+                  "JavaScript",
+                  "C",
+                ],
+              }
+            }
+            height={300}
+            options={
+              Object {
+                "legend": Object {
+                  "labels": Object {
+                    "boxWidth": 12,
+                    "fontSize": 12,
+                    "padding": 15,
+                    "usePointStyle": true,
+                  },
+                  "position": "left",
+                },
+                "maintainAspectRatio": false,
+                "responsive": false,
+                "tooltips": Object {
+                  "enabled": true,
+                },
+              }
+            }
+            width={400}
+          >
+            <ChartComponent
+              data={
+                Object {
+                  "datasets": Array [
+                    Object {
+                      "backgroundColor": Array [
+                        "#A4BDFC",
+                        "#7AE7BF",
+                        "#DBADFF",
+                        "#FF887C",
+                        "#FBD75B",
+                        "#FFB878",
+                        "#46D6DB",
+                        "#E1E1E1",
+                        "#5484ED",
+                        "#51B749",
+                        "#DC2127",
+                      ],
+                      "data": Array [
+                        46,
+                        1,
+                      ],
+                    },
+                  ],
+                  "labels": Array [
+                    "JavaScript",
+                    "C",
+                  ],
+                }
+              }
+              datasetKeyProvider={[Function]}
+              height={300}
+              legend={
+                Object {
+                  "display": true,
+                  "position": "bottom",
+                }
+              }
+              options={
+                Object {
+                  "legend": Object {
+                    "labels": Object {
+                      "boxWidth": 12,
+                      "fontSize": 12,
+                      "padding": 15,
+                      "usePointStyle": true,
+                    },
+                    "position": "left",
+                  },
+                  "maintainAspectRatio": false,
+                  "responsive": false,
+                  "tooltips": Object {
+                    "enabled": true,
+                  },
+                }
+              }
+              redraw={false}
+              type="doughnut"
+              width={400}
+            >
+              <canvas
+                height={300}
+                onClick={[Function]}
+                width={400}
+              />
+            </ChartComponent>
+          </Doughnut>
+        </div>
+      </Statistics>
+      <Statistics
+        configuration={
+          Object {
+            "height": 300,
+            "options": Object {
+              "legend": Object {
+                "labels": Object {
+                  "boxWidth": 12,
+                  "fontSize": 12,
+                  "padding": 15,
+                  "usePointStyle": true,
+                },
+                "position": "left",
+              },
+              "maintainAspectRatio": false,
+              "responsive": false,
+              "tooltips": Object {
+                "enabled": true,
+              },
+            },
+            "width": 400,
+          }
+        }
+        data={
+          Object {
+            "datasets": Array [
+              Object {
+                "backgroundColor": Array [
+                  "#A4BDFC",
+                  "#7AE7BF",
+                  "#DBADFF",
+                  "#FF887C",
+                  "#FBD75B",
+                  "#FFB878",
+                  "#46D6DB",
+                  "#E1E1E1",
+                  "#5484ED",
+                  "#51B749",
+                  "#DC2127",
+                ],
+                "data": Array [
+                  603,
+                  50,
+                  25,
+                  12,
+                  7,
+                  5,
+                  5,
+                  1,
+                ],
+              },
+            ],
+            "labels": Array [
+              "JavaScript",
+              "Unknown",
+              "HTML",
+              "CSS",
+              "C#",
+              "C",
+              "Java",
+              "C++",
+            ],
+          }
+        }
+        title="Commits per Language"
+      >
+        <div
+          className="statistic--box"
+        >
+          <h1
+            className="statistic--box-title"
+          >
+            Commits per Language
+          </h1>
+          <Doughnut
+            data={
+              Object {
+                "datasets": Array [
+                  Object {
+                    "backgroundColor": Array [
+                      "#A4BDFC",
+                      "#7AE7BF",
+                      "#DBADFF",
+                      "#FF887C",
+                      "#FBD75B",
+                      "#FFB878",
+                      "#46D6DB",
+                      "#E1E1E1",
+                      "#5484ED",
+                      "#51B749",
+                      "#DC2127",
+                    ],
+                    "data": Array [
+                      603,
+                      50,
+                      25,
+                      12,
+                      7,
+                      5,
+                      5,
+                      1,
+                    ],
+                  },
+                ],
+                "labels": Array [
+                  "JavaScript",
+                  "Unknown",
+                  "HTML",
+                  "CSS",
+                  "C#",
+                  "C",
+                  "Java",
+                  "C++",
+                ],
+              }
+            }
+            height={300}
+            options={
+              Object {
+                "legend": Object {
+                  "labels": Object {
+                    "boxWidth": 12,
+                    "fontSize": 12,
+                    "padding": 15,
+                    "usePointStyle": true,
+                  },
+                  "position": "left",
+                },
+                "maintainAspectRatio": false,
+                "responsive": false,
+                "tooltips": Object {
+                  "enabled": true,
+                },
+              }
+            }
+            width={400}
+          >
+            <ChartComponent
+              data={
+                Object {
+                  "datasets": Array [
+                    Object {
+                      "backgroundColor": Array [
+                        "#A4BDFC",
+                        "#7AE7BF",
+                        "#DBADFF",
+                        "#FF887C",
+                        "#FBD75B",
+                        "#FFB878",
+                        "#46D6DB",
+                        "#E1E1E1",
+                        "#5484ED",
+                        "#51B749",
+                        "#DC2127",
+                      ],
+                      "data": Array [
+                        603,
+                        50,
+                        25,
+                        12,
+                        7,
+                        5,
+                        5,
+                        1,
+                      ],
+                    },
+                  ],
+                  "labels": Array [
+                    "JavaScript",
+                    "Unknown",
+                    "HTML",
+                    "CSS",
+                    "C#",
+                    "C",
+                    "Java",
+                    "C++",
+                  ],
+                }
+              }
+              datasetKeyProvider={[Function]}
+              height={300}
+              legend={
+                Object {
+                  "display": true,
+                  "position": "bottom",
+                }
+              }
+              options={
+                Object {
+                  "legend": Object {
+                    "labels": Object {
+                      "boxWidth": 12,
+                      "fontSize": 12,
+                      "padding": 15,
+                      "usePointStyle": true,
+                    },
+                    "position": "left",
+                  },
+                  "maintainAspectRatio": false,
+                  "responsive": false,
+                  "tooltips": Object {
+                    "enabled": true,
+                  },
+                }
+              }
+              redraw={false}
+              type="doughnut"
+              width={400}
+            >
+              <canvas
+                height={300}
+                onClick={[Function]}
+                width={400}
+              />
+            </ChartComponent>
+          </Doughnut>
+        </div>
+      </Statistics>
+    </section>
+    <section
+      className="statistics-by-repository"
+    >
+      <Statistics
+        configuration={
+          Object {
+            "height": 400,
+            "options": Object {
+              "legend": Object {
+                "labels": Object {
+                  "boxWidth": 12,
+                  "fontSize": 12,
+                  "padding": 15,
+                  "usePointStyle": true,
+                },
+                "position": "left",
+              },
+              "maintainAspectRatio": false,
+              "responsive": false,
+              "tooltips": Object {
+                "enabled": true,
+              },
+            },
+            "width": 600,
+          }
+        }
+        data={
+          Object {
+            "datasets": Array [
+              Object {
+                "backgroundColor": Array [
+                  "#A4BDFC",
+                  "#7AE7BF",
+                  "#DBADFF",
+                  "#FF887C",
+                  "#FBD75B",
+                  "#FFB878",
+                  "#46D6DB",
+                  "#E1E1E1",
+                  "#5484ED",
+                  "#51B749",
+                  "#DC2127",
+                ],
+                "data": Array [
+                  23,
+                  8,
+                  7,
+                  4,
+                  2,
+                  1,
+                  1,
+                  1,
+                ],
+              },
+            ],
+            "labels": Array [
+              "gatsby-starter-mate",
+              "react-hotkey-tooltip",
+              "weather-styled-icon",
+              "react-radio-group-context",
+              "emasuriano.github.io",
+              "brastlewark-finder",
+              "weather-app-integration-test-cosmos",
+              "Felix-fix-it-multiplayer",
+            ],
+          }
+        }
+        title="Commits per Repo Top 10"
+      >
+        <div
+          className="statistic--box"
+        >
+          <h1
+            className="statistic--box-title"
+          >
+            Commits per Repo Top 10
+          </h1>
+          <Doughnut
+            data={
+              Object {
+                "datasets": Array [
+                  Object {
+                    "backgroundColor": Array [
+                      "#A4BDFC",
+                      "#7AE7BF",
+                      "#DBADFF",
+                      "#FF887C",
+                      "#FBD75B",
+                      "#FFB878",
+                      "#46D6DB",
+                      "#E1E1E1",
+                      "#5484ED",
+                      "#51B749",
+                      "#DC2127",
+                    ],
+                    "data": Array [
+                      23,
+                      8,
+                      7,
+                      4,
+                      2,
+                      1,
+                      1,
+                      1,
+                    ],
+                  },
+                ],
+                "labels": Array [
+                  "gatsby-starter-mate",
+                  "react-hotkey-tooltip",
+                  "weather-styled-icon",
+                  "react-radio-group-context",
+                  "emasuriano.github.io",
+                  "brastlewark-finder",
+                  "weather-app-integration-test-cosmos",
+                  "Felix-fix-it-multiplayer",
+                ],
+              }
+            }
+            height={400}
+            options={
+              Object {
+                "legend": Object {
+                  "labels": Object {
+                    "boxWidth": 12,
+                    "fontSize": 12,
+                    "padding": 15,
+                    "usePointStyle": true,
+                  },
+                  "position": "left",
+                },
+                "maintainAspectRatio": false,
+                "responsive": false,
+                "tooltips": Object {
+                  "enabled": true,
+                },
+              }
+            }
+            width={600}
+          >
+            <ChartComponent
+              data={
+                Object {
+                  "datasets": Array [
+                    Object {
+                      "backgroundColor": Array [
+                        "#A4BDFC",
+                        "#7AE7BF",
+                        "#DBADFF",
+                        "#FF887C",
+                        "#FBD75B",
+                        "#FFB878",
+                        "#46D6DB",
+                        "#E1E1E1",
+                        "#5484ED",
+                        "#51B749",
+                        "#DC2127",
+                      ],
+                      "data": Array [
+                        23,
+                        8,
+                        7,
+                        4,
+                        2,
+                        1,
+                        1,
+                        1,
+                      ],
+                    },
+                  ],
+                  "labels": Array [
+                    "gatsby-starter-mate",
+                    "react-hotkey-tooltip",
+                    "weather-styled-icon",
+                    "react-radio-group-context",
+                    "emasuriano.github.io",
+                    "brastlewark-finder",
+                    "weather-app-integration-test-cosmos",
+                    "Felix-fix-it-multiplayer",
+                  ],
+                }
+              }
+              datasetKeyProvider={[Function]}
+              height={400}
+              legend={
+                Object {
+                  "display": true,
+                  "position": "bottom",
+                }
+              }
+              options={
+                Object {
+                  "legend": Object {
+                    "labels": Object {
+                      "boxWidth": 12,
+                      "fontSize": 12,
+                      "padding": 15,
+                      "usePointStyle": true,
+                    },
+                    "position": "left",
+                  },
+                  "maintainAspectRatio": false,
+                  "responsive": false,
+                  "tooltips": Object {
+                    "enabled": true,
+                  },
+                }
+              }
+              redraw={false}
+              type="doughnut"
+              width={600}
+            >
+              <canvas
+                height={400}
+                onClick={[Function]}
+                width={600}
+              />
+            </ChartComponent>
+          </Doughnut>
+        </div>
+      </Statistics>
+      <Statistics
+        configuration={
+          Object {
+            "height": 400,
+            "options": Object {
+              "legend": Object {
+                "labels": Object {
+                  "boxWidth": 12,
+                  "fontSize": 12,
+                  "padding": 15,
+                  "usePointStyle": true,
+                },
+                "position": "left",
+              },
+              "maintainAspectRatio": false,
+              "responsive": false,
+              "tooltips": Object {
+                "enabled": true,
+              },
+            },
+            "width": 600,
+          }
+        }
+        data={
+          Object {
+            "datasets": Array [
+              Object {
+                "backgroundColor": Array [
+                  "#A4BDFC",
+                  "#7AE7BF",
+                  "#DBADFF",
+                  "#FF887C",
+                  "#FBD75B",
+                  "#FFB878",
+                  "#46D6DB",
+                  "#E1E1E1",
+                  "#5484ED",
+                  "#51B749",
+                  "#DC2127",
+                ],
+                "data": Array [
+                  143,
+                  89,
+                  62,
+                  48,
+                  47,
+                  30,
+                  24,
+                  18,
+                  18,
+                  16,
+                ],
+              },
+            ],
+            "labels": Array [
+              "react-hotkey-tooltip",
+              "weather-styled-icon",
+              "roller-blinds-wifi",
+              "100-days-of-code",
+              "gatsby-starter-mate",
+              "react-radio-group-context",
+              "runner-tracker",
+              "brastlewark-finder",
+              "portfolio-gatsby",
+              "online-cart",
+            ],
+          }
+        }
+        title="Stars per Repo Top 10"
+      >
+        <div
+          className="statistic--box"
+        >
+          <h1
+            className="statistic--box-title"
+          >
+            Stars per Repo Top 10
+          </h1>
+          <Doughnut
+            data={
+              Object {
+                "datasets": Array [
+                  Object {
+                    "backgroundColor": Array [
+                      "#A4BDFC",
+                      "#7AE7BF",
+                      "#DBADFF",
+                      "#FF887C",
+                      "#FBD75B",
+                      "#FFB878",
+                      "#46D6DB",
+                      "#E1E1E1",
+                      "#5484ED",
+                      "#51B749",
+                      "#DC2127",
+                    ],
+                    "data": Array [
+                      143,
+                      89,
+                      62,
+                      48,
+                      47,
+                      30,
+                      24,
+                      18,
+                      18,
+                      16,
+                    ],
+                  },
+                ],
+                "labels": Array [
+                  "react-hotkey-tooltip",
+                  "weather-styled-icon",
+                  "roller-blinds-wifi",
+                  "100-days-of-code",
+                  "gatsby-starter-mate",
+                  "react-radio-group-context",
+                  "runner-tracker",
+                  "brastlewark-finder",
+                  "portfolio-gatsby",
+                  "online-cart",
+                ],
+              }
+            }
+            height={400}
+            options={
+              Object {
+                "legend": Object {
+                  "labels": Object {
+                    "boxWidth": 12,
+                    "fontSize": 12,
+                    "padding": 15,
+                    "usePointStyle": true,
+                  },
+                  "position": "left",
+                },
+                "maintainAspectRatio": false,
+                "responsive": false,
+                "tooltips": Object {
+                  "enabled": true,
+                },
+              }
+            }
+            width={600}
+          >
+            <ChartComponent
+              data={
+                Object {
+                  "datasets": Array [
+                    Object {
+                      "backgroundColor": Array [
+                        "#A4BDFC",
+                        "#7AE7BF",
+                        "#DBADFF",
+                        "#FF887C",
+                        "#FBD75B",
+                        "#FFB878",
+                        "#46D6DB",
+                        "#E1E1E1",
+                        "#5484ED",
+                        "#51B749",
+                        "#DC2127",
+                      ],
+                      "data": Array [
+                        143,
+                        89,
+                        62,
+                        48,
+                        47,
+                        30,
+                        24,
+                        18,
+                        18,
+                        16,
+                      ],
+                    },
+                  ],
+                  "labels": Array [
+                    "react-hotkey-tooltip",
+                    "weather-styled-icon",
+                    "roller-blinds-wifi",
+                    "100-days-of-code",
+                    "gatsby-starter-mate",
+                    "react-radio-group-context",
+                    "runner-tracker",
+                    "brastlewark-finder",
+                    "portfolio-gatsby",
+                    "online-cart",
+                  ],
+                }
+              }
+              datasetKeyProvider={[Function]}
+              height={400}
+              legend={
+                Object {
+                  "display": true,
+                  "position": "bottom",
+                }
+              }
+              options={
+                Object {
+                  "legend": Object {
+                    "labels": Object {
+                      "boxWidth": 12,
+                      "fontSize": 12,
+                      "padding": 15,
+                      "usePointStyle": true,
+                    },
+                    "position": "left",
+                  },
+                  "maintainAspectRatio": false,
+                  "responsive": false,
+                  "tooltips": Object {
+                    "enabled": true,
+                  },
+                }
+              }
+              redraw={false}
+              type="doughnut"
+              width={600}
+            >
+              <canvas
+                height={400}
+                onClick={[Function]}
+                width={600}
+              />
+            </ChartComponent>
+          </Doughnut>
+        </div>
+      </Statistics>
+    </section>
+  </div>
+  <section
+    className="statistics-by-activity"
+  >
+    <ActivityBox
+      icon={
+        <GoRepo
+          className="stats--icon"
+          size="4rem"
+        />
+      }
+      title="Repositories"
+    >
+      <div
+        className="activity--stats activity--box"
+      >
+        <GoRepo
+          className="stats--icon"
+          size="4rem"
+        >
+          <IconBase
+            attr={
+              Object {
+                "viewBox": "0 0 12 16",
+              }
+            }
+            className="stats--icon"
+            size="4rem"
+          >
+            <svg
+              className="stats--icon"
+              fill="currentColor"
+              height="4rem"
+              size="4rem"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 12 16"
+              width="4rem"
+            >
+              <path
+                d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"
+                fillRule="evenodd"
+                key="0"
+              />
+            </svg>
+          </IconBase>
+        </GoRepo>
+        <h1
+          className="stats--number"
+        />
+        <span
+          className="stats--title"
+        >
+          Repositories
+        </span>
+      </div>
+    </ActivityBox>
+    <ActivityBox
+      icon={
+        <GoStar
+          className="stats--icon"
+          size="4rem"
+        />
+      }
+      title="Starred"
+    >
+      <div
+        className="activity--stats activity--box"
+      >
+        <GoStar
+          className="stats--icon"
+          size="4rem"
+        >
+          <IconBase
+            attr={
+              Object {
+                "viewBox": "0 0 14 16",
+              }
+            }
+            className="stats--icon"
+            size="4rem"
+          >
+            <svg
+              className="stats--icon"
+              fill="currentColor"
+              height="4rem"
+              size="4rem"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 14 16"
+              width="4rem"
+            >
+              <path
+                d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"
+                fillRule="evenodd"
+                key="0"
+              />
+            </svg>
+          </IconBase>
+        </GoStar>
+        <h1
+          className="stats--number"
+        />
+        <span
+          className="stats--title"
+        >
+          Starred
+        </span>
+      </div>
+    </ActivityBox>
+    <ActivityBox
+      icon={
+        <GoPin
+          className="stats--icon"
+          size="4rem"
+        />
+      }
+      title="Pinned"
+    >
+      <div
+        className="activity--stats activity--box"
+      >
+        <GoPin
+          className="stats--icon"
+          size="4rem"
+        >
+          <IconBase
+            attr={
+              Object {
+                "viewBox": "0 0 16 16",
+              }
+            }
+            className="stats--icon"
+            size="4rem"
+          >
+            <svg
+              className="stats--icon"
+              fill="currentColor"
+              height="4rem"
+              size="4rem"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 16 16"
+              width="4rem"
+            >
+              <path
+                d="M10 1.2V2l.5 1L6 6H2.2c-.44 0-.67.53-.34.86L5 10l-4 5 5-4 3.14 3.14a.5.5 0 0 0 .86-.34V10l3-4.5 1 .5h.8c.44 0 .67-.53.34-.86L10.86.86a.5.5 0 0 0-.86.34z"
+                fillRule="evenodd"
+                key="0"
+              />
+            </svg>
+          </IconBase>
+        </GoPin>
+        <h1
+          className="stats--number"
+        />
+        <span
+          className="stats--title"
+        >
+          Pinned
+        </span>
+      </div>
+    </ActivityBox>
+  </section>
+</section>
+`;
+
+exports[`Repository Info Component render when it has successfull response and has one page should render repository info 1`] = `
+<section
+  className="content--container"
+>
+  <div>
+    <section
+      className="statistics-by-language"
+    >
+      <Statistics
+        configuration={
+          Object {
+            "height": 300,
+            "options": Object {
+              "legend": Object {
+                "labels": Object {
+                  "boxWidth": 12,
+                  "fontSize": 12,
+                  "padding": 15,
+                  "usePointStyle": true,
+                },
+                "position": "left",
+              },
+              "maintainAspectRatio": false,
+              "responsive": false,
+              "tooltips": Object {
+                "enabled": true,
+              },
+            },
+            "width": 400,
+          }
+        }
+        data={
+          Object {
+            "datasets": Array [
+              Object {
+                "backgroundColor": Array [
+                  "#A4BDFC",
+                  "#7AE7BF",
+                  "#DBADFF",
+                  "#FF887C",
+                  "#FBD75B",
+                  "#FFB878",
+                  "#46D6DB",
+                  "#E1E1E1",
+                  "#5484ED",
+                  "#51B749",
+                  "#DC2127",
+                ],
+                "data": Array [
+                  38,
+                  6,
+                  3,
+                  3,
+                  2,
+                  2,
+                  1,
+                ],
+              },
+            ],
+            "labels": Array [
+              "JavaScript",
+              "HTML",
+              "Unknown",
+              "Java",
+              "CSS",
+              "C#",
+              "C",
+            ],
+          }
+        }
+        title="Repositories per Language"
+      >
+        <div
+          className="statistic--box"
+        >
+          <h1
+            className="statistic--box-title"
+          >
+            Repositories per Language
+          </h1>
+          <Doughnut
+            data={
+              Object {
+                "datasets": Array [
+                  Object {
+                    "backgroundColor": Array [
+                      "#A4BDFC",
+                      "#7AE7BF",
+                      "#DBADFF",
+                      "#FF887C",
+                      "#FBD75B",
+                      "#FFB878",
+                      "#46D6DB",
+                      "#E1E1E1",
+                      "#5484ED",
+                      "#51B749",
+                      "#DC2127",
+                    ],
+                    "data": Array [
+                      38,
+                      6,
+                      3,
+                      3,
+                      2,
+                      2,
+                      1,
+                    ],
+                  },
+                ],
+                "labels": Array [
+                  "JavaScript",
+                  "HTML",
+                  "Unknown",
+                  "Java",
+                  "CSS",
+                  "C#",
+                  "C",
+                ],
+              }
+            }
+            height={300}
+            options={
+              Object {
+                "legend": Object {
+                  "labels": Object {
+                    "boxWidth": 12,
+                    "fontSize": 12,
+                    "padding": 15,
+                    "usePointStyle": true,
+                  },
+                  "position": "left",
+                },
+                "maintainAspectRatio": false,
+                "responsive": false,
+                "tooltips": Object {
+                  "enabled": true,
+                },
+              }
+            }
+            width={400}
+          >
+            <ChartComponent
+              data={
+                Object {
+                  "datasets": Array [
+                    Object {
+                      "backgroundColor": Array [
+                        "#A4BDFC",
+                        "#7AE7BF",
+                        "#DBADFF",
+                        "#FF887C",
+                        "#FBD75B",
+                        "#FFB878",
+                        "#46D6DB",
+                        "#E1E1E1",
+                        "#5484ED",
+                        "#51B749",
+                        "#DC2127",
+                      ],
+                      "data": Array [
+                        38,
+                        6,
+                        3,
+                        3,
+                        2,
+                        2,
+                        1,
+                      ],
+                    },
+                  ],
+                  "labels": Array [
+                    "JavaScript",
+                    "HTML",
+                    "Unknown",
+                    "Java",
+                    "CSS",
+                    "C#",
+                    "C",
+                  ],
+                }
+              }
+              datasetKeyProvider={[Function]}
+              height={300}
+              legend={
+                Object {
+                  "display": true,
+                  "position": "bottom",
+                }
+              }
+              options={
+                Object {
+                  "legend": Object {
+                    "labels": Object {
+                      "boxWidth": 12,
+                      "fontSize": 12,
+                      "padding": 15,
+                      "usePointStyle": true,
+                    },
+                    "position": "left",
+                  },
+                  "maintainAspectRatio": false,
+                  "responsive": false,
+                  "tooltips": Object {
+                    "enabled": true,
+                  },
+                }
+              }
+              redraw={false}
+              type="doughnut"
+              width={400}
+            >
+              <canvas
+                height={300}
+                onClick={[Function]}
+                width={400}
+              />
+            </ChartComponent>
+          </Doughnut>
+        </div>
+      </Statistics>
+      <Statistics
+        configuration={
+          Object {
+            "height": 300,
+            "options": Object {
+              "legend": Object {
+                "labels": Object {
+                  "boxWidth": 12,
+                  "fontSize": 12,
+                  "padding": 15,
+                  "usePointStyle": true,
+                },
+                "position": "left",
+              },
+              "maintainAspectRatio": false,
+              "responsive": false,
+              "tooltips": Object {
+                "enabled": true,
+              },
+            },
+            "width": 400,
+          }
+        }
+        data={
+          Object {
+            "datasets": Array [
+              Object {
+                "backgroundColor": Array [
+                  "#A4BDFC",
+                  "#7AE7BF",
+                  "#DBADFF",
+                  "#FF887C",
+                  "#FBD75B",
+                  "#FFB878",
+                  "#46D6DB",
+                  "#E1E1E1",
+                  "#5484ED",
+                  "#51B749",
+                  "#DC2127",
+                ],
+                "data": Array [
+                  46,
+                  1,
+                ],
+              },
+            ],
+            "labels": Array [
+              "JavaScript",
+              "C",
+            ],
+          }
+        }
+        title="Stars per Language"
+      >
+        <div
+          className="statistic--box"
+        >
+          <h1
+            className="statistic--box-title"
+          >
+            Stars per Language
+          </h1>
+          <Doughnut
+            data={
+              Object {
+                "datasets": Array [
+                  Object {
+                    "backgroundColor": Array [
+                      "#A4BDFC",
+                      "#7AE7BF",
+                      "#DBADFF",
+                      "#FF887C",
+                      "#FBD75B",
+                      "#FFB878",
+                      "#46D6DB",
+                      "#E1E1E1",
+                      "#5484ED",
+                      "#51B749",
+                      "#DC2127",
+                    ],
+                    "data": Array [
+                      46,
+                      1,
+                    ],
+                  },
+                ],
+                "labels": Array [
+                  "JavaScript",
+                  "C",
+                ],
+              }
+            }
+            height={300}
+            options={
+              Object {
+                "legend": Object {
+                  "labels": Object {
+                    "boxWidth": 12,
+                    "fontSize": 12,
+                    "padding": 15,
+                    "usePointStyle": true,
+                  },
+                  "position": "left",
+                },
+                "maintainAspectRatio": false,
+                "responsive": false,
+                "tooltips": Object {
+                  "enabled": true,
+                },
+              }
+            }
+            width={400}
+          >
+            <ChartComponent
+              data={
+                Object {
+                  "datasets": Array [
+                    Object {
+                      "backgroundColor": Array [
+                        "#A4BDFC",
+                        "#7AE7BF",
+                        "#DBADFF",
+                        "#FF887C",
+                        "#FBD75B",
+                        "#FFB878",
+                        "#46D6DB",
+                        "#E1E1E1",
+                        "#5484ED",
+                        "#51B749",
+                        "#DC2127",
+                      ],
+                      "data": Array [
+                        46,
+                        1,
+                      ],
+                    },
+                  ],
+                  "labels": Array [
+                    "JavaScript",
+                    "C",
+                  ],
+                }
+              }
+              datasetKeyProvider={[Function]}
+              height={300}
+              legend={
+                Object {
+                  "display": true,
+                  "position": "bottom",
+                }
+              }
+              options={
+                Object {
+                  "legend": Object {
+                    "labels": Object {
+                      "boxWidth": 12,
+                      "fontSize": 12,
+                      "padding": 15,
+                      "usePointStyle": true,
+                    },
+                    "position": "left",
+                  },
+                  "maintainAspectRatio": false,
+                  "responsive": false,
+                  "tooltips": Object {
+                    "enabled": true,
+                  },
+                }
+              }
+              redraw={false}
+              type="doughnut"
+              width={400}
+            >
+              <canvas
+                height={300}
+                onClick={[Function]}
+                width={400}
+              />
+            </ChartComponent>
+          </Doughnut>
+        </div>
+      </Statistics>
+      <Statistics
+        configuration={
+          Object {
+            "height": 300,
+            "options": Object {
+              "legend": Object {
+                "labels": Object {
+                  "boxWidth": 12,
+                  "fontSize": 12,
+                  "padding": 15,
+                  "usePointStyle": true,
+                },
+                "position": "left",
+              },
+              "maintainAspectRatio": false,
+              "responsive": false,
+              "tooltips": Object {
+                "enabled": true,
+              },
+            },
+            "width": 400,
+          }
+        }
+        data={
+          Object {
+            "datasets": Array [
+              Object {
+                "backgroundColor": Array [
+                  "#A4BDFC",
+                  "#7AE7BF",
+                  "#DBADFF",
+                  "#FF887C",
+                  "#FBD75B",
+                  "#FFB878",
+                  "#46D6DB",
+                  "#E1E1E1",
+                  "#5484ED",
+                  "#51B749",
+                  "#DC2127",
+                ],
+                "data": Array [
+                  603,
+                  50,
+                  25,
+                  12,
+                  7,
+                  5,
+                  5,
+                  1,
+                ],
+              },
+            ],
+            "labels": Array [
+              "JavaScript",
+              "Unknown",
+              "HTML",
+              "CSS",
+              "C#",
+              "C",
+              "Java",
+              "C++",
+            ],
+          }
+        }
+        title="Commits per Language"
+      >
+        <div
+          className="statistic--box"
+        >
+          <h1
+            className="statistic--box-title"
+          >
+            Commits per Language
+          </h1>
+          <Doughnut
+            data={
+              Object {
+                "datasets": Array [
+                  Object {
+                    "backgroundColor": Array [
+                      "#A4BDFC",
+                      "#7AE7BF",
+                      "#DBADFF",
+                      "#FF887C",
+                      "#FBD75B",
+                      "#FFB878",
+                      "#46D6DB",
+                      "#E1E1E1",
+                      "#5484ED",
+                      "#51B749",
+                      "#DC2127",
+                    ],
+                    "data": Array [
+                      603,
+                      50,
+                      25,
+                      12,
+                      7,
+                      5,
+                      5,
+                      1,
+                    ],
+                  },
+                ],
+                "labels": Array [
+                  "JavaScript",
+                  "Unknown",
+                  "HTML",
+                  "CSS",
+                  "C#",
+                  "C",
+                  "Java",
+                  "C++",
+                ],
+              }
+            }
+            height={300}
+            options={
+              Object {
+                "legend": Object {
+                  "labels": Object {
+                    "boxWidth": 12,
+                    "fontSize": 12,
+                    "padding": 15,
+                    "usePointStyle": true,
+                  },
+                  "position": "left",
+                },
+                "maintainAspectRatio": false,
+                "responsive": false,
+                "tooltips": Object {
+                  "enabled": true,
+                },
+              }
+            }
+            width={400}
+          >
+            <ChartComponent
+              data={
+                Object {
+                  "datasets": Array [
+                    Object {
+                      "backgroundColor": Array [
+                        "#A4BDFC",
+                        "#7AE7BF",
+                        "#DBADFF",
+                        "#FF887C",
+                        "#FBD75B",
+                        "#FFB878",
+                        "#46D6DB",
+                        "#E1E1E1",
+                        "#5484ED",
+                        "#51B749",
+                        "#DC2127",
+                      ],
+                      "data": Array [
+                        603,
+                        50,
+                        25,
+                        12,
+                        7,
+                        5,
+                        5,
+                        1,
+                      ],
+                    },
+                  ],
+                  "labels": Array [
+                    "JavaScript",
+                    "Unknown",
+                    "HTML",
+                    "CSS",
+                    "C#",
+                    "C",
+                    "Java",
+                    "C++",
+                  ],
+                }
+              }
+              datasetKeyProvider={[Function]}
+              height={300}
+              legend={
+                Object {
+                  "display": true,
+                  "position": "bottom",
+                }
+              }
+              options={
+                Object {
+                  "legend": Object {
+                    "labels": Object {
+                      "boxWidth": 12,
+                      "fontSize": 12,
+                      "padding": 15,
+                      "usePointStyle": true,
+                    },
+                    "position": "left",
+                  },
+                  "maintainAspectRatio": false,
+                  "responsive": false,
+                  "tooltips": Object {
+                    "enabled": true,
+                  },
+                }
+              }
+              redraw={false}
+              type="doughnut"
+              width={400}
+            >
+              <canvas
+                height={300}
+                onClick={[Function]}
+                width={400}
+              />
+            </ChartComponent>
+          </Doughnut>
+        </div>
+      </Statistics>
+    </section>
+    <section
+      className="statistics-by-repository"
+    >
+      <Statistics
+        configuration={
+          Object {
+            "height": 400,
+            "options": Object {
+              "legend": Object {
+                "labels": Object {
+                  "boxWidth": 12,
+                  "fontSize": 12,
+                  "padding": 15,
+                  "usePointStyle": true,
+                },
+                "position": "left",
+              },
+              "maintainAspectRatio": false,
+              "responsive": false,
+              "tooltips": Object {
+                "enabled": true,
+              },
+            },
+            "width": 600,
+          }
+        }
+        data={
+          Object {
+            "datasets": Array [
+              Object {
+                "backgroundColor": Array [
+                  "#A4BDFC",
+                  "#7AE7BF",
+                  "#DBADFF",
+                  "#FF887C",
+                  "#FBD75B",
+                  "#FFB878",
+                  "#46D6DB",
+                  "#E1E1E1",
+                  "#5484ED",
+                  "#51B749",
+                  "#DC2127",
+                ],
+                "data": Array [
+                  23,
+                  8,
+                  7,
+                  4,
+                  2,
+                  1,
+                  1,
+                  1,
+                ],
+              },
+            ],
+            "labels": Array [
+              "gatsby-starter-mate",
+              "react-hotkey-tooltip",
+              "weather-styled-icon",
+              "react-radio-group-context",
+              "emasuriano.github.io",
+              "brastlewark-finder",
+              "weather-app-integration-test-cosmos",
+              "Felix-fix-it-multiplayer",
+            ],
+          }
+        }
+        title="Commits per Repo Top 10"
+      >
+        <div
+          className="statistic--box"
+        >
+          <h1
+            className="statistic--box-title"
+          >
+            Commits per Repo Top 10
+          </h1>
+          <Doughnut
+            data={
+              Object {
+                "datasets": Array [
+                  Object {
+                    "backgroundColor": Array [
+                      "#A4BDFC",
+                      "#7AE7BF",
+                      "#DBADFF",
+                      "#FF887C",
+                      "#FBD75B",
+                      "#FFB878",
+                      "#46D6DB",
+                      "#E1E1E1",
+                      "#5484ED",
+                      "#51B749",
+                      "#DC2127",
+                    ],
+                    "data": Array [
+                      23,
+                      8,
+                      7,
+                      4,
+                      2,
+                      1,
+                      1,
+                      1,
+                    ],
+                  },
+                ],
+                "labels": Array [
+                  "gatsby-starter-mate",
+                  "react-hotkey-tooltip",
+                  "weather-styled-icon",
+                  "react-radio-group-context",
+                  "emasuriano.github.io",
+                  "brastlewark-finder",
+                  "weather-app-integration-test-cosmos",
+                  "Felix-fix-it-multiplayer",
+                ],
+              }
+            }
+            height={400}
+            options={
+              Object {
+                "legend": Object {
+                  "labels": Object {
+                    "boxWidth": 12,
+                    "fontSize": 12,
+                    "padding": 15,
+                    "usePointStyle": true,
+                  },
+                  "position": "left",
+                },
+                "maintainAspectRatio": false,
+                "responsive": false,
+                "tooltips": Object {
+                  "enabled": true,
+                },
+              }
+            }
+            width={600}
+          >
+            <ChartComponent
+              data={
+                Object {
+                  "datasets": Array [
+                    Object {
+                      "backgroundColor": Array [
+                        "#A4BDFC",
+                        "#7AE7BF",
+                        "#DBADFF",
+                        "#FF887C",
+                        "#FBD75B",
+                        "#FFB878",
+                        "#46D6DB",
+                        "#E1E1E1",
+                        "#5484ED",
+                        "#51B749",
+                        "#DC2127",
+                      ],
+                      "data": Array [
+                        23,
+                        8,
+                        7,
+                        4,
+                        2,
+                        1,
+                        1,
+                        1,
+                      ],
+                    },
+                  ],
+                  "labels": Array [
+                    "gatsby-starter-mate",
+                    "react-hotkey-tooltip",
+                    "weather-styled-icon",
+                    "react-radio-group-context",
+                    "emasuriano.github.io",
+                    "brastlewark-finder",
+                    "weather-app-integration-test-cosmos",
+                    "Felix-fix-it-multiplayer",
+                  ],
+                }
+              }
+              datasetKeyProvider={[Function]}
+              height={400}
+              legend={
+                Object {
+                  "display": true,
+                  "position": "bottom",
+                }
+              }
+              options={
+                Object {
+                  "legend": Object {
+                    "labels": Object {
+                      "boxWidth": 12,
+                      "fontSize": 12,
+                      "padding": 15,
+                      "usePointStyle": true,
+                    },
+                    "position": "left",
+                  },
+                  "maintainAspectRatio": false,
+                  "responsive": false,
+                  "tooltips": Object {
+                    "enabled": true,
+                  },
+                }
+              }
+              redraw={false}
+              type="doughnut"
+              width={600}
+            >
+              <canvas
+                height={400}
+                onClick={[Function]}
+                width={600}
+              />
+            </ChartComponent>
+          </Doughnut>
+        </div>
+      </Statistics>
+      <Statistics
+        configuration={
+          Object {
+            "height": 400,
+            "options": Object {
+              "legend": Object {
+                "labels": Object {
+                  "boxWidth": 12,
+                  "fontSize": 12,
+                  "padding": 15,
+                  "usePointStyle": true,
+                },
+                "position": "left",
+              },
+              "maintainAspectRatio": false,
+              "responsive": false,
+              "tooltips": Object {
+                "enabled": true,
+              },
+            },
+            "width": 600,
+          }
+        }
+        data={
+          Object {
+            "datasets": Array [
+              Object {
+                "backgroundColor": Array [
+                  "#A4BDFC",
+                  "#7AE7BF",
+                  "#DBADFF",
+                  "#FF887C",
+                  "#FBD75B",
+                  "#FFB878",
+                  "#46D6DB",
+                  "#E1E1E1",
+                  "#5484ED",
+                  "#51B749",
+                  "#DC2127",
+                ],
+                "data": Array [
+                  143,
+                  89,
+                  62,
+                  48,
+                  47,
+                  30,
+                  24,
+                  18,
+                  18,
+                  16,
+                ],
+              },
+            ],
+            "labels": Array [
+              "react-hotkey-tooltip",
+              "weather-styled-icon",
+              "roller-blinds-wifi",
+              "100-days-of-code",
+              "gatsby-starter-mate",
+              "react-radio-group-context",
+              "runner-tracker",
+              "brastlewark-finder",
+              "portfolio-gatsby",
+              "online-cart",
+            ],
+          }
+        }
+        title="Stars per Repo Top 10"
+      >
+        <div
+          className="statistic--box"
+        >
+          <h1
+            className="statistic--box-title"
+          >
+            Stars per Repo Top 10
+          </h1>
+          <Doughnut
+            data={
+              Object {
+                "datasets": Array [
+                  Object {
+                    "backgroundColor": Array [
+                      "#A4BDFC",
+                      "#7AE7BF",
+                      "#DBADFF",
+                      "#FF887C",
+                      "#FBD75B",
+                      "#FFB878",
+                      "#46D6DB",
+                      "#E1E1E1",
+                      "#5484ED",
+                      "#51B749",
+                      "#DC2127",
+                    ],
+                    "data": Array [
+                      143,
+                      89,
+                      62,
+                      48,
+                      47,
+                      30,
+                      24,
+                      18,
+                      18,
+                      16,
+                    ],
+                  },
+                ],
+                "labels": Array [
+                  "react-hotkey-tooltip",
+                  "weather-styled-icon",
+                  "roller-blinds-wifi",
+                  "100-days-of-code",
+                  "gatsby-starter-mate",
+                  "react-radio-group-context",
+                  "runner-tracker",
+                  "brastlewark-finder",
+                  "portfolio-gatsby",
+                  "online-cart",
+                ],
+              }
+            }
+            height={400}
+            options={
+              Object {
+                "legend": Object {
+                  "labels": Object {
+                    "boxWidth": 12,
+                    "fontSize": 12,
+                    "padding": 15,
+                    "usePointStyle": true,
+                  },
+                  "position": "left",
+                },
+                "maintainAspectRatio": false,
+                "responsive": false,
+                "tooltips": Object {
+                  "enabled": true,
+                },
+              }
+            }
+            width={600}
+          >
+            <ChartComponent
+              data={
+                Object {
+                  "datasets": Array [
+                    Object {
+                      "backgroundColor": Array [
+                        "#A4BDFC",
+                        "#7AE7BF",
+                        "#DBADFF",
+                        "#FF887C",
+                        "#FBD75B",
+                        "#FFB878",
+                        "#46D6DB",
+                        "#E1E1E1",
+                        "#5484ED",
+                        "#51B749",
+                        "#DC2127",
+                      ],
+                      "data": Array [
+                        143,
+                        89,
+                        62,
+                        48,
+                        47,
+                        30,
+                        24,
+                        18,
+                        18,
+                        16,
+                      ],
+                    },
+                  ],
+                  "labels": Array [
+                    "react-hotkey-tooltip",
+                    "weather-styled-icon",
+                    "roller-blinds-wifi",
+                    "100-days-of-code",
+                    "gatsby-starter-mate",
+                    "react-radio-group-context",
+                    "runner-tracker",
+                    "brastlewark-finder",
+                    "portfolio-gatsby",
+                    "online-cart",
+                  ],
+                }
+              }
+              datasetKeyProvider={[Function]}
+              height={400}
+              legend={
+                Object {
+                  "display": true,
+                  "position": "bottom",
+                }
+              }
+              options={
+                Object {
+                  "legend": Object {
+                    "labels": Object {
+                      "boxWidth": 12,
+                      "fontSize": 12,
+                      "padding": 15,
+                      "usePointStyle": true,
+                    },
+                    "position": "left",
+                  },
+                  "maintainAspectRatio": false,
+                  "responsive": false,
+                  "tooltips": Object {
+                    "enabled": true,
+                  },
+                }
+              }
+              redraw={false}
+              type="doughnut"
+              width={600}
+            >
+              <canvas
+                height={400}
+                onClick={[Function]}
+                width={600}
+              />
+            </ChartComponent>
+          </Doughnut>
+        </div>
+      </Statistics>
+    </section>
+  </div>
+  <section
+    className="statistics-by-activity"
+  >
+    <ActivityBox
+      icon={
+        <GoRepo
+          className="stats--icon"
+          size="4rem"
+        />
+      }
+      title="Repositories"
+    >
+      <div
+        className="activity--stats activity--box"
+      >
+        <GoRepo
+          className="stats--icon"
+          size="4rem"
+        >
+          <IconBase
+            attr={
+              Object {
+                "viewBox": "0 0 12 16",
+              }
+            }
+            className="stats--icon"
+            size="4rem"
+          >
+            <svg
+              className="stats--icon"
+              fill="currentColor"
+              height="4rem"
+              size="4rem"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 12 16"
+              width="4rem"
+            >
+              <path
+                d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"
+                fillRule="evenodd"
+                key="0"
+              />
+            </svg>
+          </IconBase>
+        </GoRepo>
+        <h1
+          className="stats--number"
+        />
+        <span
+          className="stats--title"
+        >
+          Repositories
+        </span>
+      </div>
+    </ActivityBox>
+    <ActivityBox
+      icon={
+        <GoStar
+          className="stats--icon"
+          size="4rem"
+        />
+      }
+      title="Starred"
+    >
+      <div
+        className="activity--stats activity--box"
+      >
+        <GoStar
+          className="stats--icon"
+          size="4rem"
+        >
+          <IconBase
+            attr={
+              Object {
+                "viewBox": "0 0 14 16",
+              }
+            }
+            className="stats--icon"
+            size="4rem"
+          >
+            <svg
+              className="stats--icon"
+              fill="currentColor"
+              height="4rem"
+              size="4rem"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 14 16"
+              width="4rem"
+            >
+              <path
+                d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"
+                fillRule="evenodd"
+                key="0"
+              />
+            </svg>
+          </IconBase>
+        </GoStar>
+        <h1
+          className="stats--number"
+        />
+        <span
+          className="stats--title"
+        >
+          Starred
+        </span>
+      </div>
+    </ActivityBox>
+    <ActivityBox
+      icon={
+        <GoPin
+          className="stats--icon"
+          size="4rem"
+        />
+      }
+      title="Pinned"
+    >
+      <div
+        className="activity--stats activity--box"
+      >
+        <GoPin
+          className="stats--icon"
+          size="4rem"
+        >
+          <IconBase
+            attr={
+              Object {
+                "viewBox": "0 0 16 16",
+              }
+            }
+            className="stats--icon"
+            size="4rem"
+          >
+            <svg
+              className="stats--icon"
+              fill="currentColor"
+              height="4rem"
+              size="4rem"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 16 16"
+              width="4rem"
+            >
+              <path
+                d="M10 1.2V2l.5 1L6 6H2.2c-.44 0-.67.53-.34.86L5 10l-4 5 5-4 3.14 3.14a.5.5 0 0 0 .86-.34V10l3-4.5 1 .5h.8c.44 0 .67-.53.34-.86L10.86.86a.5.5 0 0 0-.86.34z"
+                fillRule="evenodd"
+                key="0"
+              />
+            </svg>
+          </IconBase>
+        </GoPin>
+        <h1
+          className="stats--number"
+        />
+        <span
+          className="stats--title"
+        >
+          Pinned
+        </span>
+      </div>
+    </ActivityBox>
+  </section>
+</section>
+`;

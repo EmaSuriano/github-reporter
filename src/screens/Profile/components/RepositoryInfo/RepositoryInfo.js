@@ -50,35 +50,25 @@ const RepositoryInfo = ({
 
       if (error) return <ErrorReport />;
 
-      fetchMore({
-        query: GET_REPOSITORIES_INFORMATION,
-        variables: {
-          name: login,
-          id,
-          cursor: compose(
-            getEndCursor,
-            getPageInfo
-          )(data)
-        },
-        updateQuery
-      });
-
       const nextPage = compose(
         hasNextPage,
         getPageInfo
       )(data);
 
-      if (nextPage)
-        return (
-          <PulseLoader
-            className="spinner"
-            loading={true}
-            color="#90C3FF"
-            sizeUnit="rem"
-            size={5}
-            margin="1rem"
-          />
-        );
+      if (nextPage) {
+        fetchMore({
+          query: GET_REPOSITORIES_INFORMATION,
+          variables: {
+            name: login,
+            id,
+            cursor: compose(
+              getEndCursor,
+              getPageInfo
+            )(data)
+          },
+          updateQuery
+        });
+      }
 
       const dataSet = reduce(
         getStatistics,

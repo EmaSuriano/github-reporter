@@ -31,7 +31,6 @@ $ npm install
 create a .env file at the same level of src and add the following variables to .env file
 
 ```bash
-  NODE_PATH=src/
   REACT_APP_GITHUB_TOKEN=<your-token>
 ```
 

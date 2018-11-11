@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 
 import Header from "../Header";
 
@@ -13,7 +13,7 @@ describe("Header Component", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Header {...props} />);
+    wrapper = mount(<Header {...props} />);
   });
 
   describe("render", () => {
@@ -24,7 +24,16 @@ describe("Header Component", () => {
   describe("inner methods", () => {
     const mockedEvent = { target: { value: "wesbos" } };
 
-    describe("handleInput", () => {
+    describe("componentDidMount instance", () => {
+      beforeEach(() => {
+        wrapper.instance().componentDidMount();
+      });
+
+      it("should create a reference called 'inputRef'", () =>
+        expect(wrapper.instance().inputRef).toBeDefined());
+    });
+
+    describe("handleInput instance", () => {
       let query;
 
       beforeAll(() => {
@@ -36,7 +45,7 @@ describe("Header Component", () => {
         expect(query).toBe("wesbos"));
     });
 
-    describe("handleSearch", () => {
+    describe("handleSearch instance", () => {
       beforeAll(() => {
         wrapper.instance().handleInput(mockedEvent);
         wrapper.instance().handleSearch();
@@ -47,6 +56,38 @@ describe("Header Component", () => {
 
       it("should call with the state", () =>
         expect(searchProfile).toHaveBeenCalledWith("wesbos"));
+    });
+
+    describe("handleKeyPress instance", () => {
+      let handleSearchSpy;
+
+      beforeAll(() => {
+        handleSearchSpy = jest.spyOn(wrapper.instance(), "handleSearch");
+      });
+
+      afterEach(() => {
+        handleSearchSpy.mockClear();
+      });
+
+      describe("when press enter", () => {
+        beforeAll(() => {
+          const e = { key: "Enter" };
+          wrapper.instance().handleKeyPress(e);
+        });
+
+        it('should call "handleSearch" function once', () =>
+          expect(handleSearchSpy).toHaveBeenCalledTimes(1));
+      });
+
+      describe("when not press enter", () => {
+        beforeAll(() => {
+          const e = { key: "Z" };
+          wrapper.instance().handleKeyPress(e);
+        });
+
+        it('should not call "handleSearch" function', () =>
+          expect(handleSearchSpy).toHaveBeenCalledTimes(0));
+      });
     });
   });
 });

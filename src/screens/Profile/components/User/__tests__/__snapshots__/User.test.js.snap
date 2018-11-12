@@ -478,6 +478,17 @@ exports[`User Component render without errors when has more than one page should
                                 },
                               },
                             },
+                            Object {
+                              "kind": "Argument",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "ownerAffiliations",
+                              },
+                              "value": Object {
+                                "kind": "EnumValue",
+                                "value": "OWNER",
+                              },
+                            },
                           ],
                           "directives": Array [],
                           "kind": "Field",
@@ -840,7 +851,7 @@ exports[`User Component render without errors when has more than one page should
           ],
           "kind": "Document",
           "loc": Object {
-            "end": 843,
+            "end": 876,
             "start": 0,
           },
         }

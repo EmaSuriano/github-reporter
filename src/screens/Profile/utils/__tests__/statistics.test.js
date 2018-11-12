@@ -9,25 +9,23 @@ import {
   updateRepositoryData
 } from "../statistics";
 
-import {
-  removeEmpties,
-  removeLowerThan,
-  sortingByParam,
-  transformStatistics
-} from "../helpers";
-
 import edge from "./fixtures/edge";
 import edgeForked from "./fixtures/edgeForked";
 
-jest.mock("../helpers", () => ({
-  removeEmpties: jest.fn(),
-  removeLowerThan: jest.fn(),
-  sortingByParam: jest.fn(),
-  transformStatistics: jest.fn()
-}));
-
 describe("Statistics", () => {
-  describe("createData", () => {});
+  describe("createData", () => {
+    let result;
+
+    beforeEach(() => {
+      const data = { languages: { HTML: { stars: 100 } } };
+      const from = "languages";
+      const currentProp = "stars";
+      result = createData(data, from, currentProp);
+    });
+
+    it("should match the object created by the function with the datasets and labels", () =>
+      expect(result).toMatchSnapshot());
+  });
 
   describe("getEdges", () => {
     let result;
@@ -126,5 +124,47 @@ describe("Statistics", () => {
     });
   });
 
-  describe("updateRepositoryData", () => {});
+  describe("updateRepositoryData", () => {
+    let result;
+
+    beforeEach(() => {
+      const repositoryInfo = {
+        user: {
+          repositories: {
+            pageInfo: {
+              hasNextPage: true,
+              endCursor: ""
+            },
+            edges: []
+          }
+        }
+      };
+
+      const edges = [
+        {
+          node: {
+            name: "JavaScriptRepo",
+            isFork: false,
+            primaryLanguage: {
+              name: "JavaScript"
+            }
+          }
+        }
+      ];
+      const pageInfo = { hasNextPage: false, endCursor: "endCursor" };
+      result = updateRepositoryData(repositoryInfo, edges, pageInfo);
+    });
+
+    it("should have one edge with 'JavaScriptRepo' as name", () => {
+      expect(result.user.repositories.edges).toEqual([
+        {
+          node: {
+            name: "JavaScriptRepo",
+            isFork: false,
+            primaryLanguage: { name: "JavaScript" }
+          }
+        }
+      ]);
+    });
+  });
 });

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Statistics createData should match the object created by the function with the datasets and labels 1`] = `
+Object {
+  "datasets": Array [
+    Object {
+      "backgroundColor": Array [
+        "#A4BDFC",
+        "#7AE7BF",
+        "#DBADFF",
+        "#FF887C",
+        "#FBD75B",
+        "#FFB878",
+        "#46D6DB",
+        "#E1E1E1",
+        "#5484ED",
+        "#51B749",
+        "#DC2127",
+      ],
+      "data": Array [
+        100,
+      ],
+    },
+  ],
+  "labels": Array [
+    "HTML",
+  ],
+}
+`;

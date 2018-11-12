@@ -124,7 +124,7 @@ const hasNextPage = propOr(false, "hasNextPage");
 
 const updateRepositoryData = (repositoryInfo, edges, pageInfo) =>
   compose(
-    assocPath(getEdges, edges),
+    assocPath(["user", "repositories", "edges"], edges),
     assocPath(["user", "repositories", "pageInfo"], pageInfo)
   )(repositoryInfo);
 

@@ -11,7 +11,7 @@ const ActivityBox = ({ icon, stat, title }) => (
 
 ActivityBox.propTypes = {
   icon: element.isRequired,
-  stat: number.isRequired,
+  stat: number,
   title: string.isRequired
 };
 

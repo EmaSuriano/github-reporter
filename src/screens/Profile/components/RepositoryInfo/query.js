@@ -9,6 +9,7 @@ export const GET_REPOSITORIES_INFORMATION = gql`
         affiliations: [OWNER]
         first: 100
         after: $cursor
+        ownerAffiliations: OWNER
       ) {
         pageInfo {
           hasNextPage

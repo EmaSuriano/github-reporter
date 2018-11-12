@@ -127,6 +127,17 @@ Object {
                         },
                       },
                     },
+                    Object {
+                      "kind": "Argument",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "ownerAffiliations",
+                      },
+                      "value": Object {
+                        "kind": "EnumValue",
+                        "value": "OWNER",
+                      },
+                    },
                   ],
                   "directives": Array [],
                   "kind": "Field",
@@ -489,7 +500,7 @@ Object {
   ],
   "kind": "Document",
   "loc": Object {
-    "end": 843,
+    "end": 876,
     "start": 0,
   },
 }

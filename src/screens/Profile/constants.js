@@ -1,4 +1,4 @@
-const DEFAULT_OPTIONS = {
+export const DEFAULT_OPTIONS = {
   maintainAspectRatio: false,
   responsive: false,
   legend: {
@@ -29,18 +29,15 @@ export const DEFAULT_COLORS = [
   "#DC2127"
 ];
 
-export const CHART_SM_CONFIGURATION = {
+export const CHART_SM = {
   height: 300,
-  width: 400,
-  options: DEFAULT_OPTIONS
+  width: 400
 };
 
-export const CHART_LG_CONFIGURATION = {
+export const CHART_LG = {
   height: 400,
-  width: 600,
-  options: DEFAULT_OPTIONS
+  width: 600
 };
 
 export const MIN_LANGUAGES = 1;
-
 export const NO_RESULTS_FOUND = "No Results Found";

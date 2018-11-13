@@ -23,7 +23,7 @@ import {
   transformStatistics
 } from "./helpers";
 
-import { DEFAULT_COLORS, MIN_LANGUAGES } from "../constants";
+import { DEFAULT_COLORS, DEFAULT_OPTIONS, MIN_LANGUAGES } from "../constants";
 
 const addCommits = (key, commits) => add(commits, propOr(0, "commits")(key));
 
@@ -31,6 +31,28 @@ const addRepository = language =>
   inc(prop("repositories", language)) || MIN_LANGUAGES;
 
 const addStars = (key, stars) => add(stars, propOr(0, "stars")(key));
+
+const createConfiguration = (user, configuration) => ({
+  ...configuration,
+  options: {
+    ...DEFAULT_OPTIONS,
+    onClick: (_, data) => createLink(user, data)
+  }
+});
+
+const createLink = (user, data) => {
+  const canvas = data[0]._chart.canvas.id;
+  const label = data[0]._model.label;
+  const redirectByRepository = `https://github.com/${user}/${label}`;
+  const redirectByLanguage = `https://github.com/${user}?utf8=%E2%9C%93&tab=repositories&q=&type=source&language=${encodeURIComponent(
+    label
+  )}`;
+
+  if (canvas === "by-repository")
+    return window.open(redirectByRepository, "_blank");
+
+  return window.open(redirectByLanguage, "_blank");
+};
 
 const createData = (data, from, currentProp) => {
   const { labels, values } = getInfo(prop(from, data), currentProp);
@@ -129,6 +151,7 @@ const updateRepositoryData = (repositoryInfo, edges, pageInfo) =>
   )(repositoryInfo);
 
 export {
+  createConfiguration,
   createData,
   getEdges,
   getEndCursor,

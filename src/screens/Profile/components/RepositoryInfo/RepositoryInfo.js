@@ -5,15 +5,13 @@ import { Query } from "react-apollo";
 import { PulseLoader } from "react-spinners";
 import { GoPin, GoRepo, GoStar } from "react-icons/go";
 
-import {
-  CHART_SM_CONFIGURATION,
-  CHART_LG_CONFIGURATION
-} from "../../constants";
+import { CHART_SM, CHART_LG } from "../../constants";
 
 import { GET_REPOSITORIES_INFORMATION } from "./query";
 import updateQuery from "./updateQuery";
 
 import {
+  createConfiguration,
   createData,
   getEndCursor,
   getPageInfo,
@@ -85,32 +83,37 @@ const RepositoryInfo = ({
           <div>
             <section className="statistics-by-language">
               <Statistics
+                id="by-language"
                 title="Repositories per Language"
                 data={createData(dataSet, "languages", "repositories")}
-                configuration={CHART_SM_CONFIGURATION}
+                configuration={createConfiguration(login, CHART_SM)}
               />
               <Statistics
+                id="by-language"
                 title="Stars per Language"
                 data={createData(dataSet, "languages", "stars")}
-                configuration={CHART_SM_CONFIGURATION}
+                configuration={createConfiguration(login, CHART_SM)}
               />
               <Statistics
+                id="by-language"
                 title="Commits per Language"
                 data={createData(dataSet, "languages", "commits")}
-                configuration={CHART_SM_CONFIGURATION}
+                configuration={createConfiguration(login, CHART_SM)}
               />
             </section>
 
             <section className="statistics-by-repository">
               <Statistics
+                id="by-repository"
                 title="Commits per Repo Top 10"
                 data={createData(dataSet, "repositories", "stars")}
-                configuration={CHART_LG_CONFIGURATION}
+                configuration={createConfiguration(login, CHART_LG)}
               />
               <Statistics
+                id="by-repository"
                 title="Stars per Repo Top 10"
                 data={createData(dataSet, "repositories", "commits")}
-                configuration={CHART_LG_CONFIGURATION}
+                configuration={createConfiguration(login, CHART_LG)}
               />
             </section>
           </div>

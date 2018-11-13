@@ -1,4 +1,5 @@
 import {
+  createConfiguration,
   createData,
   getEdges,
   getEndCursor,
@@ -13,6 +14,18 @@ import edge from "./fixtures/edge";
 import edgeForked from "./fixtures/edgeForked";
 
 describe("Statistics", () => {
+  describe("createConfiguration", () => {
+    let result;
+
+    beforeEach(() => {
+      const user = "wesbos";
+      const configuration = { width: 100, height: 100 };
+      result = createConfiguration(user, configuration);
+    });
+
+    it("should match configuration object with the snapshot", () =>
+      expect(result).toMatchSnapshot());
+  });
   describe("createData", () => {
     let result;
 

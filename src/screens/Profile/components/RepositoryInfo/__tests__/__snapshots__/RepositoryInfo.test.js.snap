@@ -23,6 +23,7 @@ exports[`Repository Info Component render when it has successfull response and h
                 "position": "left",
               },
               "maintainAspectRatio": false,
+              "onClick": [Function],
               "responsive": false,
               "tooltips": Object {
                 "enabled": true,
@@ -70,6 +71,7 @@ exports[`Repository Info Component render when it has successfull response and h
             ],
           }
         }
+        id="by-language"
         title="Repositories per Language"
       >
         <div
@@ -121,6 +123,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
             }
             height={300}
+            id="by-language"
             options={
               Object {
                 "legend": Object {
@@ -133,6 +136,7 @@ exports[`Repository Info Component render when it has successfull response and h
                   "position": "left",
                 },
                 "maintainAspectRatio": false,
+                "onClick": [Function],
                 "responsive": false,
                 "tooltips": Object {
                   "enabled": true,
@@ -183,6 +187,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
               datasetKeyProvider={[Function]}
               height={300}
+              id="by-language"
               legend={
                 Object {
                   "display": true,
@@ -201,6 +206,7 @@ exports[`Repository Info Component render when it has successfull response and h
                     "position": "left",
                   },
                   "maintainAspectRatio": false,
+                  "onClick": [Function],
                   "responsive": false,
                   "tooltips": Object {
                     "enabled": true,
@@ -213,6 +219,7 @@ exports[`Repository Info Component render when it has successfull response and h
             >
               <canvas
                 height={300}
+                id="by-language"
                 onClick={[Function]}
                 width={400}
               />
@@ -235,6 +242,7 @@ exports[`Repository Info Component render when it has successfull response and h
                 "position": "left",
               },
               "maintainAspectRatio": false,
+              "onClick": [Function],
               "responsive": false,
               "tooltips": Object {
                 "enabled": true,
@@ -272,6 +280,7 @@ exports[`Repository Info Component render when it has successfull response and h
             ],
           }
         }
+        id="by-language"
         title="Stars per Language"
       >
         <div
@@ -313,6 +322,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
             }
             height={300}
+            id="by-language"
             options={
               Object {
                 "legend": Object {
@@ -325,6 +335,7 @@ exports[`Repository Info Component render when it has successfull response and h
                   "position": "left",
                 },
                 "maintainAspectRatio": false,
+                "onClick": [Function],
                 "responsive": false,
                 "tooltips": Object {
                   "enabled": true,
@@ -365,6 +376,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
               datasetKeyProvider={[Function]}
               height={300}
+              id="by-language"
               legend={
                 Object {
                   "display": true,
@@ -383,6 +395,7 @@ exports[`Repository Info Component render when it has successfull response and h
                     "position": "left",
                   },
                   "maintainAspectRatio": false,
+                  "onClick": [Function],
                   "responsive": false,
                   "tooltips": Object {
                     "enabled": true,
@@ -395,6 +408,7 @@ exports[`Repository Info Component render when it has successfull response and h
             >
               <canvas
                 height={300}
+                id="by-language"
                 onClick={[Function]}
                 width={400}
               />
@@ -417,6 +431,7 @@ exports[`Repository Info Component render when it has successfull response and h
                 "position": "left",
               },
               "maintainAspectRatio": false,
+              "onClick": [Function],
               "responsive": false,
               "tooltips": Object {
                 "enabled": true,
@@ -466,6 +481,7 @@ exports[`Repository Info Component render when it has successfull response and h
             ],
           }
         }
+        id="by-language"
         title="Commits per Language"
       >
         <div
@@ -519,6 +535,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
             }
             height={300}
+            id="by-language"
             options={
               Object {
                 "legend": Object {
@@ -531,6 +548,7 @@ exports[`Repository Info Component render when it has successfull response and h
                   "position": "left",
                 },
                 "maintainAspectRatio": false,
+                "onClick": [Function],
                 "responsive": false,
                 "tooltips": Object {
                   "enabled": true,
@@ -583,6 +601,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
               datasetKeyProvider={[Function]}
               height={300}
+              id="by-language"
               legend={
                 Object {
                   "display": true,
@@ -601,6 +620,7 @@ exports[`Repository Info Component render when it has successfull response and h
                     "position": "left",
                   },
                   "maintainAspectRatio": false,
+                  "onClick": [Function],
                   "responsive": false,
                   "tooltips": Object {
                     "enabled": true,
@@ -613,6 +633,7 @@ exports[`Repository Info Component render when it has successfull response and h
             >
               <canvas
                 height={300}
+                id="by-language"
                 onClick={[Function]}
                 width={400}
               />
@@ -639,6 +660,7 @@ exports[`Repository Info Component render when it has successfull response and h
                 "position": "left",
               },
               "maintainAspectRatio": false,
+              "onClick": [Function],
               "responsive": false,
               "tooltips": Object {
                 "enabled": true,
@@ -688,6 +710,7 @@ exports[`Repository Info Component render when it has successfull response and h
             ],
           }
         }
+        id="by-repository"
         title="Commits per Repo Top 10"
       >
         <div
@@ -741,6 +764,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
             }
             height={400}
+            id="by-repository"
             options={
               Object {
                 "legend": Object {
@@ -753,6 +777,7 @@ exports[`Repository Info Component render when it has successfull response and h
                   "position": "left",
                 },
                 "maintainAspectRatio": false,
+                "onClick": [Function],
                 "responsive": false,
                 "tooltips": Object {
                   "enabled": true,
@@ -805,6 +830,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
               datasetKeyProvider={[Function]}
               height={400}
+              id="by-repository"
               legend={
                 Object {
                   "display": true,
@@ -823,6 +849,7 @@ exports[`Repository Info Component render when it has successfull response and h
                     "position": "left",
                   },
                   "maintainAspectRatio": false,
+                  "onClick": [Function],
                   "responsive": false,
                   "tooltips": Object {
                     "enabled": true,
@@ -835,6 +862,7 @@ exports[`Repository Info Component render when it has successfull response and h
             >
               <canvas
                 height={400}
+                id="by-repository"
                 onClick={[Function]}
                 width={600}
               />
@@ -857,6 +885,7 @@ exports[`Repository Info Component render when it has successfull response and h
                 "position": "left",
               },
               "maintainAspectRatio": false,
+              "onClick": [Function],
               "responsive": false,
               "tooltips": Object {
                 "enabled": true,
@@ -910,6 +939,7 @@ exports[`Repository Info Component render when it has successfull response and h
             ],
           }
         }
+        id="by-repository"
         title="Stars per Repo Top 10"
       >
         <div
@@ -967,6 +997,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
             }
             height={400}
+            id="by-repository"
             options={
               Object {
                 "legend": Object {
@@ -979,6 +1010,7 @@ exports[`Repository Info Component render when it has successfull response and h
                   "position": "left",
                 },
                 "maintainAspectRatio": false,
+                "onClick": [Function],
                 "responsive": false,
                 "tooltips": Object {
                   "enabled": true,
@@ -1035,6 +1067,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
               datasetKeyProvider={[Function]}
               height={400}
+              id="by-repository"
               legend={
                 Object {
                   "display": true,
@@ -1053,6 +1086,7 @@ exports[`Repository Info Component render when it has successfull response and h
                     "position": "left",
                   },
                   "maintainAspectRatio": false,
+                  "onClick": [Function],
                   "responsive": false,
                   "tooltips": Object {
                     "enabled": true,
@@ -1065,6 +1099,7 @@ exports[`Repository Info Component render when it has successfull response and h
             >
               <canvas
                 height={400}
+                id="by-repository"
                 onClick={[Function]}
                 width={600}
               />
@@ -1296,6 +1331,7 @@ exports[`Repository Info Component render when it has successfull response and h
                 "position": "left",
               },
               "maintainAspectRatio": false,
+              "onClick": [Function],
               "responsive": false,
               "tooltips": Object {
                 "enabled": true,
@@ -1343,6 +1379,7 @@ exports[`Repository Info Component render when it has successfull response and h
             ],
           }
         }
+        id="by-language"
         title="Repositories per Language"
       >
         <div
@@ -1394,6 +1431,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
             }
             height={300}
+            id="by-language"
             options={
               Object {
                 "legend": Object {
@@ -1406,6 +1444,7 @@ exports[`Repository Info Component render when it has successfull response and h
                   "position": "left",
                 },
                 "maintainAspectRatio": false,
+                "onClick": [Function],
                 "responsive": false,
                 "tooltips": Object {
                   "enabled": true,
@@ -1456,6 +1495,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
               datasetKeyProvider={[Function]}
               height={300}
+              id="by-language"
               legend={
                 Object {
                   "display": true,
@@ -1474,6 +1514,7 @@ exports[`Repository Info Component render when it has successfull response and h
                     "position": "left",
                   },
                   "maintainAspectRatio": false,
+                  "onClick": [Function],
                   "responsive": false,
                   "tooltips": Object {
                     "enabled": true,
@@ -1486,6 +1527,7 @@ exports[`Repository Info Component render when it has successfull response and h
             >
               <canvas
                 height={300}
+                id="by-language"
                 onClick={[Function]}
                 width={400}
               />
@@ -1508,6 +1550,7 @@ exports[`Repository Info Component render when it has successfull response and h
                 "position": "left",
               },
               "maintainAspectRatio": false,
+              "onClick": [Function],
               "responsive": false,
               "tooltips": Object {
                 "enabled": true,
@@ -1545,6 +1588,7 @@ exports[`Repository Info Component render when it has successfull response and h
             ],
           }
         }
+        id="by-language"
         title="Stars per Language"
       >
         <div
@@ -1586,6 +1630,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
             }
             height={300}
+            id="by-language"
             options={
               Object {
                 "legend": Object {
@@ -1598,6 +1643,7 @@ exports[`Repository Info Component render when it has successfull response and h
                   "position": "left",
                 },
                 "maintainAspectRatio": false,
+                "onClick": [Function],
                 "responsive": false,
                 "tooltips": Object {
                   "enabled": true,
@@ -1638,6 +1684,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
               datasetKeyProvider={[Function]}
               height={300}
+              id="by-language"
               legend={
                 Object {
                   "display": true,
@@ -1656,6 +1703,7 @@ exports[`Repository Info Component render when it has successfull response and h
                     "position": "left",
                   },
                   "maintainAspectRatio": false,
+                  "onClick": [Function],
                   "responsive": false,
                   "tooltips": Object {
                     "enabled": true,
@@ -1668,6 +1716,7 @@ exports[`Repository Info Component render when it has successfull response and h
             >
               <canvas
                 height={300}
+                id="by-language"
                 onClick={[Function]}
                 width={400}
               />
@@ -1690,6 +1739,7 @@ exports[`Repository Info Component render when it has successfull response and h
                 "position": "left",
               },
               "maintainAspectRatio": false,
+              "onClick": [Function],
               "responsive": false,
               "tooltips": Object {
                 "enabled": true,
@@ -1739,6 +1789,7 @@ exports[`Repository Info Component render when it has successfull response and h
             ],
           }
         }
+        id="by-language"
         title="Commits per Language"
       >
         <div
@@ -1792,6 +1843,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
             }
             height={300}
+            id="by-language"
             options={
               Object {
                 "legend": Object {
@@ -1804,6 +1856,7 @@ exports[`Repository Info Component render when it has successfull response and h
                   "position": "left",
                 },
                 "maintainAspectRatio": false,
+                "onClick": [Function],
                 "responsive": false,
                 "tooltips": Object {
                   "enabled": true,
@@ -1856,6 +1909,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
               datasetKeyProvider={[Function]}
               height={300}
+              id="by-language"
               legend={
                 Object {
                   "display": true,
@@ -1874,6 +1928,7 @@ exports[`Repository Info Component render when it has successfull response and h
                     "position": "left",
                   },
                   "maintainAspectRatio": false,
+                  "onClick": [Function],
                   "responsive": false,
                   "tooltips": Object {
                     "enabled": true,
@@ -1886,6 +1941,7 @@ exports[`Repository Info Component render when it has successfull response and h
             >
               <canvas
                 height={300}
+                id="by-language"
                 onClick={[Function]}
                 width={400}
               />
@@ -1912,6 +1968,7 @@ exports[`Repository Info Component render when it has successfull response and h
                 "position": "left",
               },
               "maintainAspectRatio": false,
+              "onClick": [Function],
               "responsive": false,
               "tooltips": Object {
                 "enabled": true,
@@ -1961,6 +2018,7 @@ exports[`Repository Info Component render when it has successfull response and h
             ],
           }
         }
+        id="by-repository"
         title="Commits per Repo Top 10"
       >
         <div
@@ -2014,6 +2072,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
             }
             height={400}
+            id="by-repository"
             options={
               Object {
                 "legend": Object {
@@ -2026,6 +2085,7 @@ exports[`Repository Info Component render when it has successfull response and h
                   "position": "left",
                 },
                 "maintainAspectRatio": false,
+                "onClick": [Function],
                 "responsive": false,
                 "tooltips": Object {
                   "enabled": true,
@@ -2078,6 +2138,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
               datasetKeyProvider={[Function]}
               height={400}
+              id="by-repository"
               legend={
                 Object {
                   "display": true,
@@ -2096,6 +2157,7 @@ exports[`Repository Info Component render when it has successfull response and h
                     "position": "left",
                   },
                   "maintainAspectRatio": false,
+                  "onClick": [Function],
                   "responsive": false,
                   "tooltips": Object {
                     "enabled": true,
@@ -2108,6 +2170,7 @@ exports[`Repository Info Component render when it has successfull response and h
             >
               <canvas
                 height={400}
+                id="by-repository"
                 onClick={[Function]}
                 width={600}
               />
@@ -2130,6 +2193,7 @@ exports[`Repository Info Component render when it has successfull response and h
                 "position": "left",
               },
               "maintainAspectRatio": false,
+              "onClick": [Function],
               "responsive": false,
               "tooltips": Object {
                 "enabled": true,
@@ -2183,6 +2247,7 @@ exports[`Repository Info Component render when it has successfull response and h
             ],
           }
         }
+        id="by-repository"
         title="Stars per Repo Top 10"
       >
         <div
@@ -2240,6 +2305,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
             }
             height={400}
+            id="by-repository"
             options={
               Object {
                 "legend": Object {
@@ -2252,6 +2318,7 @@ exports[`Repository Info Component render when it has successfull response and h
                   "position": "left",
                 },
                 "maintainAspectRatio": false,
+                "onClick": [Function],
                 "responsive": false,
                 "tooltips": Object {
                   "enabled": true,
@@ -2308,6 +2375,7 @@ exports[`Repository Info Component render when it has successfull response and h
               }
               datasetKeyProvider={[Function]}
               height={400}
+              id="by-repository"
               legend={
                 Object {
                   "display": true,
@@ -2326,6 +2394,7 @@ exports[`Repository Info Component render when it has successfull response and h
                     "position": "left",
                   },
                   "maintainAspectRatio": false,
+                  "onClick": [Function],
                   "responsive": false,
                   "tooltips": Object {
                     "enabled": true,
@@ -2338,6 +2407,7 @@ exports[`Repository Info Component render when it has successfull response and h
             >
               <canvas
                 height={400}
+                id="by-repository"
                 onClick={[Function]}
                 width={600}
               />

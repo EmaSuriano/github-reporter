@@ -1,4 +1,5 @@
 import {
+  createConfiguration,
   createData,
   getEdges,
   getEndCursor,
@@ -10,6 +11,7 @@ import {
 } from "./statistics";
 
 export {
+  createConfiguration,
   createData,
   getEdges,
   getEndCursor,

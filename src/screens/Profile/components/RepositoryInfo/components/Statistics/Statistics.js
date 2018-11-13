@@ -5,13 +5,13 @@ import { Doughnut } from "react-chartjs-2";
 
 import NoDataFound from "../NoDataFound";
 
-const Statistics = ({ data, configuration, title }) => (
+const Statistics = ({ configuration, data, id, title }) => (
   <div className="statistic--box">
     <h1 className="statistic--box-title">{title}</h1>
     {isEmpty(data.labels) ? (
       <NoDataFound />
     ) : (
-      <Doughnut data={data} {...configuration} />
+      <Doughnut id={id} data={data} {...configuration} />
     )}
   </div>
 );
@@ -29,7 +29,9 @@ Statistics.propTypes = {
         data: arrayOf(number)
       })
     )
-  })
+  }),
+  id: string,
+  title: string
 };
 
 export default Statistics;

@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Statistics createConfiguration should match configuration object with the snapshot 1`] = `
+Object {
+  "height": 100,
+  "options": Object {
+    "legend": Object {
+      "labels": Object {
+        "boxWidth": 12,
+        "fontSize": 12,
+        "padding": 15,
+        "usePointStyle": true,
+      },
+      "position": "left",
+    },
+    "maintainAspectRatio": false,
+    "onClick": [Function],
+    "responsive": false,
+    "tooltips": Object {
+      "enabled": true,
+    },
+  },
+  "width": 100,
+}
+`;
+
 exports[`Statistics createData should match the object created by the function with the datasets and labels 1`] = `
 Object {
   "datasets": Array [

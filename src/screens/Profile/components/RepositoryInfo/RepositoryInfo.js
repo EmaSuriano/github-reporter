@@ -25,7 +25,11 @@ import ActivityBox from "./components/ActivityBox";
 import ErrorReport from "shared/components/ErrorReport";
 import Statistics from "./components/Statistics";
 
-const renderIcon = ({ Icon, ...props }) => <Icon size="4rem" {...props} />;
+const renderIcon = ({ Icon, login, tab, ...props }) => (
+  <a className="stats--icon" href={`https://github.com/${login}?tab=${tab}`}>
+    <Icon size="4rem" {...props} />
+  </a>
+);
 
 const RepositoryInfo = ({
   id,
@@ -112,17 +116,17 @@ const RepositoryInfo = ({
           </div>
           <section className="statistics-by-activity">
             <ActivityBox
-              icon={renderIcon({ Icon: GoRepo, className: "stats--icon" })}
+              icon={renderIcon({ Icon: GoRepo, login, tab: "repositories" })}
               stat={repositories}
               title="Repositories"
             />
             <ActivityBox
-              icon={renderIcon({ Icon: GoStar, className: "stats--icon" })}
+              icon={renderIcon({ Icon: GoStar, login, tab: "stars" })}
               stat={starredRepositories}
               title="Starred"
             />
             <ActivityBox
-              icon={renderIcon({ Icon: GoPin, className: "stats--icon" })}
+              icon={renderIcon({ Icon: GoPin, login, tab: "" })}
               stat={pinnedRepositories}
               title="Pinned"
             />

@@ -5,6 +5,14 @@ body {
   height: 100vh;
 }
 
+a {
+  color: black;
+}
+
+a:focus {
+  outline: none;
+}
+
 .container {
   background-color: #ffffff;
   padding: 2rem;

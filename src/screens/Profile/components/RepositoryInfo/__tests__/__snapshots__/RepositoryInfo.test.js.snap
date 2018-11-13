@@ -1079,52 +1079,58 @@ exports[`Repository Info Component render when it has successfull response and h
   >
     <ActivityBox
       icon={
-        <GoRepo
+        <a
           className="stats--icon"
-          size="4rem"
-        />
+          href="https://github.com/wesbos?tab=repositories"
+        >
+          <GoRepo
+            size="4rem"
+          />
+        </a>
       }
       title="Repositories"
     >
       <div
         className="activity--stats activity--box"
       >
-        <GoRepo
+        <a
           className="stats--icon"
-          size="4rem"
+          href="https://github.com/wesbos?tab=repositories"
         >
-          <IconBase
-            attr={
-              Object {
-                "viewBox": "0 0 12 16",
-              }
-            }
-            className="stats--icon"
+          <GoRepo
             size="4rem"
           >
-            <svg
-              className="stats--icon"
-              fill="currentColor"
-              height="4rem"
-              size="4rem"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
+            <IconBase
+              attr={
                 Object {
-                  "color": undefined,
+                  "viewBox": "0 0 12 16",
                 }
               }
-              viewBox="0 0 12 16"
-              width="4rem"
+              size="4rem"
             >
-              <path
-                d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"
-                fillRule="evenodd"
-                key="0"
-              />
-            </svg>
-          </IconBase>
-        </GoRepo>
+              <svg
+                fill="currentColor"
+                height="4rem"
+                size="4rem"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 12 16"
+                width="4rem"
+              >
+                <path
+                  d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"
+                  fillRule="evenodd"
+                  key="0"
+                />
+              </svg>
+            </IconBase>
+          </GoRepo>
+        </a>
         <h1
           className="stats--number"
         />
@@ -1137,52 +1143,58 @@ exports[`Repository Info Component render when it has successfull response and h
     </ActivityBox>
     <ActivityBox
       icon={
-        <GoStar
+        <a
           className="stats--icon"
-          size="4rem"
-        />
+          href="https://github.com/wesbos?tab=stars"
+        >
+          <GoStar
+            size="4rem"
+          />
+        </a>
       }
       title="Starred"
     >
       <div
         className="activity--stats activity--box"
       >
-        <GoStar
+        <a
           className="stats--icon"
-          size="4rem"
+          href="https://github.com/wesbos?tab=stars"
         >
-          <IconBase
-            attr={
-              Object {
-                "viewBox": "0 0 14 16",
-              }
-            }
-            className="stats--icon"
+          <GoStar
             size="4rem"
           >
-            <svg
-              className="stats--icon"
-              fill="currentColor"
-              height="4rem"
-              size="4rem"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
+            <IconBase
+              attr={
                 Object {
-                  "color": undefined,
+                  "viewBox": "0 0 14 16",
                 }
               }
-              viewBox="0 0 14 16"
-              width="4rem"
+              size="4rem"
             >
-              <path
-                d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"
-                fillRule="evenodd"
-                key="0"
-              />
-            </svg>
-          </IconBase>
-        </GoStar>
+              <svg
+                fill="currentColor"
+                height="4rem"
+                size="4rem"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 14 16"
+                width="4rem"
+              >
+                <path
+                  d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"
+                  fillRule="evenodd"
+                  key="0"
+                />
+              </svg>
+            </IconBase>
+          </GoStar>
+        </a>
         <h1
           className="stats--number"
         />
@@ -1195,52 +1207,58 @@ exports[`Repository Info Component render when it has successfull response and h
     </ActivityBox>
     <ActivityBox
       icon={
-        <GoPin
+        <a
           className="stats--icon"
-          size="4rem"
-        />
+          href="https://github.com/wesbos?tab="
+        >
+          <GoPin
+            size="4rem"
+          />
+        </a>
       }
       title="Pinned"
     >
       <div
         className="activity--stats activity--box"
       >
-        <GoPin
+        <a
           className="stats--icon"
-          size="4rem"
+          href="https://github.com/wesbos?tab="
         >
-          <IconBase
-            attr={
-              Object {
-                "viewBox": "0 0 16 16",
-              }
-            }
-            className="stats--icon"
+          <GoPin
             size="4rem"
           >
-            <svg
-              className="stats--icon"
-              fill="currentColor"
-              height="4rem"
-              size="4rem"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
+            <IconBase
+              attr={
                 Object {
-                  "color": undefined,
+                  "viewBox": "0 0 16 16",
                 }
               }
-              viewBox="0 0 16 16"
-              width="4rem"
+              size="4rem"
             >
-              <path
-                d="M10 1.2V2l.5 1L6 6H2.2c-.44 0-.67.53-.34.86L5 10l-4 5 5-4 3.14 3.14a.5.5 0 0 0 .86-.34V10l3-4.5 1 .5h.8c.44 0 .67-.53.34-.86L10.86.86a.5.5 0 0 0-.86.34z"
-                fillRule="evenodd"
-                key="0"
-              />
-            </svg>
-          </IconBase>
-        </GoPin>
+              <svg
+                fill="currentColor"
+                height="4rem"
+                size="4rem"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 16 16"
+                width="4rem"
+              >
+                <path
+                  d="M10 1.2V2l.5 1L6 6H2.2c-.44 0-.67.53-.34.86L5 10l-4 5 5-4 3.14 3.14a.5.5 0 0 0 .86-.34V10l3-4.5 1 .5h.8c.44 0 .67-.53.34-.86L10.86.86a.5.5 0 0 0-.86.34z"
+                  fillRule="evenodd"
+                  key="0"
+                />
+              </svg>
+            </IconBase>
+          </GoPin>
+        </a>
         <h1
           className="stats--number"
         />
@@ -2334,52 +2352,58 @@ exports[`Repository Info Component render when it has successfull response and h
   >
     <ActivityBox
       icon={
-        <GoRepo
+        <a
           className="stats--icon"
-          size="4rem"
-        />
+          href="https://github.com/wesbos?tab=repositories"
+        >
+          <GoRepo
+            size="4rem"
+          />
+        </a>
       }
       title="Repositories"
     >
       <div
         className="activity--stats activity--box"
       >
-        <GoRepo
+        <a
           className="stats--icon"
-          size="4rem"
+          href="https://github.com/wesbos?tab=repositories"
         >
-          <IconBase
-            attr={
-              Object {
-                "viewBox": "0 0 12 16",
-              }
-            }
-            className="stats--icon"
+          <GoRepo
             size="4rem"
           >
-            <svg
-              className="stats--icon"
-              fill="currentColor"
-              height="4rem"
-              size="4rem"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
+            <IconBase
+              attr={
                 Object {
-                  "color": undefined,
+                  "viewBox": "0 0 12 16",
                 }
               }
-              viewBox="0 0 12 16"
-              width="4rem"
+              size="4rem"
             >
-              <path
-                d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"
-                fillRule="evenodd"
-                key="0"
-              />
-            </svg>
-          </IconBase>
-        </GoRepo>
+              <svg
+                fill="currentColor"
+                height="4rem"
+                size="4rem"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 12 16"
+                width="4rem"
+              >
+                <path
+                  d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"
+                  fillRule="evenodd"
+                  key="0"
+                />
+              </svg>
+            </IconBase>
+          </GoRepo>
+        </a>
         <h1
           className="stats--number"
         />
@@ -2392,52 +2416,58 @@ exports[`Repository Info Component render when it has successfull response and h
     </ActivityBox>
     <ActivityBox
       icon={
-        <GoStar
+        <a
           className="stats--icon"
-          size="4rem"
-        />
+          href="https://github.com/wesbos?tab=stars"
+        >
+          <GoStar
+            size="4rem"
+          />
+        </a>
       }
       title="Starred"
     >
       <div
         className="activity--stats activity--box"
       >
-        <GoStar
+        <a
           className="stats--icon"
-          size="4rem"
+          href="https://github.com/wesbos?tab=stars"
         >
-          <IconBase
-            attr={
-              Object {
-                "viewBox": "0 0 14 16",
-              }
-            }
-            className="stats--icon"
+          <GoStar
             size="4rem"
           >
-            <svg
-              className="stats--icon"
-              fill="currentColor"
-              height="4rem"
-              size="4rem"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
+            <IconBase
+              attr={
                 Object {
-                  "color": undefined,
+                  "viewBox": "0 0 14 16",
                 }
               }
-              viewBox="0 0 14 16"
-              width="4rem"
+              size="4rem"
             >
-              <path
-                d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"
-                fillRule="evenodd"
-                key="0"
-              />
-            </svg>
-          </IconBase>
-        </GoStar>
+              <svg
+                fill="currentColor"
+                height="4rem"
+                size="4rem"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 14 16"
+                width="4rem"
+              >
+                <path
+                  d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"
+                  fillRule="evenodd"
+                  key="0"
+                />
+              </svg>
+            </IconBase>
+          </GoStar>
+        </a>
         <h1
           className="stats--number"
         />
@@ -2450,52 +2480,58 @@ exports[`Repository Info Component render when it has successfull response and h
     </ActivityBox>
     <ActivityBox
       icon={
-        <GoPin
+        <a
           className="stats--icon"
-          size="4rem"
-        />
+          href="https://github.com/wesbos?tab="
+        >
+          <GoPin
+            size="4rem"
+          />
+        </a>
       }
       title="Pinned"
     >
       <div
         className="activity--stats activity--box"
       >
-        <GoPin
+        <a
           className="stats--icon"
-          size="4rem"
+          href="https://github.com/wesbos?tab="
         >
-          <IconBase
-            attr={
-              Object {
-                "viewBox": "0 0 16 16",
-              }
-            }
-            className="stats--icon"
+          <GoPin
             size="4rem"
           >
-            <svg
-              className="stats--icon"
-              fill="currentColor"
-              height="4rem"
-              size="4rem"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
+            <IconBase
+              attr={
                 Object {
-                  "color": undefined,
+                  "viewBox": "0 0 16 16",
                 }
               }
-              viewBox="0 0 16 16"
-              width="4rem"
+              size="4rem"
             >
-              <path
-                d="M10 1.2V2l.5 1L6 6H2.2c-.44 0-.67.53-.34.86L5 10l-4 5 5-4 3.14 3.14a.5.5 0 0 0 .86-.34V10l3-4.5 1 .5h.8c.44 0 .67-.53.34-.86L10.86.86a.5.5 0 0 0-.86.34z"
-                fillRule="evenodd"
-                key="0"
-              />
-            </svg>
-          </IconBase>
-        </GoPin>
+              <svg
+                fill="currentColor"
+                height="4rem"
+                size="4rem"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 16 16"
+                width="4rem"
+              >
+                <path
+                  d="M10 1.2V2l.5 1L6 6H2.2c-.44 0-.67.53-.34.86L5 10l-4 5 5-4 3.14 3.14a.5.5 0 0 0 .86-.34V10l3-4.5 1 .5h.8c.44 0 .67-.53.34-.86L10.86.86a.5.5 0 0 0-.86.34z"
+                  fillRule="evenodd"
+                  key="0"
+                />
+              </svg>
+            </IconBase>
+          </GoPin>
+        </a>
         <h1
           className="stats--number"
         />

@@ -25,7 +25,68 @@ describe("Statistics", () => {
 
     it("should match configuration object with the snapshot", () =>
       expect(result).toMatchSnapshot());
+
+    describe("onClick instance", () => {
+      let onClickInstance;
+
+      const spyWindow = jest.spyOn(window, "open");
+
+      describe('when canvas is equal to "by-language"', () => {
+        beforeEach(() => {
+          const user = "wesbos";
+          const data = [
+            {
+              _model: { label: "linkLabel" },
+              _chart: { canvas: { id: "by-language" } }
+            }
+          ];
+
+          result.options.onClick(user, data);
+        });
+
+        afterEach(() => {
+          jest.clearAllMocks();
+        });
+
+        it("should call window open once", () =>
+          expect(spyWindow).toHaveBeenCalledTimes(1));
+
+        it("should call window open with the proper link and _blank property", () =>
+          expect(spyWindow).toHaveBeenCalledWith(
+            "https://github.com/wesbos?utf8=%E2%9C%93&tab=repositories&q=&type=source&language=linkLabel",
+            "_blank"
+          ));
+      });
+
+      describe('when canvas is equal to "by-repository"', () => {
+        beforeEach(() => {
+          const user = "wesbos";
+          const data = [
+            {
+              _model: { label: "linkLabel" },
+              _chart: { canvas: { id: "by-repository" } }
+            }
+          ];
+
+          result.options.onClick(user, data);
+        });
+
+        afterEach(() => {
+          jest.clearAllMocks();
+        });
+
+        it("should call window open once", () =>
+          expect(spyWindow).toHaveBeenCalledTimes(1));
+
+        it("should call window open with the proper link and _blank property", () =>
+          expect(spyWindow).toHaveBeenCalledWith(
+            "https://github.com/wesbos/linkLabel",
+            "_blank"
+          ));
+      });
+    });
   });
+
   describe("createData", () => {
     let result;
 

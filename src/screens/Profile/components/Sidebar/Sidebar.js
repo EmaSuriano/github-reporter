@@ -1,7 +1,7 @@
 import React from "react";
 import { number, string } from "prop-types";
 import { FaUserCheck, FaUserPlus } from "react-icons/fa";
-import { GoClock, GoCode, GoMail } from "react-icons/go";
+import { GoClock, GoCode, GoLocation, GoMail } from "react-icons/go";
 import moment from "moment";
 
 import Follow from "./components/Follow";
@@ -17,6 +17,7 @@ const Sidebar = ({
   email,
   followers,
   following,
+  location,
   name
 }) => (
   <section className="content--sidebar">
@@ -54,6 +55,10 @@ const Sidebar = ({
           icon={renderIcon({ Icon: GoCode, size: "3rem" })}
           title={company}
         />
+        <StatsBox
+          icon={renderIcon({ Icon: GoLocation, size: "3rem" })}
+          title={location}
+        />
       </div>
     </div>
   </section>
@@ -67,6 +72,7 @@ Sidebar.propTypes = {
   email: string,
   followers: number.isRequired,
   following: number.isRequired,
+  location: string.isRequired,
   name: string.isRequired
 };
 

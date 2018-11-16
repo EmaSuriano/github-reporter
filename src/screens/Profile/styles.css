@@ -234,10 +234,10 @@ input:focus {
 .statistics-by-activity {
   grid-area: by-activity;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: auto;
   grid-template-rows: 1fr;
   grid-gap: 1rem;
-  grid-template-areas: "repositories" "starred" "extra";
+  grid-template-areas: "repositories starred extra";
   justify-items: center;
 }
 

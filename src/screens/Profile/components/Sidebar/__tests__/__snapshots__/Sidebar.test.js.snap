@@ -79,6 +79,14 @@ exports[`Sidebar render should match with html structure of the snapshot 1`] = `
         }
         quantity={0}
       />
+      <StatsBox
+        icon={
+          <GoLocation
+            size="3rem"
+          />
+        }
+        quantity={0}
+      />
     </div>
   </div>
 </section>

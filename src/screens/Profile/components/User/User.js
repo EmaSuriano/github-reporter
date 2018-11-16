@@ -38,6 +38,7 @@ const User = ({ profile }) => (
         followers,
         following,
         id,
+        location,
         login,
         name,
         pinnedRepositories,
@@ -55,6 +56,7 @@ const User = ({ profile }) => (
             email={email}
             followers={getTotalCount(followers)}
             following={getTotalCount(following)}
+            location={location}
             name={name}
           />
           <RepositoryInfo

@@ -1,6 +1,7 @@
 import React, { Component, createRef } from "react";
 import { func } from "prop-types";
 import { FaSearch } from "react-icons/fa";
+import { Box, Text } from "grommet";
 
 export default class Header extends Component {
   static propTypes = {
@@ -26,22 +27,24 @@ export default class Header extends Component {
 
   render() {
     return (
-      <section className="profile--header">
-        <h1 className="header--title">Github Reporter</h1>
-        <div className="input-search">
-          <input
-            ref={this.inputRef}
-            type="text"
-            placeholder="Who are you looking for ?"
-            onChange={this.handleInput}
-            onKeyPress={this.handleKeyPress}
-            value={this.state.query}
-          />
-          <span className="input-search--button" onClick={this.handleSearch}>
-            <FaSearch size="2rem" />
-          </span>
-        </div>
-      </section>
+      <React.Fragment>
+        <Box basis="small">
+          <Text>Github Reporter</Text>
+        </Box>
+        <Box direction="row" basis="full" align="center" gap="small">
+          <Box basis="large">
+            <input
+              ref={this.inputRef}
+              type="text"
+              placeholder="Who are you looking for ?"
+              onChange={this.handleInput}
+              onKeyPress={this.handleKeyPress}
+              value={this.state.query}
+            />
+          </Box>
+          <FaSearch size="2rem" onClick={this.handleSearch} />
+        </Box>
+      </React.Fragment>
     );
   }
 }

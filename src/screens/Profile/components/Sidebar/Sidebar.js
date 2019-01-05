@@ -3,7 +3,7 @@ import { number, string } from "prop-types";
 import { FaUserCheck, FaUserPlus } from "react-icons/fa";
 import { GoClock, GoCode, GoLocation, GoMail } from "react-icons/go";
 import moment from "moment";
-import { Box, Image, Text } from "grommet";
+import { Box, Image, Text, Heading } from "grommet";
 import styled from "styled-components";
 
 import Follow from "./components/Follow";
@@ -11,8 +11,20 @@ import StatsBox from "./components/StatsBox";
 
 const renderIcon = ({ Icon, ...props }) => <Icon size="2rem" {...props} />;
 
-const StyledImage = styled(Image)`
+const Wrapper = styled(Box)`
+  background-color: #fff;
+  border: 1px solid #eee9e9;
+  padding: 1rem;
+`;
+
+const Avatar = styled(Image)`
   border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
+`;
+
+const HeadingName = styled(Heading)`
+  margin-top: 0;
 `;
 
 const Sidebar = ({
@@ -26,13 +38,21 @@ const Sidebar = ({
   location,
   name
 }) => (
-  <React.Fragment>
+  <Wrapper>
     <Box justify="center" align="center" gap="small">
-      <StyledImage src={avatar} />
-      <Text>{name}</Text>
-      <Text>{bio}</Text>
+      <Avatar src={avatar} />
+      <HeadingName level={2} size="medium" responsive>
+        {name}
+      </HeadingName>
+      <Text textAlign="center">{bio}</Text>
     </Box>
-    <Box direction="row" justify="center" align="center" gap="large">
+    <Box
+      direction="row"
+      justify="center"
+      align="center"
+      gap="large"
+      margin="medium"
+    >
       <Follow
         icon={renderIcon({ Icon: FaUserCheck })}
         title="Followers"
@@ -63,7 +83,7 @@ const Sidebar = ({
         title={location}
       />
     </Box>
-  </React.Fragment>
+  </Wrapper>
 );
 
 Sidebar.propTypes = {

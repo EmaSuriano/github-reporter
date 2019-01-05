@@ -4,6 +4,7 @@ import { propOr } from "ramda";
 import { Query } from "react-apollo";
 import { PulseLoader } from "react-spinners";
 import { Box } from "grommet";
+import styled from "styled-components";
 
 import { PROFILE_INFO } from "./query";
 
@@ -12,6 +13,12 @@ import RepositoryInfo from "../RepositoryInfo";
 import Sidebar from "../Sidebar";
 
 import { getTotalCount } from "../../utils";
+
+const Wrapper = styled(Box)`
+  background-color: #fafafa;
+  border-radius: 0.5rem;
+  box-shadow: inset 0px 5px 25px 5px rgba(240, 240, 240, 0.75);
+`;
 
 const User = ({ profile }) => (
   <Query query={PROFILE_INFO} variables={{ name: profile }}>
@@ -48,7 +55,7 @@ const User = ({ profile }) => (
       } = propOr({}, "user")(data);
 
       return (
-        <React.Fragment>
+        <Wrapper direction="row" pad="small" gap="small">
           <Box gridArea="sidebar" width="medium">
             <Sidebar
               avatar={avatarUrl}
@@ -72,7 +79,7 @@ const User = ({ profile }) => (
               pinnedRepositories={getTotalCount(pinnedRepositories)}
             /> */}
           </Box>
-        </React.Fragment>
+        </Wrapper>
       );
     }}
   </Query>

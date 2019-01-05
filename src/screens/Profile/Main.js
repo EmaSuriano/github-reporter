@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import { isEmpty } from "ramda";
 import { Box, Grid } from "grommet";
+import styled from "styled-components";
 
 import Header from "./components/Header";
 import User from "./components/User";
 
 import "./styles.css";
+
+const Wrapper = styled(Grid)`
+  padding: 2rem;
+`;
 
 export default class Profile extends Component {
   state = { user: "" };
@@ -19,7 +24,7 @@ export default class Profile extends Component {
     } = this;
 
     return (
-      <Grid
+      <Wrapper
         areas={[
           { name: "header", start: [0, 0], end: [1, 0] },
           { name: "sidebar", start: [0, 1], end: [0, 1] },
@@ -41,7 +46,7 @@ export default class Profile extends Component {
           <Header searchProfile={searchProfile} />
         </Box>
         {!isEmpty(user) && <User profile={user} />}
-      </Grid>
+      </Wrapper>
     );
 
     /* return (

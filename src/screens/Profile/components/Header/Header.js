@@ -2,7 +2,12 @@ import React, { Component, createRef } from "react";
 import { func } from "prop-types";
 import { FaSearch } from "react-icons/fa";
 import { Box, Text } from "grommet";
+import styled from "styled-components";
 
+const PageTitle = styled(Text)`
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+`;
 export default class Header extends Component {
   static propTypes = {
     searchProfile: func.isRequired
@@ -28,8 +33,10 @@ export default class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <Box basis="medium">
-          <Text>Github Reporter</Text>
+        <Box basis="1/3">
+          <PageTitle level={1} size="xxlarge" weight="bold">
+            Github Reporter
+          </PageTitle>
         </Box>
         <Box direction="row" basis="full" align="center" gap="small">
           <Box basis="full">

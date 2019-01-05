@@ -1,14 +1,15 @@
 import React from "react";
 import { element, number, string } from "prop-types";
+import { Box, Text } from "grommet";
 
 const Follow = ({ icon, title, quantity }) => (
-  <div className="follow-box">
-    <span className="follow-icon">{icon}</span>
-    <div className="follow-stat">
-      <h3 className="follow-stat--number">{quantity}</h3>
-      <span className="follow-stat--text">{title}</span>
-    </div>
-  </div>
+  <Box direction="row" align="center" gap="medium">
+    <Text>{icon}</Text>
+    <Box>
+      <Text>{quantity}</Text>
+      <Text>{title}</Text>
+    </Box>
+  </Box>
 );
 
 Follow.defaultProps = {

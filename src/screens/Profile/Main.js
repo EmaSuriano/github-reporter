@@ -21,16 +21,16 @@ export default class Profile extends Component {
     return (
       <Grid
         areas={[
-          { name: "header", start: [0, 0], end: [1, 1] },
+          { name: "header", start: [0, 0], end: [1, 0] },
           { name: "sidebar", start: [0, 1], end: [0, 1] },
           { name: "main", start: [1, 1], end: [1, 1] }
         ]}
         fill
-        rows={["flex", "flex"]}
-        columns={["flex", "flex"]}
+        rows={["auto", "flex"]}
+        columns={["auto", "flex"]}
       >
         <Box
-          basis="full"
+          basis="medium"
           columns={["large", "auto"]}
           gridArea="header"
           direction="row"

@@ -3,6 +3,7 @@ import { number, shape, string } from "prop-types";
 import { propOr } from "ramda";
 import { Query } from "react-apollo";
 import { PulseLoader } from "react-spinners";
+import { Box } from "grommet";
 
 import { PROFILE_INFO } from "./query";
 
@@ -47,26 +48,31 @@ const User = ({ profile }) => (
       } = propOr({}, "user")(data);
 
       return (
-        <section className="profile--content">
-          <Sidebar
-            avatar={avatarUrl}
-            bio={bio}
-            company={company}
-            createdAt={createdAt}
-            email={email}
-            followers={getTotalCount(followers)}
-            following={getTotalCount(following)}
-            location={location}
-            name={name}
-          />
-          <RepositoryInfo
-            id={id}
-            login={login}
-            repositories={getTotalCount(repositories)}
-            starredRepositories={getTotalCount(starredRepositories)}
-            pinnedRepositories={getTotalCount(pinnedRepositories)}
-          />
-        </section>
+        <React.Fragment>
+          <Box gridArea="sidebar" width="medium">
+            <Sidebar
+              avatar={avatarUrl}
+              bio={bio}
+              company={company}
+              createdAt={createdAt}
+              email={email}
+              followers={getTotalCount(followers)}
+              following={getTotalCount(following)}
+              location={location}
+              name={name}
+            />
+          </Box>
+          <Box gridArea="main" justify="center" align="center">
+            Content
+            {/*<RepositoryInfo
+              id={id}
+              login={login}
+              repositories={getTotalCount(repositories)}
+              starredRepositories={getTotalCount(starredRepositories)}
+              pinnedRepositories={getTotalCount(pinnedRepositories)}
+            /> */}
+          </Box>
+        </React.Fragment>
       );
     }}
   </Query>

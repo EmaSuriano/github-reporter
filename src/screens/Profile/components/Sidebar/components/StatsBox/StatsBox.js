@@ -1,11 +1,12 @@
 import React from "react";
 import { element, string } from "prop-types";
+import { Box, Text } from "grommet";
 
 const StatsBox = ({ icon, title }) => (
-  <section className="sidebar--extra-info">
-    <span>{icon}</span>
-    <h3 className="extra-info-title">{title}</h3>
-  </section>
+  <Box direction="row" align="center" gap="small">
+    <Box>{icon}</Box>
+    <Text>{title}</Text>
+  </Box>
 );
 
 StatsBox.defaultProps = {

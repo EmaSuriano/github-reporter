@@ -30,7 +30,7 @@ export default class Profile extends Component {
         columns={["flex", "flex"]}
       >
         <Box
-          basis="medium"
+          basis="full"
           columns={["large", "auto"]}
           gridArea="header"
           direction="row"
@@ -40,19 +40,7 @@ export default class Profile extends Component {
         >
           <Header searchProfile={searchProfile} />
         </Box>
-        <Box
-          gridArea="sidebar"
-          width="small"
-          animation={[
-            { type: "fadeIn", duration: 300 },
-            { type: "slideRight", size: "xlarge", duration: 150 }
-          ]}
-        >
-          Second Box
-        </Box>
-        <Box gridArea="main" justify="center" align="center">
-          Third Box
-        </Box>
+        {!isEmpty(user) && <User profile={user} />}
       </Grid>
     );
 

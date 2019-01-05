@@ -28,11 +28,11 @@ export default class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <Box basis="small">
+        <Box basis="medium">
           <Text>Github Reporter</Text>
         </Box>
         <Box direction="row" basis="full" align="center" gap="small">
-          <Box basis="large">
+          <Box basis="full">
             <input
               ref={this.inputRef}
               type="text"

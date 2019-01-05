@@ -2,7 +2,7 @@ export const DEFAULT_OPTIONS = {
   maintainAspectRatio: false,
   responsive: false,
   legend: {
-    position: "left",
+    position: "bottom",
     labels: {
       usePointStyle: true,
       fontSize: 12,

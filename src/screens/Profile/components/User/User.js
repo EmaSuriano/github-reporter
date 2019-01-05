@@ -69,15 +69,14 @@ const User = ({ profile }) => (
               name={name}
             />
           </Box>
-          <Box gridArea="main" justify="center" align="center">
-            Content
-            {/*<RepositoryInfo
+          <Box gridArea="main" align="center">
+            <RepositoryInfo
               id={id}
               login={login}
               repositories={getTotalCount(repositories)}
               starredRepositories={getTotalCount(starredRepositories)}
               pinnedRepositories={getTotalCount(pinnedRepositories)}
-            /> */}
+            />
           </Box>
         </Wrapper>
       );

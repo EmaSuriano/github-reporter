@@ -32,10 +32,17 @@ const addRepository = language =>
 
 const addStars = (key, stars) => add(stars, propOr(0, "stars")(key));
 
-const createConfiguration = (user, configuration) => ({
-  ...configuration,
+const createConfiguration = user => ({
   options: {
     ...DEFAULT_OPTIONS,
+    legend: {
+      position: window.innerWidth < 600 ? "bottom" : "left",
+      labels: {
+        fontSize: window.innerWidth < 600 ? 10 : 12,
+        padding: window.innerWidth < 600 ? 8 : 10,
+        boxWidth: window.innerWidth < 600 ? 10 : 12
+      }
+    },
     onClick: (_, data) => createLink(user, data)
   }
 });

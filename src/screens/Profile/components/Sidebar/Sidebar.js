@@ -39,7 +39,7 @@ const Sidebar = ({
   name
 }) => (
   <Wrapper>
-    <Box justify="center" align="center" gap="small">
+    <Box responsive justify="center" align="center" gap="small">
       <Avatar src={avatar} />
       <HeadingName level={2} size="medium" responsive>
         {name}
@@ -47,6 +47,7 @@ const Sidebar = ({
       <Text textAlign="center">{bio}</Text>
     </Box>
     <Box
+      responsive
       direction="row"
       justify="center"
       align="center"
@@ -65,7 +66,7 @@ const Sidebar = ({
         quantity={following}
       />
     </Box>
-    <Box gap="small">
+    <Box responsive gap="small">
       <StatsBox
         icon={renderIcon({ Icon: GoClock, size: "3rem" })}
         title={`Joined Github ${moment(createdAt).fromNow()}`}

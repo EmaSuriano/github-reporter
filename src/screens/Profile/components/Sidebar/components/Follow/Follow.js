@@ -3,9 +3,9 @@ import { element, number, string } from "prop-types";
 import { Box, Text } from "grommet";
 
 const Follow = ({ icon, title, quantity }) => (
-  <Box direction="row" align="center" gap="medium">
+  <Box responsive direction="row" align="center" gap="medium">
     <Text>{icon}</Text>
-    <Box>
+    <Box responsive>
       <Text>{quantity}</Text>
       <Text>{title}</Text>
     </Box>

@@ -81,8 +81,8 @@ const RepositoryInfo = ({
 
       return (
         <React.Fragment>
-          <Box align="center" gap="medium">
-            <Box direction="row" gap="medium">
+          <Box responsive align="center" gap="medium">
+            <Box responsive direction="row" gap="medium">
               <ActivityBox
                 icon={renderIcon({ Icon: GoRepo, login, tab: "repositories" })}
                 stat={repositories}
@@ -99,38 +99,38 @@ const RepositoryInfo = ({
                 title="Pinned"
               />
             </Box>
-            <Box direction="row" gap="small">
+            <Box responsive direction="row" justify="between" gap="medium">
               <Statistics
                 id="by-language"
                 title="Repositories per Language"
                 data={createData(dataSet, "languages", "repositories")}
-                configuration={createConfiguration(login, CHART_SM)}
+                configuration={createConfiguration(login)}
               />
               <Statistics
                 id="by-language"
                 title="Stars per Language"
                 data={createData(dataSet, "languages", "stars")}
-                configuration={createConfiguration(login, CHART_SM)}
+                configuration={createConfiguration(login)}
               />
               <Statistics
                 id="by-language"
                 title="Commits per Language"
                 data={createData(dataSet, "languages", "commits")}
-                configuration={createConfiguration(login, CHART_SM)}
+                configuration={createConfiguration(login)}
               />
             </Box>
-            <Box direction="row" gap="small">
+            <Box responsive direction="row" gap="small">
               <Statistics
                 id="by-repository"
                 title="Commits per Repo Top 10"
                 data={createData(dataSet, "repositories", "stars")}
-                configuration={createConfiguration(login, CHART_LG)}
+                configuration={createConfiguration(login)}
               />
               <Statistics
                 id="by-repository"
                 title="Stars per Repo Top 10"
                 data={createData(dataSet, "repositories", "commits")}
-                configuration={createConfiguration(login, CHART_LG)}
+                configuration={createConfiguration(login)}
               />
             </Box>
           </Box>

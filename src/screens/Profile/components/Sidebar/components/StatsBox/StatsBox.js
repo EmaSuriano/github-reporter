@@ -3,8 +3,8 @@ import { element, string } from "prop-types";
 import { Box, Text } from "grommet";
 
 const StatsBox = ({ icon, title }) => (
-  <Box direction="row" align="center" gap="small">
-    <Box>{icon}</Box>
+  <Box responsive direction="row" align="center" gap="small">
+    <Box responsive>{icon}</Box>
     <Text>{title}</Text>
   </Box>
 );

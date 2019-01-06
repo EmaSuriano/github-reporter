@@ -33,13 +33,13 @@ export default class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <Box basis="1/3">
+        <Box responsive basis="1/3">
           <PageTitle level={1} size="xxlarge" weight="bold">
             Github Reporter
           </PageTitle>
         </Box>
-        <Box direction="row" basis="full" align="center" gap="small">
-          <Box basis="full">
+        <Box responsive direction="row" basis="full" align="center" gap="small">
+          <Box responsive basis="full">
             <input
               ref={this.inputRef}
               type="text"

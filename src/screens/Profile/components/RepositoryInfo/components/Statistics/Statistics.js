@@ -13,13 +13,20 @@ const StatisticsBox = styled(Box)`
   border-radius: 0.5rem;
 `;
 
+const Wrapper = styled.section`
+  position: relative;
+  height: 20vh;
+`;
+
 const Statistics = ({ configuration, data, id, title }) => (
   <StatisticsBox justify="center" align="center" gap="medium">
     <Text>{title}</Text>
     {isEmpty(data.labels) ? (
       <NoDataFound />
     ) : (
-      <Doughnut id={id} data={data} {...configuration} />
+      <Wrapper>
+        <Doughnut id={id} data={data} {...configuration} />
+      </Wrapper>
     )}
   </StatisticsBox>
 );

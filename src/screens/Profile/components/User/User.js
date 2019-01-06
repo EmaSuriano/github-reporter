@@ -56,7 +56,7 @@ const User = ({ profile }) => (
 
       return (
         <Wrapper direction="row" pad="small" gap="small">
-          <Box gridArea="sidebar" width="medium">
+          <Box responsive gridArea="sidebar" width="medium">
             <Sidebar
               avatar={avatarUrl}
               bio={bio}
@@ -69,7 +69,7 @@ const User = ({ profile }) => (
               name={name}
             />
           </Box>
-          <Box gridArea="main" align="center">
+          <Box responsive gridArea="main" align="center">
             <RepositoryInfo
               id={id}
               login={login}

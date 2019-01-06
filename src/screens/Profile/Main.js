@@ -9,7 +9,7 @@ import User from "./components/User";
 import "./styles.css";
 
 const Wrapper = styled(Grid)`
-  padding: 2rem;
+  padding: 1rem;
 `;
 
 export default class Profile extends Component {
@@ -35,6 +35,7 @@ export default class Profile extends Component {
         columns={["auto", "flex"]}
       >
         <Box
+          responsive
           basis="medium"
           columns={["large", "auto"]}
           gridArea="header"

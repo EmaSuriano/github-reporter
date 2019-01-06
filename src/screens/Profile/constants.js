@@ -1,7 +1,13 @@
 export const DEFAULT_OPTIONS = {
-  maintainAspectRatio: false,
-  responsive: false,
   legend: {
+    position: window.innerWidth < 600 ? "bottom" : "left",
+    labels: {
+      fontSize: window.innerWidth < 600 ? 10 : 12,
+      padding: window.innerWidth < 600 ? 8 : 10,
+      boxWidth: window.innerWidth < 600 ? 10 : 12
+    }
+  },
+  /* legend: {
     position: "bottom",
     labels: {
       usePointStyle: true,
@@ -9,7 +15,7 @@ export const DEFAULT_OPTIONS = {
       padding: 15,
       boxWidth: 12
     }
-  },
+  }, */
   tooltips: {
     enabled: true
   }

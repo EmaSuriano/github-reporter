@@ -82,7 +82,7 @@ const RepositoryInfo = ({
       return (
         <React.Fragment>
           <Box responsive align="center" gap="medium">
-            <Box responsive direction="row" gap="medium">
+            <Box responsive direction="row" gap="medium" wrap>
               <ActivityBox
                 icon={renderIcon({ Icon: GoRepo, login, tab: "repositories" })}
                 stat={repositories}
@@ -99,7 +99,7 @@ const RepositoryInfo = ({
                 title="Pinned"
               />
             </Box>
-            <Box responsive direction="row" justify="between" gap="medium">
+            <Box responsive direction="row" gap="medium" wrap>
               <Statistics
                 id="by-language"
                 title="Repositories per Language"
@@ -119,7 +119,7 @@ const RepositoryInfo = ({
                 configuration={createConfiguration(login)}
               />
             </Box>
-            <Box responsive direction="row" gap="small">
+            <Box responsive direction="row" gap="small" wrap>
               <Statistics
                 id="by-repository"
                 title="Commits per Repo Top 10"

@@ -49,12 +49,5 @@ export default class Profile extends Component {
         {!isEmpty(user) && <User profile={user} />}
       </Wrapper>
     );
-
-    /* return (
-      <section className="container">
-        <Header searchProfile={searchProfile} />
-        {!isEmpty(user) && <User profile={user} />}
-      </section>
-    ); */
   }
 }

@@ -82,11 +82,12 @@ const RepositoryInfo = ({
       return (
         <ResponsiveContext.Consumer>
           {size => (
-            <Box responsive align="center" gap="medium">
+            <Box responsive align="center" gap="medium" width="full">
               <Box
                 responsive
                 direction={size === "small" ? "column" : "row"}
                 gap="medium"
+                justify="center"
                 wrap
               >
                 <ActivityBox
@@ -113,6 +114,7 @@ const RepositoryInfo = ({
                 responsive
                 direction={size === "small" ? "column" : "row"}
                 gap="medium"
+                justify="center"
                 wrap
               >
                 <Statistics
@@ -138,6 +140,7 @@ const RepositoryInfo = ({
                 responsive
                 direction={size === "small" ? "column" : "row"}
                 gap="small"
+                justify="center"
                 wrap
               >
                 <Statistics

@@ -62,7 +62,7 @@ const User = ({ profile }) => (
               gap="small"
               pad="small"
             >
-              <Box responsive width="medium">
+              <Box responsive>
                 <Sidebar
                   avatar={avatarUrl}
                   bio={bio}
@@ -75,7 +75,7 @@ const User = ({ profile }) => (
                   name={name}
                 />
               </Box>
-              <Box responsive align="center">
+              <Box responsive align="center" width="full">
                 <RepositoryInfo
                   id={id}
                   login={login}

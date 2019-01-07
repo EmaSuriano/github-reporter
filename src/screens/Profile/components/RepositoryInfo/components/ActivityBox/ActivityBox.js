@@ -12,7 +12,7 @@ const StyledBox = styled(Box)`
 `;
 
 const ActivityBox = ({ icon, stat, title }) => (
-  <StyledBox direction="row" pad="small" gap="large">
+  <StyledBox direction="row" pad="small" margin="xsmall">
     {icon}
     <Box align="center">
       <Text>{stat}</Text>

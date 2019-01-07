@@ -15,11 +15,13 @@ const StatisticsBox = styled(Box)`
 
 const Wrapper = styled.section`
   position: relative;
-  height: 25vh;
+  max-width: 100%;
+  height: auto;
+  width: 350px;
 `;
 
 const Statistics = ({ configuration, data, id, title }) => (
-  <StatisticsBox justify="center" align="center" gap="medium">
+  <StatisticsBox justify="center" align="center" margin="xsmall">
     <Text>{title}</Text>
     {isEmpty(data.labels) ? (
       <NoDataFound />

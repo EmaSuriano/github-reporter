@@ -1,4 +1,4 @@
-import { filter, gt, isNil, not, path, pathOr, subtract } from "ramda";
+import { equals, filter, gt, isNil, not, path, pathOr, subtract } from "ramda";
 
 const getDirection = size => (equals(size, "small") ? "column" : "row");
 

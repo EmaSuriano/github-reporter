@@ -13,6 +13,7 @@ import RepositoryInfo from "../RepositoryInfo";
 import Sidebar from "../Sidebar";
 
 import { getTotalCount } from "../../utils";
+import { getDirection } from "../../utils/helpers";
 
 const Wrapper = styled(Box)`
   background-color: #fafafa;
@@ -57,11 +58,7 @@ const User = ({ profile }) => (
       return (
         <ResponsiveContext.Consumer>
           {size => (
-            <Wrapper
-              direction={size === "small" ? "column" : "row"}
-              gap="small"
-              pad="small"
-            >
+            <Wrapper direction={getDirection(size)} gap="small" pad="small">
               <Box responsive>
                 <Sidebar
                   avatar={avatarUrl}

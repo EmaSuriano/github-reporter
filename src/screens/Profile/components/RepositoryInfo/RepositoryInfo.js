@@ -6,8 +6,6 @@ import { PulseLoader } from "react-spinners";
 import { GoPin, GoRepo, GoStar } from "react-icons/go";
 import { Box, ResponsiveContext } from "grommet";
 
-import { CHART_SM, CHART_LG } from "../../constants";
-
 import { GET_REPOSITORIES_INFORMATION } from "./query";
 import updateQuery from "./updateQuery";
 
@@ -19,6 +17,7 @@ import {
   getStatistics,
   hasNextPage
 } from "../../utils";
+import { getDirection } from "../../utils/helpers";
 
 import ActivityBox from "./components/ActivityBox";
 import ErrorReport from "shared/components/ErrorReport";
@@ -85,7 +84,7 @@ const RepositoryInfo = ({
             <Box responsive align="center" gap="medium" width="full">
               <Box
                 responsive
-                direction={size === "small" ? "column" : "row"}
+                direction={getDirection(size)}
                 gap="medium"
                 justify="center"
                 wrap
@@ -112,7 +111,7 @@ const RepositoryInfo = ({
               </Box>
               <Box
                 responsive
-                direction={size === "small" ? "column" : "row"}
+                direction={getDirection(size)}
                 gap="medium"
                 justify="center"
                 wrap
@@ -138,7 +137,7 @@ const RepositoryInfo = ({
               </Box>
               <Box
                 responsive
-                direction={size === "small" ? "column" : "row"}
+                direction={getDirection(size)}
                 gap="small"
                 justify="center"
                 wrap

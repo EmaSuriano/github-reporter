@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { isEmpty } from "ramda";
-import { Box, Grid, ResponsiveContext } from "grommet";
-import styled from "styled-components";
+import { Box, ResponsiveContext } from "grommet";
 
 import Header from "./components/Header";
 import User from "./components/User";
 
-import "./styles.css";
+import { getDirection } from "./utils/helpers";
 
 export default class Profile extends Component {
   state = { user: "" };
@@ -25,7 +24,7 @@ export default class Profile extends Component {
           {size => (
             <Box
               responsive
-              direction={size === "small" ? "column" : "row"}
+              direction={getDirection(size)}
               align="center"
               justify="start"
               pad={{ horizontal: "medium", vertical: "small" }}

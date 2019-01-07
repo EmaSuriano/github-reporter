@@ -3,7 +3,7 @@ import { number, shape, string } from "prop-types";
 import { propOr } from "ramda";
 import { Query } from "react-apollo";
 import { PulseLoader } from "react-spinners";
-import { Box } from "grommet";
+import { Box, ResponsiveContext } from "grommet";
 import styled from "styled-components";
 
 import { PROFILE_INFO } from "./query";
@@ -55,30 +55,38 @@ const User = ({ profile }) => (
       } = propOr({}, "user")(data);
 
       return (
-        <Wrapper direction="row" pad="small" gap="small">
-          <Box responsive gridArea="sidebar" width="medium">
-            <Sidebar
-              avatar={avatarUrl}
-              bio={bio}
-              company={company}
-              createdAt={createdAt}
-              email={email}
-              followers={getTotalCount(followers)}
-              following={getTotalCount(following)}
-              location={location}
-              name={name}
-            />
-          </Box>
-          <Box responsive gridArea="main" align="center">
-            <RepositoryInfo
-              id={id}
-              login={login}
-              repositories={getTotalCount(repositories)}
-              starredRepositories={getTotalCount(starredRepositories)}
-              pinnedRepositories={getTotalCount(pinnedRepositories)}
-            />
-          </Box>
-        </Wrapper>
+        <ResponsiveContext.Consumer>
+          {size => (
+            <Wrapper
+              direction={size === "small" ? "column" : "row"}
+              gap="small"
+              pad="small"
+            >
+              <Box responsive width="medium">
+                <Sidebar
+                  avatar={avatarUrl}
+                  bio={bio}
+                  company={company}
+                  createdAt={createdAt}
+                  email={email}
+                  followers={getTotalCount(followers)}
+                  following={getTotalCount(following)}
+                  location={location}
+                  name={name}
+                />
+              </Box>
+              <Box responsive align="center">
+                <RepositoryInfo
+                  id={id}
+                  login={login}
+                  repositories={getTotalCount(repositories)}
+                  starredRepositories={getTotalCount(starredRepositories)}
+                  pinnedRepositories={getTotalCount(pinnedRepositories)}
+                />
+              </Box>
+            </Wrapper>
+          )}
+        </ResponsiveContext.Consumer>
       );
     }}
   </Query>

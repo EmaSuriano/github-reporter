@@ -15,7 +15,7 @@ const StatisticsBox = styled(Box)`
 
 const Wrapper = styled.section`
   position: relative;
-  height: 20vh;
+  height: 25vh;
 `;
 
 const Statistics = ({ configuration, data, id, title }) => (

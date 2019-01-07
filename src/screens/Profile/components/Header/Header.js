@@ -1,7 +1,7 @@
 import React, { Component, createRef } from "react";
 import { func } from "prop-types";
-import { FaSearch } from "react-icons/fa";
-import { Box, Text } from "grommet";
+import { Box, Text, TextInput } from "grommet";
+import { Search } from "grommet-icons";
 import styled from "styled-components";
 
 const PageTitle = styled(Text)`
@@ -33,23 +33,36 @@ export default class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <Box responsive basis="1/3">
-          <PageTitle level={1} size="xxlarge" weight="bold">
+        <Box responsive>
+          <PageTitle level={1} size="large" weight="bold">
             Github Reporter
           </PageTitle>
         </Box>
         <Box responsive direction="row" basis="full" align="center" gap="small">
-          <Box responsive basis="full">
-            <input
+          <Box
+            responsive
+            basis="full"
+            direction="row"
+            align="center"
+            pad={{ horizontal: "small", vertical: "xsmall" }}
+            margin="medium"
+            round="small"
+            border={{
+              side: "all",
+              color: "border"
+            }}
+          >
+            <Search onClick={this.handleSearch} />
+            <TextInput
+              type="search"
               ref={this.inputRef}
-              type="text"
-              placeholder="Who are you looking for ?"
+              plain
+              value={this.state.query}
               onChange={this.handleInput}
               onKeyPress={this.handleKeyPress}
-              value={this.state.query}
+              placeholder="Who are you looking for ?"
             />
           </Box>
-          <FaSearch size="2rem" onClick={this.handleSearch} />
         </Box>
       </React.Fragment>
     );

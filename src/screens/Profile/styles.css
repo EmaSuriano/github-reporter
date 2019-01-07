@@ -82,7 +82,7 @@ a:focus {
   cursor: pointer;
 }
 
-input[type="text"] {
+/* input[type="text"] {
   font-family: "Niramit", sans-serif;
   background-color: #f6f6f6;
   border: 0;
@@ -100,7 +100,7 @@ input::placeholder {
 input:focus {
   outline: none !important;
   border: 1px solid #a6acaf;
-}
+} */
 
 .error-box {
   text-align: center;

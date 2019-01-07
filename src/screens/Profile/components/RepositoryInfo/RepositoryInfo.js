@@ -4,7 +4,7 @@ import { compose, pathOr, reduce } from "ramda";
 import { Query } from "react-apollo";
 import { PulseLoader } from "react-spinners";
 import { GoPin, GoRepo, GoStar } from "react-icons/go";
-import { Box } from "grommet";
+import { Box, ResponsiveContext } from "grommet";
 
 import { CHART_SM, CHART_LG } from "../../constants";
 
@@ -80,61 +80,82 @@ const RepositoryInfo = ({
       );
 
       return (
-        <React.Fragment>
-          <Box responsive align="center" gap="medium">
-            <Box responsive direction="row" gap="medium" wrap>
-              <ActivityBox
-                icon={renderIcon({ Icon: GoRepo, login, tab: "repositories" })}
-                stat={repositories}
-                title="Repositories"
-              />
-              <ActivityBox
-                icon={renderIcon({ Icon: GoStar, login, tab: "stars" })}
-                stat={starredRepositories}
-                title="Starred"
-              />
-              <ActivityBox
-                icon={renderIcon({ Icon: GoPin, login, tab: "" })}
-                stat={pinnedRepositories}
-                title="Pinned"
-              />
+        <ResponsiveContext.Consumer>
+          {size => (
+            <Box responsive align="center" gap="medium">
+              <Box
+                responsive
+                direction={size === "small" ? "column" : "row"}
+                gap="medium"
+                wrap
+              >
+                <ActivityBox
+                  icon={renderIcon({
+                    Icon: GoRepo,
+                    login,
+                    tab: "repositories"
+                  })}
+                  stat={repositories}
+                  title="Repositories"
+                />
+                <ActivityBox
+                  icon={renderIcon({ Icon: GoStar, login, tab: "stars" })}
+                  stat={starredRepositories}
+                  title="Starred"
+                />
+                <ActivityBox
+                  icon={renderIcon({ Icon: GoPin, login, tab: "" })}
+                  stat={pinnedRepositories}
+                  title="Pinned"
+                />
+              </Box>
+              <Box
+                responsive
+                direction={size === "small" ? "column" : "row"}
+                gap="medium"
+                wrap
+              >
+                <Statistics
+                  id="by-language"
+                  title="Repositories per Language"
+                  data={createData(dataSet, "languages", "repositories")}
+                  configuration={createConfiguration(login)}
+                />
+                <Statistics
+                  id="by-language"
+                  title="Stars per Language"
+                  data={createData(dataSet, "languages", "stars")}
+                  configuration={createConfiguration(login)}
+                />
+                <Statistics
+                  id="by-language"
+                  title="Commits per Language"
+                  data={createData(dataSet, "languages", "commits")}
+                  configuration={createConfiguration(login)}
+                />
+              </Box>
+              <Box
+                responsive
+                direction={size === "small" ? "column" : "row"}
+                gap="small"
+                wrap
+              >
+                <Statistics
+                  id="by-repository"
+                  title="Commits per Repo Top 10"
+                  data={createData(dataSet, "repositories", "stars")}
+                  configuration={createConfiguration(login)}
+                />
+                <Statistics
+                  id="by-repository"
+                  title="Stars per Repo Top 10"
+                  data={createData(dataSet, "repositories", "commits")}
+                  configuration={createConfiguration(login)}
+                />
+              </Box>
             </Box>
-            <Box responsive direction="row" gap="medium" wrap>
-              <Statistics
-                id="by-language"
-                title="Repositories per Language"
-                data={createData(dataSet, "languages", "repositories")}
-                configuration={createConfiguration(login)}
-              />
-              <Statistics
-                id="by-language"
-                title="Stars per Language"
-                data={createData(dataSet, "languages", "stars")}
-                configuration={createConfiguration(login)}
-              />
-              <Statistics
-                id="by-language"
-                title="Commits per Language"
-                data={createData(dataSet, "languages", "commits")}
-                configuration={createConfiguration(login)}
-              />
-            </Box>
-            <Box responsive direction="row" gap="small" wrap>
-              <Statistics
-                id="by-repository"
-                title="Commits per Repo Top 10"
-                data={createData(dataSet, "repositories", "stars")}
-                configuration={createConfiguration(login)}
-              />
-              <Statistics
-                id="by-repository"
-                title="Stars per Repo Top 10"
-                data={createData(dataSet, "repositories", "commits")}
-                configuration={createConfiguration(login)}
-              />
-            </Box>
-          </Box>
-        </React.Fragment>
+          )}
+        </ResponsiveContext.Consumer>
       );
     }}
   </Query>

@@ -1,15 +1,24 @@
 import React from "react";
 import { element, number, string } from "prop-types";
-import { Box, Text } from "grommet";
+import { Box, Text, ResponsiveContext } from "grommet";
 
 const Follow = ({ icon, title, quantity }) => (
-  <Box responsive direction="row" align="center" gap="medium">
-    <Text>{icon}</Text>
-    <Box responsive>
-      <Text>{quantity}</Text>
-      <Text>{title}</Text>
-    </Box>
-  </Box>
+  <ResponsiveContext.Consumer>
+    {size => (
+      <Box
+        responsive
+        direction={size === "small" ? "column" : "row"}
+        align="center"
+        gap="medium"
+      >
+        <Text>{icon}</Text>
+        <Box responsive align="center">
+          <Text>{quantity}</Text>
+          <Text>{title}</Text>
+        </Box>
+      </Box>
+    )}
+  </ResponsiveContext.Consumer>
 );
 
 Follow.defaultProps = {

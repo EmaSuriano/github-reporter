@@ -8,7 +8,7 @@ const theme = deepMerge(grommet, {
         value: 500
       },
       small: {
-        value: 900
+        value: 800
       },
       medium: undefined,
       middle: {

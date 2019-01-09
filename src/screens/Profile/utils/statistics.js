@@ -32,11 +32,11 @@ const addRepository = language =>
 
 const addStars = (key, stars) => add(stars, propOr(0, "stars")(key));
 
-const createConfiguration = user => ({
+const createConfiguration = (user, legendPosition) => ({
   options: {
     ...DEFAULT_OPTIONS,
     legend: {
-      position: window.innerWidth < 600 ? "bottom" : "left",
+      position: legendPosition || window.innerWidth < 600 ? "bottom" : "left",
       labels: {
         fontSize: window.innerWidth < 600 ? 10 : 12,
         padding: window.innerWidth < 600 ? 8 : 10,

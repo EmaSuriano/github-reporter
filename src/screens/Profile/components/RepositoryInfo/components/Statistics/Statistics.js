@@ -17,16 +17,20 @@ const Wrapper = styled.section`
   position: relative;
   max-width: 100%;
   height: auto;
-  width: 350px;
+  width: ${props => (props.size === "large" ? "500px" : "350px")};
 `;
 
-const Statistics = ({ configuration, data, id, title }) => (
+const StatisticTitle = styled(Text)`
+  text-transform: uppercase;
+`;
+
+const Statistics = ({ configuration, data, id, title, size }) => (
   <StatisticsBox justify="center" align="center" margin="xsmall">
-    <Text>{title}</Text>
+    <StatisticTitle margin="small">{title}</StatisticTitle>
     {isEmpty(data.labels) ? (
       <NoDataFound />
     ) : (
-      <Wrapper>
+      <Wrapper size={size}>
         <Doughnut id={id} data={data} {...configuration} />
       </Wrapper>
     )}

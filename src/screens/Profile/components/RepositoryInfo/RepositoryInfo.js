@@ -85,7 +85,6 @@ const RepositoryInfo = ({
               <Box
                 responsive
                 direction={getDirection(size)}
-                gap="medium"
                 justify="center"
                 wrap
               >
@@ -112,7 +111,6 @@ const RepositoryInfo = ({
               <Box
                 responsive
                 direction={getDirection(size)}
-                gap="medium"
                 justify="center"
                 wrap
               >
@@ -138,7 +136,6 @@ const RepositoryInfo = ({
               <Box
                 responsive
                 direction={getDirection(size)}
-                gap="small"
                 justify="center"
                 wrap
               >
@@ -146,13 +143,15 @@ const RepositoryInfo = ({
                   id="by-repository"
                   title="Commits per Repo Top 10"
                   data={createData(dataSet, "repositories", "stars")}
-                  configuration={createConfiguration(login)}
+                  configuration={createConfiguration(login, "bottom")}
+                  size="large"
                 />
                 <Statistics
                   id="by-repository"
                   title="Stars per Repo Top 10"
                   data={createData(dataSet, "repositories", "commits")}
-                  configuration={createConfiguration(login)}
+                  configuration={createConfiguration(login, "bottom")}
+                  size="large"
                 />
               </Box>
             </Box>

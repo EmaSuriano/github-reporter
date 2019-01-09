@@ -1,26 +1,15 @@
 import React from "react";
 import { element, number, string } from "prop-types";
-import { Box, Text, ResponsiveContext } from "grommet";
-
-import { getDirection } from "../../../../utils/helpers";
+import { Box, Text } from "grommet";
 
 const Follow = ({ icon, title, quantity }) => (
-  <ResponsiveContext.Consumer>
-    {size => (
-      <Box
-        responsive
-        direction={getDirection(size)}
-        align="center"
-        gap="medium"
-      >
-        <Text>{icon}</Text>
-        <Box responsive align="center">
-          <Text>{quantity}</Text>
-          <Text>{title}</Text>
-        </Box>
-      </Box>
-    )}
-  </ResponsiveContext.Consumer>
+  <Box align="center" gap="medium" direction="row">
+    <Text>{icon}</Text>
+    <Box align="center">
+      <Text>{quantity}</Text>
+      <Text>{title}</Text>
+    </Box>
+  </Box>
 );
 
 Follow.defaultProps = {
@@ -29,8 +18,8 @@ Follow.defaultProps = {
 
 Follow.propTypes = {
   icon: element.isRequired,
-  quantity: number,
-  title: string.isRequired
+  title: string.isRequired,
+  quantity: number
 };
 
 export default Follow;

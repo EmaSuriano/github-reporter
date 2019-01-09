@@ -81,13 +81,8 @@ const RepositoryInfo = ({
       return (
         <ResponsiveContext.Consumer>
           {size => (
-            <Box responsive align="center" gap="medium" width="full">
-              <Box
-                responsive
-                direction={getDirection(size)}
-                justify="center"
-                wrap
-              >
+            <Box align="center" gap="medium" width="full">
+              <Box direction="row" justify="center" wrap>
                 <ActivityBox
                   icon={renderIcon({
                     Icon: GoRepo,

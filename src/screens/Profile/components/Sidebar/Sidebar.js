@@ -24,10 +24,6 @@ const Avatar = styled(Image)`
   width: 15rem;
 `;
 
-const HeadingName = styled(Heading)`
-  margin-top: 0;
-`;
-
 const Sidebar = ({
   avatar,
   bio,
@@ -42,15 +38,14 @@ const Sidebar = ({
   <ResponsiveContext.Consumer>
     {size => (
       <Wrapper>
-        <Box responsive justify="center" align="center" gap="small">
+        <Box justify="center" align="center" gap="small">
           <Avatar src={avatar} />
-          <HeadingName level={2} size="medium" responsive>
+          <Heading level={2} size="medium" margin={{ top: 0 }}>
             {name}
-          </HeadingName>
+          </Heading>
           <Text textAlign="center">{bio}</Text>
         </Box>
         <Box
-          responsive
           direction={getDirection(size)}
           justify="center"
           align="center"
@@ -69,7 +64,7 @@ const Sidebar = ({
             quantity={following}
           />
         </Box>
-        <Box responsive gap="small">
+        <Box gap="small">
           <StatsBox
             icon={renderIcon({ Icon: GoClock, size: "3rem" })}
             title={`Joined Github ${moment(createdAt).fromNow()}`}

@@ -81,13 +81,8 @@ const RepositoryInfo = ({
       return (
         <ResponsiveContext.Consumer>
           {size => (
-            <Box responsive align="center" gap="medium" width="full">
-              <Box
-                responsive
-                direction={getDirection(size)}
-                justify="center"
-                wrap
-              >
+            <Box align="center" gap="medium" width="full">
+              <Box direction="row" justify="center" wrap>
                 <ActivityBox
                   icon={renderIcon({
                     Icon: GoRepo,
@@ -141,14 +136,14 @@ const RepositoryInfo = ({
               >
                 <Statistics
                   id="by-repository"
-                  title="Commits per Repo Top 10"
+                  title="Stars per Repo Top 10"
                   data={createData(dataSet, "repositories", "stars")}
                   configuration={createConfiguration(login, "bottom")}
                   size="large"
                 />
                 <Statistics
                   id="by-repository"
-                  title="Stars per Repo Top 10"
+                  title="Commits per Repo Top 10"
                   data={createData(dataSet, "repositories", "commits")}
                   configuration={createConfiguration(login, "bottom")}
                   size="large"

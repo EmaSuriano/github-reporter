@@ -8,7 +8,7 @@ import User from "./components/User";
 import { getDirection } from "./utils/helpers";
 
 export default class Profile extends Component {
-  state = { user: "" };
+  state = { user: window.location.pathname.replace("/", "") };
 
   searchProfile = user => this.setState({ user });
 

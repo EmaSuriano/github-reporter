@@ -8,9 +8,6 @@ import styled from "styled-components";
 
 import Follow from "./components/Follow";
 import StatsBox from "./components/StatsBox";
-import { getDirection } from "../../utils/helpers";
-
-const renderIcon = ({ Icon, ...props }) => <Icon size="2rem" {...props} />;
 
 const Wrapper = styled(Box)`
   background-color: #fff;
@@ -22,10 +19,6 @@ const Avatar = styled(Image)`
   border-radius: 50%;
   height: 15rem;
   width: 15rem;
-`;
-
-const HeadingName = styled(Heading)`
-  margin-top: 0;
 `;
 
 const Sidebar = ({
@@ -42,50 +35,49 @@ const Sidebar = ({
   <ResponsiveContext.Consumer>
     {size => (
       <Wrapper>
-        <Box responsive justify="center" align="center" gap="small">
+        <Box justify="center" align="center" gap="small">
           <Avatar src={avatar} />
-          <HeadingName level={2} size="medium" responsive>
+          <Heading level={2} size="medium" margin={{ top: 0 }}>
             {name}
-          </HeadingName>
-          <Text textAlign="center">{bio}</Text>
+          </Heading>
+          {bio && (
+            <Text textAlign="center" margin="medium">
+              {bio}
+            </Text>
+          )}
         </Box>
         <Box
-          responsive
-          direction={getDirection(size)}
+          direction="row"
           justify="center"
           align="center"
           gap="large"
           margin="medium"
         >
           <Follow
-            icon={renderIcon({ Icon: FaUserCheck })}
+            icon={<FaUserCheck size="2rem" />}
             title="Followers"
             quantity={followers}
           />
 
           <Follow
-            icon={renderIcon({ Icon: FaUserPlus })}
+            icon={<FaUserPlus size="2rem" />}
             title="Following"
             quantity={following}
           />
         </Box>
-        <Box responsive gap="small">
+        {console.log(size)}
+        <Box gap="small" direction="row" wrap>
           <StatsBox
-            icon={renderIcon({ Icon: GoClock, size: "3rem" })}
+            icon={<GoClock size="2.5rem" />}
             title={`Joined Github ${moment(createdAt).fromNow()}`}
           />
-          <StatsBox
-            icon={renderIcon({ Icon: GoMail, size: "3rem" })}
-            title={email}
-          />
-          <StatsBox
-            icon={renderIcon({ Icon: GoCode, size: "3rem" })}
-            title={company}
-          />
-          <StatsBox
-            icon={renderIcon({ Icon: GoLocation, size: "3rem" })}
-            title={location}
-          />
+          {email && <StatsBox icon={<GoMail size="2.5rem" />} title={email} />}
+          {company && (
+            <StatsBox icon={<GoCode size="2.5rem" />} title={company} />
+          )}
+          {location && (
+            <StatsBox icon={<GoLocation size="2.5rem" />} title={location} />
+          )}
         </Box>
       </Wrapper>
     )}
@@ -94,14 +86,14 @@ const Sidebar = ({
 
 Sidebar.propTypes = {
   avatar: string.isRequired,
-  bio: string,
-  company: string,
-  createdAt: string,
-  email: string,
   followers: number.isRequired,
   following: number.isRequired,
-  location: string.isRequired,
-  name: string.isRequired
+  name: string.isRequired,
+  createdAt: string.isRequired,
+  location: string,
+  bio: string,
+  company: string,
+  email: string
 };
 
 export default Sidebar;

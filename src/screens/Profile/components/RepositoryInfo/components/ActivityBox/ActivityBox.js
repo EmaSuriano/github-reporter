@@ -9,6 +9,7 @@ const StyledBox = styled(Box)`
   border-radius: 0.5rem;
   min-width: 210px;
   min-height: 70px;
+  text-transform: uppercase;
 `;
 
 const ActivityBox = ({ icon, stat, title }) => (
@@ -21,8 +22,8 @@ const ActivityBox = ({ icon, stat, title }) => (
   >
     {icon}
     <Box align="center" justify="center" pad="small">
-      <Text>{stat}</Text>
-      <Text>{title}</Text>
+      <Text size="xlarge">{stat}</Text>
+      <Text size="medium">{title}</Text>
     </Box>
   </StyledBox>
 );

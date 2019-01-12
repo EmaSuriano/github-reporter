@@ -81,13 +81,8 @@ const RepositoryInfo = ({
       return (
         <ResponsiveContext.Consumer>
           {size => (
-            <Box responsive align="center" gap="medium" width="full">
-              <Box
-                responsive
-                direction={getDirection(size)}
-                justify="center"
-                wrap
-              >
+            <Box align="center" gap="medium" width="full">
+              <Box direction={getDirection(size)} justify="center" wrap>
                 <ActivityBox
                   icon={renderIcon({
                     Icon: GoRepo,
@@ -108,12 +103,7 @@ const RepositoryInfo = ({
                   title="Pinned"
                 />
               </Box>
-              <Box
-                responsive
-                direction={getDirection(size)}
-                justify="center"
-                wrap
-              >
+              <Box direction={getDirection(size)} justify="center" wrap>
                 <Statistics
                   id="by-language"
                   title="Repositories per Language"

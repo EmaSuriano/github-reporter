@@ -59,28 +59,24 @@ const User = ({ profile }) => (
         <ResponsiveContext.Consumer>
           {size => (
             <Wrapper direction={getDirection(size)} gap="small" pad="small">
-              <Box responsive>
-                <Sidebar
-                  avatar={avatarUrl}
-                  bio={bio}
-                  company={company}
-                  createdAt={createdAt}
-                  email={email}
-                  followers={getTotalCount(followers)}
-                  following={getTotalCount(following)}
-                  location={location}
-                  name={name}
-                />
-              </Box>
-              <Box responsive align="center" width="full">
-                <RepositoryInfo
-                  id={id}
-                  login={login}
-                  repositories={getTotalCount(repositories)}
-                  starredRepositories={getTotalCount(starredRepositories)}
-                  pinnedRepositories={getTotalCount(pinnedRepositories)}
-                />
-              </Box>
+              <Sidebar
+                avatar={avatarUrl}
+                bio={bio}
+                company={company}
+                createdAt={createdAt}
+                email={email}
+                followers={getTotalCount(followers)}
+                following={getTotalCount(following)}
+                location={location}
+                name={name}
+              />
+              <RepositoryInfo
+                id={id}
+                login={login}
+                repositories={getTotalCount(repositories)}
+                starredRepositories={getTotalCount(starredRepositories)}
+                pinnedRepositories={getTotalCount(pinnedRepositories)}
+              />
             </Wrapper>
           )}
         </ResponsiveContext.Consumer>

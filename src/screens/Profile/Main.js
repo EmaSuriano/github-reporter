@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import { isEmpty } from "ramda";
-import { Box, ResponsiveContext } from "grommet";
+import { Box } from "grommet";
 
 import Header from "./components/Header";
 import User from "./components/User";
-
-import { getDirection } from "./utils/helpers";
 
 export default class Profile extends Component {
   state = { user: "" };
@@ -20,20 +18,7 @@ export default class Profile extends Component {
 
     return (
       <Box pad="small">
-        <ResponsiveContext.Consumer>
-          {size => (
-            <Box
-              responsive
-              direction={getDirection(size)}
-              align="center"
-              justify="start"
-              pad={{ horizontal: "medium", vertical: "small" }}
-              gap="medium"
-            >
-              <Header searchProfile={searchProfile} />
-            </Box>
-          )}
-        </ResponsiveContext.Consumer>
+        <Header searchProfile={searchProfile} />
         {!isEmpty(user) && <User profile={user} />}
       </Box>
     );

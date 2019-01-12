@@ -3,6 +3,7 @@ import { func } from "prop-types";
 import { Box, ResponsiveContext, Text, TextInput } from "grommet";
 import { Search } from "grommet-icons";
 import styled from "styled-components";
+import Slide from "react-reveal/Slide";
 
 import { getDirection } from "../../utils/helpers";
 
@@ -34,56 +35,58 @@ export default class Header extends Component {
 
   render() {
     return (
-      <ResponsiveContext.Consumer>
-        {size => (
-          <Box
-            responsive
-            direction={getDirection(size)}
-            align="center"
-            justify="start"
-            pad={{ horizontal: "medium", vertical: "small" }}
-            gap="medium"
-          >
-            <Box responsive>
-              <PageTitle level={1} size="large" weight="bold">
-                Github Reporter
-              </PageTitle>
-            </Box>
+      <Slide left>
+        <ResponsiveContext.Consumer>
+          {size => (
             <Box
               responsive
-              direction="row"
-              basis="full"
+              direction={getDirection(size)}
               align="center"
-              gap="small"
+              justify="start"
+              pad={{ horizontal: "medium", vertical: "small" }}
+              gap="medium"
             >
+              <Box responsive>
+                <PageTitle level={1} size="large" weight="bold">
+                  Github Reporter
+                </PageTitle>
+              </Box>
               <Box
                 responsive
-                basis="full"
                 direction="row"
+                basis="full"
                 align="center"
-                pad={{ horizontal: "small", vertical: "xsmall" }}
-                margin="medium"
-                round="small"
-                border={{
-                  side: "all",
-                  color: "border"
-                }}
+                gap="small"
               >
-                <Search onClick={this.handleSearch} />
-                <TextInput
-                  type="search"
-                  ref={this.inputRef}
-                  plain
-                  value={this.state.query}
-                  onChange={this.handleInput}
-                  onKeyPress={this.handleKeyPress}
-                  placeholder="Who are you looking for ?"
-                />
+                <Box
+                  responsive
+                  basis="full"
+                  direction="row"
+                  align="center"
+                  pad={{ horizontal: "small", vertical: "xsmall" }}
+                  margin="medium"
+                  round="small"
+                  border={{
+                    side: "all",
+                    color: "border"
+                  }}
+                >
+                  <Search onClick={this.handleSearch} />
+                  <TextInput
+                    type="search"
+                    ref={this.inputRef}
+                    plain
+                    value={this.state.query}
+                    onChange={this.handleInput}
+                    onKeyPress={this.handleKeyPress}
+                    placeholder="Who are you looking for ?"
+                  />
+                </Box>
               </Box>
             </Box>
-          </Box>
-        )}
-      </ResponsiveContext.Consumer>
+          )}
+        </ResponsiveContext.Consumer>
+      </Slide>
     );
   }
 }

@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import User from "./components/User";
 
 export default class Profile extends Component {
-  state = { user: "" };
+  state = { user: window.location.pathname.replace("/", "") };
 
   searchProfile = user => this.setState({ user });
 

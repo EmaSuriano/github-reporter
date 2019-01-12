@@ -1,6 +1,7 @@
-import { equals, filter, gt, isNil, not, path, pathOr, subtract } from "ramda";
+import { filter, gt, isNil, not, path, pathOr, subtract } from "ramda";
 
-const getDirection = size => (equals(size, "small") ? "column" : "row");
+const getDirection = size =>
+  ["xsmall", "small"].includes(size) ? "column" : "row";
 
 const removeEmpties = (data = []) => filter(value => value !== 0, data);
 

@@ -131,14 +131,14 @@ const RepositoryInfo = ({
               >
                 <Statistics
                   id="by-repository"
-                  title="Commits per Repo Top 10"
+                  title="Stars per Repo Top 10"
                   data={createData(dataSet, "repositories", "stars")}
                   configuration={createConfiguration(login, "bottom")}
                   size="large"
                 />
                 <Statistics
                   id="by-repository"
-                  title="Stars per Repo Top 10"
+                  title="Commits per Repo Top 10"
                   data={createData(dataSet, "repositories", "commits")}
                   configuration={createConfiguration(login, "bottom")}
                   size="large"

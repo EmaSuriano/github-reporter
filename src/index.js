@@ -8,6 +8,7 @@ import Profile from "./screens/Profile";
 import client from "./config/apolloConfig";
 import registerServiceWorker from "./registerServiceWorker";
 import { createGlobalStyle } from "styled-components";
+import theme from "./theme";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -17,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 ReactDOM.render(
-  <Grommet>
+  <Grommet theme={theme} full>
     <ApolloProvider client={client}>
       <GlobalStyle />
       <Profile />

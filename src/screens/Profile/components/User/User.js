@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 import { PROFILE_INFO } from "./query";
 
-import ErrorReport from "shared/components/ErrorReport";
+import ErrorReport from "../../../../shared/components/ErrorReport";
 import RepositoryInfo from "../RepositoryInfo";
 import Sidebar from "../Sidebar";
 

@@ -20,7 +20,7 @@ import {
 import { getDirection } from "../../utils/helpers";
 
 import ActivityBox from "./components/ActivityBox";
-import ErrorReport from "shared/components/ErrorReport";
+import ErrorReport from "../../../../shared/components/ErrorReport";
 import Statistics from "./components/Statistics";
 
 const renderIcon = ({ Icon, login, tab, ...props }) => (

@@ -1,9 +1,22 @@
-import React from "react";
-import styled from "styled-components";
+import React, { Component } from "react";
+import { Box } from "grommet";
 
-const Title = styled.h1`
-  color: red;
-  font-size: 50px;
-`;
+import Header from "../src/screens/Profile/components/Header";
+import User from "../src/screens/Profile/components/User";
 
-export default () => <Title>My page</Title>;
+export default class Profile extends Component {
+  state = { user: window.location.pathname.replace("/", "") };
+
+  searchProfile = user => this.setState({ user });
+
+  render() {
+    const { user } = this.state;
+
+    return (
+      <Box pad="small">
+        <Header searchProfile={this.searchProfile} />
+        {user && <User profile={user} />}
+      </Box>
+    );
+  }
+}

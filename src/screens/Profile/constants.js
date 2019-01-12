@@ -1,13 +1,10 @@
 export const DEFAULT_OPTIONS = {
-  maintainAspectRatio: false,
-  responsive: false,
   legend: {
-    position: "left",
+    position: window.innerWidth < 600 ? "bottom" : "left",
     labels: {
-      usePointStyle: true,
-      fontSize: 12,
-      padding: 15,
-      boxWidth: 12
+      fontSize: window.innerWidth < 600 ? 10 : 12,
+      padding: window.innerWidth < 600 ? 8 : 10,
+      boxWidth: window.innerWidth < 600 ? 10 : 12
     }
   },
   tooltips: {
@@ -28,16 +25,6 @@ export const DEFAULT_COLORS = [
   "#51B749",
   "#DC2127"
 ];
-
-export const CHART_SM = {
-  height: 300,
-  width: 400
-};
-
-export const CHART_LG = {
-  height: 400,
-  width: 600
-};
 
 export const MIN_LANGUAGES = 1;
 export const NO_RESULTS_FOUND = "No Results Found";

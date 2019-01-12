@@ -1,7 +1,15 @@
 import React, { Component, createRef } from "react";
 import { func } from "prop-types";
-import { FaSearch } from "react-icons/fa";
+import { Box, ResponsiveContext, Text, TextInput } from "grommet";
+import { Search } from "grommet-icons";
+import styled from "styled-components";
 
+import { getDirection } from "../../utils/helpers";
+
+const PageTitle = styled(Text)`
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+`;
 export default class Header extends Component {
   static propTypes = {
     searchProfile: func.isRequired
@@ -26,22 +34,56 @@ export default class Header extends Component {
 
   render() {
     return (
-      <section className="profile--header">
-        <h1 className="header--title">Github Reporter</h1>
-        <div className="input-search">
-          <input
-            ref={this.inputRef}
-            type="text"
-            placeholder="Who are you looking for ?"
-            onChange={this.handleInput}
-            onKeyPress={this.handleKeyPress}
-            value={this.state.query}
-          />
-          <span className="input-search--button" onClick={this.handleSearch}>
-            <FaSearch size="2rem" />
-          </span>
-        </div>
-      </section>
+      <ResponsiveContext.Consumer>
+        {size => (
+          <Box
+            responsive
+            direction={getDirection(size)}
+            align="center"
+            justify="start"
+            pad={{ horizontal: "medium", vertical: "small" }}
+            gap="medium"
+          >
+            <Box responsive>
+              <PageTitle level={1} size="large" weight="bold">
+                Github Reporter
+              </PageTitle>
+            </Box>
+            <Box
+              responsive
+              direction="row"
+              basis="full"
+              align="center"
+              gap="small"
+            >
+              <Box
+                responsive
+                basis="full"
+                direction="row"
+                align="center"
+                pad={{ horizontal: "small", vertical: "xsmall" }}
+                margin="medium"
+                round="small"
+                border={{
+                  side: "all",
+                  color: "border"
+                }}
+              >
+                <Search onClick={this.handleSearch} />
+                <TextInput
+                  type="search"
+                  ref={this.inputRef}
+                  plain
+                  value={this.state.query}
+                  onChange={this.handleInput}
+                  onKeyPress={this.handleKeyPress}
+                  placeholder="Who are you looking for ?"
+                />
+              </Box>
+            </Box>
+          </Box>
+        )}
+      </ResponsiveContext.Consumer>
     );
   }
 }

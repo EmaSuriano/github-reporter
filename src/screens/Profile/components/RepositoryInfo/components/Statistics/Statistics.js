@@ -2,18 +2,39 @@ import React from "react";
 import { arrayOf, number, shape, string } from "prop-types";
 import { isEmpty } from "ramda";
 import { Doughnut } from "react-chartjs-2";
+import { Box, Text } from "grommet";
+import styled from "styled-components";
 
 import NoDataFound from "../NoDataFound";
 
-const Statistics = ({ configuration, data, id, title }) => (
-  <div className="statistic--box">
-    <h1 className="statistic--box-title">{title}</h1>
+const StatisticsBox = styled(Box)`
+  background-color: #ffffff;
+  border: 1px solid #eee9e9;
+  border-radius: 0.5rem;
+`;
+
+const ChartContainer = styled.section`
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  width: ${props => (props.size === "large" ? "500px" : "350px")};
+`;
+
+const StatisticTitle = styled(Text)`
+  text-transform: uppercase;
+`;
+
+const Statistics = ({ configuration, data, id, title, size }) => (
+  <StatisticsBox justify="center" align="center" margin="xsmall">
+    <StatisticTitle margin="small">{title}</StatisticTitle>
     {isEmpty(data.labels) ? (
       <NoDataFound />
     ) : (
-      <Doughnut id={id} data={data} {...configuration} />
+      <ChartContainer size={size}>
+        <Doughnut id={id} data={data} {...configuration} />
+      </ChartContainer>
     )}
-  </div>
+  </StatisticsBox>
 );
 
 Statistics.defaultProps = {

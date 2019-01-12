@@ -1,5 +1,8 @@
 import { filter, gt, isNil, not, path, pathOr, subtract } from "ramda";
 
+const getDirection = size =>
+  ["xsmall", "small"].includes(size) ? "column" : "row";
+
 const removeEmpties = (data = []) => filter(value => value !== 0, data);
 
 const removeLowerThan = (statistics, param, x) => key => {
@@ -18,4 +21,10 @@ const transformStatistics = (statistics = {}) => (accumulator, key) => ({
   [key]: { ...statistics[key] }
 });
 
-export { removeEmpties, removeLowerThan, sortingByParam, transformStatistics };
+export {
+  getDirection,
+  removeEmpties,
+  removeLowerThan,
+  sortingByParam,
+  transformStatistics
+};

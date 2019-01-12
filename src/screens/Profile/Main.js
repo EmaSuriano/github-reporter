@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { isEmpty } from "ramda";
+import { Box } from "grommet";
 
 import Header from "./components/Header";
 import User from "./components/User";
 
-import "./styles.css";
-
 export default class Profile extends Component {
-  state = { user: "" };
+  state = { user: window.location.pathname.replace("/", "") };
 
   searchProfile = user => this.setState({ user });
 
@@ -18,10 +17,10 @@ export default class Profile extends Component {
     } = this;
 
     return (
-      <section className="container">
+      <Box pad="small">
         <Header searchProfile={searchProfile} />
         {!isEmpty(user) && <User profile={user} />}
-      </section>
+      </Box>
     );
   }
 }

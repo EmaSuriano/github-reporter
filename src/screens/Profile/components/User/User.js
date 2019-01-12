@@ -3,6 +3,8 @@ import { number, shape, string } from "prop-types";
 import { propOr } from "ramda";
 import { Query } from "react-apollo";
 import { PulseLoader } from "react-spinners";
+import { Box, ResponsiveContext } from "grommet";
+import styled from "styled-components";
 
 import { PROFILE_INFO } from "./query";
 
@@ -11,6 +13,13 @@ import RepositoryInfo from "../RepositoryInfo";
 import Sidebar from "../Sidebar";
 
 import { getTotalCount } from "../../utils";
+import { getDirection } from "../../utils/helpers";
+
+const Wrapper = styled(Box)`
+  background-color: #fafafa;
+  border-radius: 0.5rem;
+  box-shadow: inset 0px 5px 25px 5px rgba(240, 240, 240, 0.75);
+`;
 
 const User = ({ profile }) => (
   <Query query={PROFILE_INFO} variables={{ name: profile }}>
@@ -47,26 +56,30 @@ const User = ({ profile }) => (
       } = propOr({}, "user")(data);
 
       return (
-        <section className="profile--content">
-          <Sidebar
-            avatar={avatarUrl}
-            bio={bio}
-            company={company}
-            createdAt={createdAt}
-            email={email}
-            followers={getTotalCount(followers)}
-            following={getTotalCount(following)}
-            location={location}
-            name={name}
-          />
-          <RepositoryInfo
-            id={id}
-            login={login}
-            repositories={getTotalCount(repositories)}
-            starredRepositories={getTotalCount(starredRepositories)}
-            pinnedRepositories={getTotalCount(pinnedRepositories)}
-          />
-        </section>
+        <ResponsiveContext.Consumer>
+          {size => (
+            <Wrapper direction={getDirection(size)} gap="small" pad="small">
+              <Sidebar
+                avatar={avatarUrl}
+                bio={bio}
+                company={company}
+                createdAt={createdAt}
+                email={email}
+                followers={getTotalCount(followers)}
+                following={getTotalCount(following)}
+                location={location}
+                name={name}
+              />
+              <RepositoryInfo
+                id={id}
+                login={login}
+                repositories={getTotalCount(repositories)}
+                starredRepositories={getTotalCount(starredRepositories)}
+                pinnedRepositories={getTotalCount(pinnedRepositories)}
+              />
+            </Wrapper>
+          )}
+        </ResponsiveContext.Consumer>
       );
     }}
   </Query>

@@ -3,11 +3,23 @@ import { number, string } from "prop-types";
 import { FaUserCheck, FaUserPlus } from "react-icons/fa";
 import { GoClock, GoCode, GoLocation, GoMail } from "react-icons/go";
 import moment from "moment";
+import { Box, Image, Text, Heading, ResponsiveContext } from "grommet";
+import styled from "styled-components";
 
 import Follow from "./components/Follow";
 import StatsBox from "./components/StatsBox";
 
-const renderIcon = ({ Icon, ...props }) => <Icon size="2rem" {...props} />;
+const Wrapper = styled(Box)`
+  background-color: #fff;
+  border: 1px solid #eee9e9;
+  padding: 1rem;
+`;
+
+const Avatar = styled(Image)`
+  border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
+`;
 
 const Sidebar = ({
   avatar,
@@ -20,60 +32,68 @@ const Sidebar = ({
   location,
   name
 }) => (
-  <section className="content--sidebar">
-    <div className="sidebar--header">
-      <div className="sidebar--avatar">
-        <img alt="Avatar" src={avatar} />
-      </div>
-      <div className="sidebar--info">
-        <h1 className="sidebar--info__title">{name}</h1>
-        <span className="sidebar--info__bio">{bio}</span>
-      </div>
-      <div className="sidebar--following">
-        <Follow
-          icon={renderIcon({ Icon: FaUserCheck })}
-          title="Followers"
-          quantity={followers}
-        />
+  <ResponsiveContext.Consumer>
+    {size => (
+      <Wrapper>
+        <Box justify="center" align="center" gap="small">
+          <Avatar src={avatar} />
+          <Heading level={2} size="medium" margin={{ top: 0 }}>
+            {name}
+          </Heading>
+          {bio && (
+            <Text textAlign="center" margin="medium">
+              {bio}
+            </Text>
+          )}
+        </Box>
+        <Box
+          direction="row"
+          justify="center"
+          align="center"
+          gap="large"
+          margin="medium"
+        >
+          <Follow
+            icon={<FaUserCheck size="2rem" />}
+            title="Followers"
+            quantity={followers}
+          />
 
-        <Follow
-          icon={renderIcon({ Icon: FaUserPlus })}
-          title="Following"
-          quantity={following}
-        />
-      </div>
-      <div className="algo">
-        <StatsBox
-          icon={renderIcon({ Icon: GoClock, size: "3rem" })}
-          title={`Joined Github ${moment(createdAt).fromNow()}`}
-        />
-        <StatsBox
-          icon={renderIcon({ Icon: GoMail, size: "3rem" })}
-          title={email}
-        />
-        <StatsBox
-          icon={renderIcon({ Icon: GoCode, size: "3rem" })}
-          title={company}
-        />
-        <StatsBox
-          icon={renderIcon({ Icon: GoLocation, size: "3rem" })}
-          title={location}
-        />
-      </div>
-    </div>
-  </section>
+          <Follow
+            icon={<FaUserPlus size="2rem" />}
+            title="Following"
+            quantity={following}
+          />
+        </Box>
+        {console.log(size)}
+        <Box gap="small" direction="row" wrap>
+          <StatsBox
+            icon={<GoClock size="2.5rem" />}
+            title={`Joined Github ${moment(createdAt).fromNow()}`}
+          />
+          {email && <StatsBox icon={<GoMail size="2.5rem" />} title={email} />}
+          {company && (
+            <StatsBox icon={<GoCode size="2.5rem" />} title={company} />
+          )}
+          {location && (
+            <StatsBox icon={<GoLocation size="2.5rem" />} title={location} />
+          )}
+        </Box>
+      </Wrapper>
+    )}
+  </ResponsiveContext.Consumer>
 );
 
 Sidebar.propTypes = {
   avatar: string.isRequired,
-  bio: string,
-  company: string,
-  createdAt: string,
-  email: string,
   followers: number.isRequired,
   following: number.isRequired,
-  location: string.isRequired,
-  name: string.isRequired
+  name: string.isRequired,
+  createdAt: string.isRequired,
+  location: string,
+  bio: string,
+  company: string,
+  email: string
 };
 
 export default Sidebar;

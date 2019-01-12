@@ -13,7 +13,7 @@ const StatisticsBox = styled(Box)`
   border-radius: 0.5rem;
 `;
 
-const Wrapper = styled.section`
+const ChartContainer = styled.section`
   position: relative;
   max-width: 100%;
   height: auto;
@@ -30,9 +30,9 @@ const Statistics = ({ configuration, data, id, title, size }) => (
     {isEmpty(data.labels) ? (
       <NoDataFound />
     ) : (
-      <Wrapper size={size}>
+      <ChartContainer size={size}>
         <Doughnut id={id} data={data} {...configuration} />
-      </Wrapper>
+      </ChartContainer>
     )}
   </StatisticsBox>
 );

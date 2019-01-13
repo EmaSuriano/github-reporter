@@ -70,13 +70,13 @@ const User = ({ profile }) => (
                 location={location}
                 name={name}
               />
-              <RepositoryInfo
+              {/* <RepositoryInfo
                 id={id}
                 login={login}
                 repositories={getTotalCount(repositories)}
                 starredRepositories={getTotalCount(starredRepositories)}
                 pinnedRepositories={getTotalCount(pinnedRepositories)}
-              />
+              /> */}
             </Wrapper>
           )}
         </ResponsiveContext.Consumer>

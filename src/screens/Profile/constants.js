@@ -1,11 +1,17 @@
 export const DEFAULT_OPTIONS = {
   legend: {
-    position: window.innerWidth < 600 ? "bottom" : "left",
+    position: "bottom",
     labels: {
-      fontSize: window.innerWidth < 600 ? 10 : 12,
-      padding: window.innerWidth < 600 ? 8 : 10,
-      boxWidth: window.innerWidth < 600 ? 10 : 12
+      fontSize: 10,
+      padding: 8,
+      boxWidth: 10
     }
+    // position: window.innerWidth < 600 ? "bottom" : "left",
+    // labels: {
+    //   fontSize: window.innerWidth < 600 ? 10 : 12,
+    //   padding: window.innerWidth < 600 ? 8 : 10,
+    //   boxWidth: window.innerWidth < 600 ? 10 : 12
+    // }
   },
   tooltips: {
     enabled: true

@@ -35,31 +35,23 @@ export default class Header extends Component {
 
   render() {
     return (
-      <Slide left>
+      <Slide top>
         <ResponsiveContext.Consumer>
           {size => (
             <Box
-              responsive
               direction={getDirection(size)}
               align="center"
               justify="start"
               pad={{ horizontal: "medium", vertical: "small" }}
               gap="medium"
             >
-              <Box responsive>
+              <Box>
                 <PageTitle level={1} size="large" weight="bold">
                   Github Reporter
                 </PageTitle>
               </Box>
-              <Box
-                responsive
-                direction="row"
-                basis="full"
-                align="center"
-                gap="small"
-              >
+              <Box direction="row" basis="full" align="center" gap="small">
                 <Box
-                  responsive
                   basis="full"
                   direction="row"
                   align="center"

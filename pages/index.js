@@ -27,6 +27,7 @@ class App extends Component {
   searchProfile = user => this.setState({ user });
 
   render() {
+    console.log(this.props.user);
     const { user } = this.state;
 
     return (

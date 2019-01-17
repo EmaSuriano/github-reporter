@@ -3,8 +3,8 @@ import App, { Container } from 'next/app';
 import { ApolloProvider } from 'react-apollo';
 import { Grommet } from 'grommet';
 import { createGlobalStyle } from 'styled-components';
-import theme from '../src/theme';
 import buildClient from '../src/config/apolloConfig';
+import theme from '../src/theme';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -14,8 +14,14 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default class MyApp extends App {
-  static async getInitialProps() {
-    return { githubToken: process.env.REACT_APP_GITHUB_TOKEN };
+  static async getInitialProps({ Component, router, ctx }) {
+    let pageProps = {};
+
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
+    }
+
+    return { githubToken: process.env.REACT_APP_GITHUB_TOKEN, pageProps };
   }
 
   render() {

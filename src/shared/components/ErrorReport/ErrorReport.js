@@ -1,18 +1,16 @@
-import React from "react";
-import { string } from "prop-types";
+import React from 'react';
+import { string } from 'prop-types';
+import styled from 'styled-components';
+import { DEFAULT_ERROR } from '../../constants';
 
-import { DEFAULT_ERROR } from "../../constants";
-
-const ErrorReport = ({ description }) => (
-  <div className="error-box">{description}</div>
-);
+const ErrorReport = ({ description }) => <div>{description}</div>;
 
 ErrorReport.defaultProps = {
-  description: DEFAULT_ERROR
+  description: DEFAULT_ERROR,
 };
 
 ErrorReport.propTypes = {
-  description: string
+  description: string,
 };
 
 export default ErrorReport;

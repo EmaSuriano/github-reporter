@@ -1,10 +1,10 @@
-import React, { Component, createRef } from "react";
-import { func } from "prop-types";
-import { Box, ResponsiveContext, Text, TextInput } from "grommet";
-import { Search } from "grommet-icons";
-import styled from "styled-components";
+import React, { Component, createRef } from 'react';
+import { func, string } from 'prop-types';
+import { Box, ResponsiveContext, Text, TextInput } from 'grommet';
+import { Search } from 'grommet-icons';
+import styled from 'styled-components';
 
-import { getDirection } from "../../utils/helpers";
+import { getDirection } from '../../utils/helpers';
 
 const PageTitle = styled(Text)`
   letter-spacing: 0.3rem;
@@ -12,7 +12,12 @@ const PageTitle = styled(Text)`
 `;
 export default class Header extends Component {
   static propTypes = {
-    searchProfile: func.isRequired
+    searchProfile: func.isRequired,
+    query: string,
+  };
+
+  static defaultProps = {
+    query: '',
   };
 
   constructor(props) {
@@ -21,16 +26,17 @@ export default class Header extends Component {
   }
 
   componentDidMount() {
-    this.inputRef.current.focus();
+    const { query } = this.props;
+    if (!query) this.inputRef.current.focus();
   }
 
-  state = { query: "" };
+  state = { query: this.props.query };
 
   handleInput = e => this.setState({ query: e.target.value });
 
   handleSearch = () => this.props.searchProfile(this.state.query);
 
-  handleKeyPress = e => e.key === "Enter" && this.handleSearch();
+  handleKeyPress = e => e.key === 'Enter' && this.handleSearch();
 
   render() {
     return (
@@ -41,7 +47,7 @@ export default class Header extends Component {
             direction={getDirection(size)}
             align="center"
             justify="start"
-            pad={{ horizontal: "medium", vertical: "small" }}
+            pad={{ horizontal: 'medium', vertical: 'small' }}
             gap="medium"
           >
             <Box responsive>
@@ -49,24 +55,18 @@ export default class Header extends Component {
                 Github Reporter
               </PageTitle>
             </Box>
-            <Box
-              responsive
-              direction="row"
-              basis="full"
-              align="center"
-              gap="small"
-            >
+            <Box responsive direction="row" basis="full" align="center" gap="small">
               <Box
                 responsive
                 basis="full"
                 direction="row"
                 align="center"
-                pad={{ horizontal: "small", vertical: "xsmall" }}
+                pad={{ horizontal: 'small', vertical: 'xsmall' }}
                 margin="medium"
                 round="small"
                 border={{
-                  side: "all",
-                  color: "border"
+                  side: 'all',
+                  color: 'border',
                 }}
               >
                 <Search onClick={this.handleSearch} />

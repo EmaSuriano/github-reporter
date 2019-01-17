@@ -3,7 +3,8 @@
     "browser": true,
     "jest": true
   },
-  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "extends": ["airbnb", "plugin:prettier/recommended", "plugin:react/recommended"],
+  "plugins": ["prettier"],
   "parser": "babel-eslint",
   "rules": {
     "class-methods-use-this": 0,

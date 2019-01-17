@@ -1,19 +1,19 @@
-import React from "react";
-import { number, shape, string } from "prop-types";
-import { propOr } from "ramda";
-import { Query } from "react-apollo";
-import { PulseLoader } from "react-spinners";
-import { Box, ResponsiveContext } from "grommet";
-import styled from "styled-components";
+import React from 'react';
+import { number, shape, string } from 'prop-types';
+import { propOr } from 'ramda';
+import { Query } from 'react-apollo';
+import { PulseLoader } from 'react-spinners';
+import { Box, ResponsiveContext } from 'grommet';
+import styled from 'styled-components';
 
-import { PROFILE_INFO } from "./query";
+import { PROFILE_INFO } from './query';
 
-import ErrorReport from "../../../../shared/components/ErrorReport";
-import RepositoryInfo from "../RepositoryInfo";
-import Sidebar from "../Sidebar";
+import ErrorReport from '../../../../shared/components/ErrorReport';
+import RepositoryInfo from '../RepositoryInfo';
+import Sidebar from '../Sidebar';
 
-import { getTotalCount } from "../../utils";
-import { getDirection } from "../../utils/helpers";
+import { getTotalCount } from '../../utils';
+import { getDirection } from '../../utils/helpers';
 
 const Wrapper = styled(Box)`
   background-color: #fafafa;
@@ -36,7 +36,7 @@ const User = ({ profile }) => (
           />
         );
 
-      if (error) return <ErrorReport />;
+      if (error) return <ErrorReport description={error} />;
 
       const {
         avatarUrl,
@@ -52,8 +52,8 @@ const User = ({ profile }) => (
         name,
         pinnedRepositories,
         repositories,
-        starredRepositories
-      } = propOr({}, "user")(data);
+        starredRepositories,
+      } = propOr({}, 'user')(data);
 
       return (
         <ResponsiveContext.Consumer>
@@ -95,18 +95,18 @@ User.propTypes = {
   login: string,
   name: string,
   followers: shape({
-    totalCount: number
+    totalCount: number,
   }),
   pinnedRepositories: shape({
-    totalCount: number
+    totalCount: number,
   }),
   profile: string.isRequired,
   repositories: shape({
-    totalCount: number
+    totalCount: number,
   }),
   starredRepositories: shape({
-    totalCount: number
-  })
+    totalCount: number,
+  }),
 };
 
 export default User;

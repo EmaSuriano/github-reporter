@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Box } from "grommet";
-import Header from "../src/screens/Profile/components/Header";
-import User from "../src/screens/Profile/components/User";
+import React, { Component } from 'react';
+import { Box } from 'grommet';
+import Header from '../src/screens/Profile/components/Header';
+import User from '../src/screens/Profile/components/User';
 
 class App extends Component {
   state = { user: this.props.user };
@@ -10,7 +10,7 @@ class App extends Component {
     const { user } = ctx.query;
 
     return {
-      user
+      user,
     };
   }
 
@@ -18,11 +18,11 @@ class App extends Component {
 
   render() {
     const { user } = this.state;
-    console.log(user);
+
     return (
       <Box pad="small">
-        <Header searchProfile={this.searchProfile} />
-        {user && <User profile={user} />}
+        <Header searchProfile={this.searchProfile} query={user} />
+        {user ? <User profile={user} /> : <p>Please search for an user!</p>}
       </Box>
     );
   }

@@ -3,8 +3,9 @@ import { number, string } from "prop-types";
 import { FaUserCheck, FaUserPlus } from "react-icons/fa";
 import { GoClock, GoCode, GoLocation, GoMail } from "react-icons/go";
 import moment from "moment";
-import { Box, Image, Text, Heading, ResponsiveContext } from "grommet";
+import { Box, Heading, Image, Text } from "grommet";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 import Follow from "./components/Follow";
 import StatsBox from "./components/StatsBox";
@@ -32,56 +33,53 @@ const Sidebar = ({
   location,
   name
 }) => (
-  <ResponsiveContext.Consumer>
-    {size => (
-      <Wrapper>
-        <Box justify="center" align="center" gap="small">
-          <Avatar src={avatar} />
-          <Heading level={2} size="medium" margin={{ top: 0 }}>
-            {name}
-          </Heading>
-          {bio && (
-            <Text textAlign="center" margin="medium">
-              {bio}
-            </Text>
-          )}
-        </Box>
-        <Box
-          direction="row"
-          justify="center"
-          align="center"
-          gap="large"
-          margin="medium"
-        >
-          <Follow
-            icon={<FaUserCheck size="2rem" />}
-            title="Followers"
-            quantity={followers}
-          />
+  <Fade left>
+    <Wrapper>
+      <Box justify="center" align="center" gap="small">
+        <Avatar src={avatar} />
+        <Heading level={2} size="medium" margin={{ top: 0 }}>
+          {name}
+        </Heading>
+        {bio && (
+          <Text textAlign="center" margin="medium">
+            {bio}
+          </Text>
+        )}
+      </Box>
+      <Box
+        direction="row"
+        justify="center"
+        align="center"
+        gap="large"
+        margin="medium"
+      >
+        <Follow
+          icon={<FaUserCheck size="2rem" />}
+          title="Followers"
+          quantity={followers}
+        />
 
-          <Follow
-            icon={<FaUserPlus size="2rem" />}
-            title="Following"
-            quantity={following}
-          />
-        </Box>
-        {console.log(size)}
-        <Box gap="small" direction="row" wrap>
-          <StatsBox
-            icon={<GoClock size="2.5rem" />}
-            title={`Joined Github ${moment(createdAt).fromNow()}`}
-          />
-          {email && <StatsBox icon={<GoMail size="2.5rem" />} title={email} />}
-          {company && (
-            <StatsBox icon={<GoCode size="2.5rem" />} title={company} />
-          )}
-          {location && (
-            <StatsBox icon={<GoLocation size="2.5rem" />} title={location} />
-          )}
-        </Box>
-      </Wrapper>
-    )}
-  </ResponsiveContext.Consumer>
+        <Follow
+          icon={<FaUserPlus size="2rem" />}
+          title="Following"
+          quantity={following}
+        />
+      </Box>
+      <Box gap="small" direction="row" wrap>
+        <StatsBox
+          icon={<GoClock size="2.5rem" />}
+          title={`Joined Github ${moment(createdAt).fromNow()}`}
+        />
+        {email && <StatsBox icon={<GoMail size="2.5rem" />} title={email} />}
+        {company && (
+          <StatsBox icon={<GoCode size="2.5rem" />} title={company} />
+        )}
+        {location && (
+          <StatsBox icon={<GoLocation size="2.5rem" />} title={location} />
+        )}
+      </Box>
+    </Wrapper>
+  </Fade>
 );
 
 Sidebar.propTypes = {

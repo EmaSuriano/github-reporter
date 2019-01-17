@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Box } from 'grommet';
 import Header from '../src/screens/Profile/components/Header';
 import User from '../src/screens/Profile/components/User';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 class App extends Component {
   static propTypes = {
@@ -13,27 +14,27 @@ class App extends Component {
     user: '',
   };
 
-  // eslint-disable-next-line react/destructuring-assignment
-  state = { user: this.props.user };
-
-  static async getInitialProps(ctx) {
-    const { user } = ctx.query;
-
+  static async getInitialProps({ query }) {
     return {
-      user,
+      user: query.user,
     };
   }
+
+  // eslint-disable-next-line react/destructuring-assignment
+  state = { user: this.props.user };
 
   searchProfile = user => this.setState({ user });
 
   render() {
-    console.log(this.props.user);
     const { user } = this.state;
+    const { error } = this.props;
 
     return (
       <Box pad="small">
         <Header searchProfile={this.searchProfile} query={user} />
-        {user ? <User profile={user} /> : <p>Please search for an user!</p>}
+        <ErrorBoundary error={error}>
+          {user ? <User profile={user} /> : <p>Please search for an user!</p>}
+        </ErrorBoundary>
       </Box>
     );
   }

@@ -3,8 +3,10 @@ import App, { Container } from 'next/app';
 import { ApolloProvider } from 'react-apollo';
 import { Grommet } from 'grommet';
 import { createGlobalStyle } from 'styled-components';
-import buildClient from '../src/config/apolloConfig';
+// import buildClient from '../src/config/apolloConfig';
 import theme from '../src/theme';
+import withApolloClient from '../lib/with-apollo-client';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -13,29 +15,31 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default class MyApp extends App {
-  static async getInitialProps({ Component, router, ctx }) {
-    let pageProps = {};
+class MyApp extends App {
+  // static async getInitialProps({ Component, router, ctx }) {
+  //   let pageProps = {};
 
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
-    }
+  //   if (Component.getInitialProps) {
+  //     pageProps = await Component.getInitialProps(ctx);
+  //   }
 
-    return { githubToken: process.env.REACT_APP_GITHUB_TOKEN, pageProps };
-  }
+  //   return { pageProps };
+  // }
 
   render() {
-    const { Component, pageProps, githubToken } = this.props;
+    const { Component, pageProps, apolloClient, error } = this.props;
 
     return (
       <Container>
         <Grommet theme={theme} full>
-          <ApolloProvider client={buildClient(githubToken)}>
+          <ApolloProvider client={apolloClient}>
             <GlobalStyle />
-            <Component {...pageProps} />
+            <Component {...pageProps} error={error} />
           </ApolloProvider>
         </Grommet>
       </Container>
     );
   }
 }
+
+export default withApolloClient(MyApp);

@@ -8,8 +8,6 @@ import fetch from 'node-fetch';
 const httpLink = new HttpLink({ uri: 'https://api.github.com/graphql', fetch });
 
 const buildClient = githubToken => {
-  console.log(`Bearer ${githubToken}`);
-
   const authLink = setContext((_, { headers }) => ({
     headers: {
       ...headers,
@@ -21,6 +19,7 @@ const buildClient = githubToken => {
 
   const client = new ApolloClient({
     link,
+    ssrMode: true,
     cache: new InMemoryCache(),
   });
 

@@ -5,11 +5,10 @@ import { Query } from 'react-apollo';
 import { PulseLoader } from 'react-spinners';
 import { Box, ResponsiveContext } from 'grommet';
 import styled from 'styled-components';
+import Error from 'next/error';
 
 import { PROFILE_INFO } from './query';
 
-import ErrorReport from '../../../../shared/components/ErrorReport';
-import RepositoryInfo from '../RepositoryInfo';
 import Sidebar from '../Sidebar';
 
 import { getTotalCount } from '../../utils';
@@ -28,15 +27,17 @@ const User = ({ profile }) => (
         return (
           <PulseLoader
             className="spinner"
-            loading={true}
             color="#90C3FF"
             sizeUnit="rem"
             size={5}
             margin="1rem"
+            loading
           />
         );
 
-      if (error) return <ErrorReport description={error} />;
+      if (error) {
+        return <Error statusCode={error.networkError.statusCode} />;
+      }
 
       const {
         avatarUrl,
@@ -86,9 +87,9 @@ const User = ({ profile }) => (
 );
 
 User.propTypes = {
-  avatarUrl: string,
-  bio: string,
-  company: string,
+  avatarUrl: string.isRequired,
+  bio: string.isRequired,
+  company: string.isRequired,
   createdAt: string,
   email: string,
   location: string,

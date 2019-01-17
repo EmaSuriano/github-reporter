@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import { isEmpty } from "ramda";
-import { Box } from "grommet";
+import React, { Component } from 'react';
+import { isEmpty } from 'ramda';
+import { Box } from 'grommet';
 
-import Header from "./components/Header";
-import User from "./components/User";
+import Header from './components/Header';
+import User from './components/User';
 
 export default class Profile extends Component {
-  state = { user: window.location.pathname.replace("/", "") };
+  state = { user: window.location.pathname.replace('/', '') };
 
   searchProfile = user => this.setState({ user });
 
   render() {
     const {
       searchProfile,
-      state: { user }
+      state: { user },
     } = this;
 
     return (

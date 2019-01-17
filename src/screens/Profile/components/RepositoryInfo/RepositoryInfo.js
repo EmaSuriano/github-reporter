@@ -2,6 +2,7 @@ import React from 'react';
 import { number, string } from 'prop-types';
 import { compose, pathOr, reduce } from 'ramda';
 import { Query } from 'react-apollo';
+import Error from 'next/error';
 import { PulseLoader } from 'react-spinners';
 import { GoPin, GoRepo, GoStar } from 'react-icons/go';
 import { Box, ResponsiveContext } from 'grommet';
@@ -20,7 +21,6 @@ import {
 import { getDirection } from '../../utils/helpers';
 
 import ActivityBox from './components/ActivityBox';
-import ErrorReport from '../../../../shared/components/ErrorReport';
 import Statistics from './components/Statistics';
 
 const renderIcon = ({ Icon, login, tab, ...props }) => (
@@ -44,7 +44,7 @@ const RepositoryInfo = ({ id, login, pinnedRepositories, repositories, starredRe
           />
         );
 
-      if (error) return <ErrorReport description={error} />;
+      if (error) return <Error statusCode={error} />;
 
       const nextPage = compose(
         hasNextPage,

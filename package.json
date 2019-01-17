@@ -11,12 +11,14 @@
     "apollo-link-http": "^1.5.5",
     "babel-plugin-styled-components": "^1.10.0",
     "chart.js": "^2.7.2",
+    "dotenv": "^6.2.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "graphql": "^14.0.2",
     "grommet": "^2.2.1",
     "grommet-icons": "^4.1.0",
     "moment": "^2.22.2",
     "next": "^7.0.2",
+    "node-fetch": "^2.3.0",
     "prop-types": "^15.6.2",
     "query-string": "^6.2.0",
     "ramda": "^0.25.0",
@@ -42,7 +44,8 @@
     "test": "cross-env NODE_PATH=./src react-scripts test --env=jsdom --colors",
     "test:ci": "cross-env CI=true NODE_PATH=./src react-scripts test --env=jsdom --colors",
     "test:coverage": "npm run test:ci -- --coverage",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint pages"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -69,6 +72,7 @@
     "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",
     "enzyme": "^3.7.0",
+    "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.3",

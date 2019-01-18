@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Box } from 'grommet';
-import Header from '../src/screens/Profile/components/Header';
-import User from '../src/screens/Profile/components/User';
+import Header from '../components/Header';
+import User from '../components/User';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 class App extends Component {
   static propTypes = {
     user: PropTypes.string,
+    error: PropTypes.object,
   };
 
   static defaultProps = {
     user: '',
+    error: undefined,
   };
 
   static async getInitialProps({ query }) {

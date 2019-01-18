@@ -8,6 +8,10 @@ export default class ErrorBoundary extends React.Component {
     error: PropTypes.object,
   };
 
+  static defaultProps = {
+    error: undefined,
+  };
+
   state = {
     error: this.props.error,
   };

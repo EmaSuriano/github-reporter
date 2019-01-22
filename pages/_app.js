@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import App, { Container } from 'next/app';
 import { ApolloProvider } from 'react-apollo';
 import { Grommet } from 'grommet';
 import { createGlobalStyle } from 'styled-components';
+import Fonts from '../components/Fonts';
 import theme from '../utils/theme';
 import withApolloClient from '../lib/with-apollo-client';
 
@@ -13,15 +14,25 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const MyApp = ({ Component, pageProps, apolloClient, error }) => (
-  <Container>
-    <Grommet theme={theme} full>
-      <ApolloProvider client={apolloClient}>
-        <GlobalStyle />
-        <Component {...pageProps} error={error} />
-      </ApolloProvider>
-    </Grommet>
-  </Container>
-);
+class MyApp extends App {
+  componentDidMount() {
+    Fonts();
+  }
+
+  render() {
+    const { Component, pageProps, apolloClient, error } = this.props;
+
+    return (
+      <Container>
+        <Grommet theme={theme} full>
+          <ApolloProvider client={apolloClient}>
+            <GlobalStyle />
+            <Component {...pageProps} error={error} />
+          </ApolloProvider>
+        </Grommet>
+      </Container>
+    );
+  }
+}
 
 export default withApolloClient(MyApp);

@@ -16,13 +16,12 @@ class App extends Component {
     error: undefined,
   };
 
-  static async getInitialProps({ query }) {
+  static getInitialProps({ query }) {
     return {
       user: query.user,
     };
   }
 
-  // eslint-disable-next-line react/destructuring-assignment
   state = { user: this.props.user };
 
   searchProfile = user => this.setState({ user });

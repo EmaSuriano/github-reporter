@@ -77,7 +77,7 @@ const RepositoryInfo = ({ id, login, pinnedRepositories, repositories, starredRe
         <ResponsiveContext.Consumer>
           {size => (
             <Box align="center" jutify="center" gap="medium" width="full">
-              <Fade big>
+              <Fade big ssrFadeout>
                 <Box direction={getDirection(size)} justify="center" wrap>
                   <ActivityBox
                     icon={renderIcon({

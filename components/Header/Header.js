@@ -40,7 +40,7 @@ export default class Header extends Component {
     const { query } = this.state;
 
     return (
-      <Slide top>
+      <Slide top ssrFadeout>
         <ResponsiveContext.Consumer>
           {size => (
             <Box

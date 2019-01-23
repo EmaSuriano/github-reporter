@@ -33,7 +33,7 @@ const Sidebar = ({
   location,
   name,
 }) => (
-  <Fade left>
+  <Fade left ssrFadeout>
     <Wrapper>
       <Box justify="center" align="center" gap="small">
         <Avatar src={avatar} />

@@ -1,6 +1,6 @@
 import React, { Component, createRef } from 'react';
 import { func, string } from 'prop-types';
-import { Box, ResponsiveContext, Text, TextInput } from 'grommet';
+import { Box, Button, Text, ResponsiveContext, TextInput } from 'grommet';
 import { Search } from 'grommet-icons';
 import styled from 'styled-components';
 import Slide from 'react-reveal/Slide';
@@ -50,11 +50,11 @@ export default class Header extends Component {
               pad={{ horizontal: 'medium', vertical: 'small' }}
               gap="medium"
             >
-              <Box>
+              <Button href="/">
                 <PageTitle level={1} size="large" weight="bold">
                   Github Reporter
                 </PageTitle>
-              </Box>
+              </Button>
               <Box direction="row" basis="full" align="center" gap="small">
                 <Box
                   basis="full"

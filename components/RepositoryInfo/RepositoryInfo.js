@@ -5,6 +5,7 @@ import { Query } from 'react-apollo';
 import { PulseLoader } from 'react-spinners';
 import { GoPin, GoRepo, GoStar } from 'react-icons/go';
 import { Box, ResponsiveContext } from 'grommet';
+import Error from 'next/error';
 import Fade from 'react-reveal/Fade';
 
 import { GET_REPOSITORIES_INFORMATION } from './query';
@@ -36,11 +37,11 @@ const RepositoryInfo = ({ id, login, pinnedRepositories, repositories, starredRe
         return (
           <PulseLoader
             className="spinner"
-            loading={true}
             color="#90C3FF"
             sizeUnit="rem"
             size={5}
             margin="1rem"
+            loading
           />
         );
 

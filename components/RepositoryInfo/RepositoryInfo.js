@@ -77,7 +77,7 @@ const RepositoryInfo = ({ id, login, pinnedRepositories, repositories, starredRe
           {size => (
             <Box align="center" jutify="center" gap="medium" width="full">
               <Fade big>
-                <Box direction={getDirection(size)} justify="center" wrap>
+                <Box direction="row" justify="center" wrap>
                   <ActivityBox
                     icon={<ActivityIcon Icon={GoRepo} login={login} tab="repositories" />}
                     stat={repositories}

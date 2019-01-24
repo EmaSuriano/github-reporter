@@ -23,7 +23,7 @@ import { getDirection } from '../../utils/helpers';
 import ActivityBox from './components/ActivityBox';
 import Statistics from './components/Statistics';
 
-const renderIcon = ({ Icon, login, tab, ...props }) => (
+const ActivityIcon = ({ Icon, login, tab, ...props }) => (
   <a className="stats--icon" href={`https://github.com/${login}?tab=${tab}`}>
     <Icon size="4rem" {...props} />
   </a>
@@ -36,11 +36,11 @@ const RepositoryInfo = ({ id, login, pinnedRepositories, repositories, starredRe
         return (
           <PulseLoader
             className="spinner"
-            loading={true}
             color="#90C3FF"
             sizeUnit="rem"
             size={5}
             margin="1rem"
+            loading
           />
         );
 
@@ -79,21 +79,17 @@ const RepositoryInfo = ({ id, login, pinnedRepositories, repositories, starredRe
               <Fade big>
                 <Box direction={getDirection(size)} justify="center" wrap>
                   <ActivityBox
-                    icon={renderIcon({
-                      Icon: GoRepo,
-                      login,
-                      tab: 'repositories',
-                    })}
+                    icon={<ActivityIcon Icon={GoRepo} login={login} tab="repositories" />}
                     stat={repositories}
                     title="Repositories"
                   />
                   <ActivityBox
-                    icon={renderIcon({ Icon: GoStar, login, tab: 'stars' })}
+                    icon={<ActivityIcon Icon={GoStar} login={login} tab="stars" />}
                     stat={starredRepositories}
                     title="Starred"
                   />
                   <ActivityBox
-                    icon={renderIcon({ Icon: GoPin, login, tab: '' })}
+                    icon={<ActivityIcon Icon={GoPin} login={login} tab="" />}
                     stat={pinnedRepositories}
                     title="Pinned"
                   />
@@ -117,8 +113,6 @@ const RepositoryInfo = ({ id, login, pinnedRepositories, repositories, starredRe
                     data={createData(dataSet, 'languages', 'commits')}
                     configuration={createConfiguration(login)}
                   />
-                </Box>
-                <Box responsive direction={getDirection(size)} justify="center" wrap>
                   <Statistics
                     id="by-repository"
                     title="Stars per Repo Top 10"
